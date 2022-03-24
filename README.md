@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+<!--  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&hide=javascript,css,scss,html&theme=tokyonight) -->
+![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=dpgraham4401&count_private=true&theme=dark)
 <!--
 **dpgraham4401/dpgraham4401** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
