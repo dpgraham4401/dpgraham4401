@@ -5,7 +5,7 @@
 * 🔭 I’m currently working on 
     * [An open source example on integrating with RCRAInfo](https://github.com/dpgraham4401/haztrak)
 * 🌱 I’m currently learning 
-    * [More on web development with Go](https://github.com/dpgraham4401)
+    * [More on web development with Go](https://github.com/dpgraham4401/dpgraham)
 * 📖 I’m currently reading
     * [Any good technical book I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
 ---
