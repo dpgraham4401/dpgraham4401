@@ -2,11 +2,11 @@
 
 <!--  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&hide=javascript,css,scss,html&theme=tokyonight) -->
 <!-- ![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=dpgraham4401&count_private=true&theme=dark) -->
-* 🔭 I’m currently working on 
-    * [An open source example on integrating with RCRAInfo](https://github.com/dpgraham4401/haztrak)
-* 🌱 I’m currently learning 
+* 🔭 I’m currently working on ...
+    * [Haztrak: An open-source example of how waste management software can interface with RCRAInfo](https://github.com/USEPA/haztrak)
+* 🌱 I’m currently learning ...
     * [More on web development with Go](https://github.com/dpgraham4401/dpgraham)
-* 📖 I’m currently reading
+* 📖 I’m currently reading ...
     * [Any good technical book I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
 ---
 <!-- ### Other stuff
