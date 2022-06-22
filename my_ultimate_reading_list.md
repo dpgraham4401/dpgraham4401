@@ -4,7 +4,7 @@
  - [x] [Clean Code (Martin)](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
  - [ ] [The Pragmatic Prgrammer (Thomas and Hunt)](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=pd_bxgy_img_sccl_2/132-7763395-0841352?pd_rd_w=J7jlp&pf_rd_p=6b3eefea-7b16-43e9-bc45-2e332cbf99da&pf_rd_r=5YMBCJAG6Y6BW4QK46RV&pd_rd_r=f82b12a5-c7c0-4bc9-b45d-87f9118a423e&pd_rd_wg=E7KUG&pd_rd_i=0135957052&psc=1)
  - [x] [The Cathedral and the Bazaar (Raymond)](https://www.amazon.com/Cathedral-Bazaar-Musings-Accidental-Revolutionary-ebook/dp/B0026OR3LM/ref=sr_1_1?keywords=the+cathedral+and+the+bazaar&qid=1651241395&s=books&sprefix=The+cathedral+an%2Cstripbooks%2C62&sr=1-1)
- - [ ] [Designing Dat-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D)
+ - [ ] [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D)
  - [x] [The Twelve Factor App (?)](https://12factor.net/)
  - [ ] [The Unix and Linux System Administration Handbook (Nemeth +)](https://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0134277554/ref=sr_1_1?keywords=unix+and+linux+system+administration+handbook&qid=1651783202&s=books&sprefix=The+unix+and+lin%2Cstripbooks%2C67&sr=1-1)
  - [x] [The Phoenix Project (Kim, Behr, & Spafford)](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592)
