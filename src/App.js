@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-          <div className="min-vh-100 bg-dark">Min-height 100vh
+          <div className="min-vh-100 bg-dark">
               <Article/>
           </div>
   );
