@@ -1,13 +1,17 @@
 import Article from "./components/article";
-import NavBtn from "./components/nav";
+import NavBtn from "./components/topnav";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "./components/footer";
 
 function App() {
   return (
-    <div className="min-vh-100 bg-dark">
+    <>
       <NavBtn/>
-      <Article/>
-    </div>
+      <main className="bg-dark flex-fill" role="main">
+        <Article/>
+      </main>
+      <Footer/>
+    </>
   );
 }
 
