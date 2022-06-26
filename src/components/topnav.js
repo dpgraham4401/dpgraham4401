@@ -1,5 +1,6 @@
 import React from "react";
 import {Navbar, Container, Nav} from "react-bootstrap";
+import IconButton from "./topnavbtn";
 
 const NavBtn = () => {
   return (
@@ -17,8 +18,7 @@ const NavBtn = () => {
         <Navbar.Toggle
           className="border-0 shadow-none"
           aria-controls="basic-navbar-nav">
-          <p className="bg-dpg-teal bg-gradient
-            rounded-circle px-4 py-3 h2 fw-bolder">X</p>
+          <IconButton/>
         </Navbar.Toggle>
         <Navbar.Collapse className="" id="basic-navbar-nav">
           <Nav className="me-auto">
