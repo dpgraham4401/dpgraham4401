@@ -2,7 +2,7 @@ import React from "react";
 import {Navbar, Container, Nav} from "react-bootstrap";
 import IconButton from "./topnavbtn";
 
-const NavBtn = () => {
+const TopNav = () => {
   return (
     <Navbar bg="dark" expand="lg">
       <Container className="pt-4">
@@ -31,4 +31,4 @@ const NavBtn = () => {
   );
 }
 
-export default NavBtn;
+export default TopNav;
