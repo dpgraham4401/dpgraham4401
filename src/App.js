@@ -10,17 +10,35 @@ import {
   faCoffee,
   faX,
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
 library.add(fab, faCheckSquare, faX, faCoffee, faBars)
 
 function App() {
   return (
     <>
-      <TopNav/>
-      <main className="bg-dark flex-fill p-5" role="main">
-        <Article/>
-      </main>
-      <Footer/>
+      <Router>
+        <TopNav/>
+        <main className="bg-dark flex-fill p-5" role="main">
+          <div>
+            <Switch>
+              <Route exact path="/">
+                <Article/>
+              </Route>
+              <Route path="/blog">
+              </Route>
+              <Route path="/tutorials">
+                <Article/>
+              </Route>
+            </Switch>
+          </div>
+        </main>
+        <Footer/>
+      </Router>
     </>
   );
 }
