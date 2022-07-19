@@ -6,8 +6,9 @@
     * [Haztrak: An open-source example of how waste management software can interface with RCRAInfo](https://github.com/USEPA/haztrak)
 * 🌱 I’m currently learning ...
     * [More on web development with Go](https://github.com/dpgraham4401/dpgraham)
+    * [About front end web development with React](https://github.com/USEPA/hazatrak)
 * 📖 I’m currently reading ...
-    * [Any good technical book I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
+    * [Any good book I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
 ---
 <!-- ### Other stuff
 [David Graham's Ultimate (in progress) Reading List](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md) -->
