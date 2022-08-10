@@ -21,11 +21,12 @@
 
 <!-- My Workspace -->
 <p align='center'>
-  💻 My workspace<br/><br/>
+  💻 My workspace(s)<br/><br/>
   <img src="https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white" />
   <img src="https://img.shields.io/badge/AMD%20Ryzen_7_3700X-ED1C24?style=for-the-badge&logo=amd&logoColor=white" />
   <img src="https://img.shields.io/badge/RAM-16GB-%230071C5.svg?&style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/apple%20silicon-333333?style=for-the-badge&logo=apple&logoColor=white" />
+  <br>
+  <img src="https://img.shields.io/badge/apple%20M1-333333?style=for-the-badge&logo=apple&logoColor=white" />
 </p>
 
 ---
