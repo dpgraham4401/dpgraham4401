@@ -19,20 +19,6 @@
    <a href="#"><img src="https://github-readme-stats.vercel.app/api?username=dpgraham4401&show_icons=true&count_private=true&theme=dark" width="450"></a>
 </p>
 
-<!-- <div align="center" valign="top"><br>
-  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg">
-  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-  <img align="center" alt="Redux" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg">
-  <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
-  <img align="center" alt="github" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg">
-  <img align="center" alt="linux" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg">
-</div><br> -->
-
 <div align="center" valign="top"><br>
   Proficiencies<br/><br/>
   <table>
@@ -84,6 +70,7 @@
 ### 🌱 I’m currently learning ...
   - [More on web development with Go](https://github.com/dpgraham4401/dpgraham)
   - [About front end web development with React](https://github.com/USEPA/hazatrak)
+  - [How to administer my home k8 instance](/assets/homeserver.JPG)
 ### 📖 I’m currently reading ...
   - [Any good book I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
 
