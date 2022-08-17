@@ -19,8 +19,10 @@
    <a href="#"><img src="https://github-readme-stats.vercel.app/api?username=dpgraham4401&show_icons=true&count_private=true&theme=dark" width="450"></a>
 </p>
 
-<div align="center" valign="top"><br>
-  Proficiencies<br/><br/>
+<h4 align='center'>
+  :heavy_check_mark: Proficiencies
+</h4>  
+<div align="center" valign="top">
   <table>
     <tr>
       <th>Server/General</th>
@@ -55,14 +57,16 @@
 </div><br>
 
 <!-- My Workspace -->
-<p align='center'>
-  💻 My workspace(s)<br/><br/>
+<h4 align='center'>
+  :computer: My workspace(s)
+</h4>  
+<div align='center'>
   <img src="https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white" />
   <img src="https://img.shields.io/badge/AMD%20Ryzen_7_3700X-ED1C24?style=for-the-badge&logo=amd&logoColor=white" />
   <img src="https://img.shields.io/badge/RAM-16GB-%230071C5.svg?&style=for-the-badge&logoColor=white" />
   <br>
   <img src="https://img.shields.io/badge/apple%20M1-333333?style=for-the-badge&logo=apple&logoColor=white" />
-</p>
+</div>
 
 ---
 
