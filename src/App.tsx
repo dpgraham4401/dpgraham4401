@@ -1,21 +1,17 @@
 import React from 'react';
-import './App.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-  faB,
-  faCheckSquare,
-  faBars,
-  faCoffee,
-  faX,
-} from '@fortawesome/free-solid-svg-icons';
+import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
-
-library.add(faB, faCheckSquare, faX, faCoffee, faBars);
+import Home from './components/Home';
 
 function App() {
   return (
     <>
-      <p>hello</p>
+      <main className="bg-dark flex-fill">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hello" element={<p>hello</p>} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );
