@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
-import Home from './components/Home';
+import Home from './features/Home';
 import TopNav from './components/TopNav';
 
 function App() {

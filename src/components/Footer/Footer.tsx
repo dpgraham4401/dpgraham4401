@@ -14,21 +14,21 @@ function Footer() {
         <ListGroup.Item
           as="a"
           href="https://www.linkedin.com/in/dpgraham4401/"
-          className="border-0 bg-transparent"
+          className="border-0 bg-transparent link-dpg-light"
         >
           <FontAwesomeIcon className="h1" icon={faLinkedin} />
         </ListGroup.Item>
         <ListGroup.Item
           as="a"
           href="https://github.com/dpgraham4401"
-          className="border-0 bg-transparent"
+          className="border-0 bg-transparent link-dpg-light"
         >
           <FontAwesomeIcon className="h1" icon={faGithub} />
         </ListGroup.Item>
         <ListGroup.Item
           as="a"
           href="https://twitter.com/Dpgraham4401"
-          className="border-0 bg-transparent"
+          className="border-0 bg-transparent link-dpg-light"
         >
           <FontAwesomeIcon className="h1" icon={faTwitter} />
         </ListGroup.Item>
