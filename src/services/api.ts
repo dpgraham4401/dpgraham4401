@@ -9,7 +9,6 @@ interface RequestOptions {
 
 function request(method: string, body?: any) {
   const baseURL = `${process.env.REACT_APP_API_URL}`;
-  console.log('baseURL: ', baseURL);
   return (url: string, body: object | null) => {
     const requestOptions: RequestOptions = {
       url: `${baseURL}/${url}`,
@@ -22,7 +21,6 @@ function request(method: string, body?: any) {
     }
     return axios(requestOptions as any).then((response) => {
       const { data } = response;
-      console.log('data: ', data);
       return data;
     });
   };
