@@ -7,7 +7,7 @@ interface RequestOptions {
   data: object | null;
 }
 
-function request(method: string, body?: any) {
+function request(method: string) {
   const baseURL = `${process.env.REACT_APP_API_URL}`;
   return (url: string, body: object | null) => {
     const requestOptions: RequestOptions = {

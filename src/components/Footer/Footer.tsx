@@ -1,15 +1,15 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faGithub,
   faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import { ListGroup } from 'react-bootstrap';
+} from "@fortawesome/free-brands-svg-icons";
+import { ListGroup } from "react-bootstrap";
 
 function Footer() {
   return (
-    <footer className="bg-dpg-teal bg-gradient py-3">
+    <footer className="bg-primary bg-gradient py-3">
       <ListGroup horizontal className="d-flex justify-content-center">
         <ListGroup.Item
           as="a"
