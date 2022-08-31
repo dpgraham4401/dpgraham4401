@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Card, Container } from 'react-bootstrap';
-import { api } from '../../services';
-
-interface Blog {
-  id: number;
-  title: string;
-  updateDate: Date;
-  createDate: string;
-}
+import React, { useEffect, useState } from "react";
+import { Card, Container } from "react-bootstrap";
+import { api } from "../../services";
+import { Blog } from "../../types";
 
 function Home() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
@@ -15,7 +9,7 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     api
-      .get('blog', null)
+      .get("blog", null)
       .then((response) => {
         console.log(response);
         setBlogs(response as Blog[]);
@@ -31,7 +25,7 @@ function Home() {
         <Card.Header as="h5" className="bg-light">
           Home
         </Card.Header>
-        <Card.Body>{loading ? printData(blogs) : 'loading'}</Card.Body>
+        <Card.Body>{loading ? printData(blogs) : "loading"}</Card.Body>
       </Card>
     </Container>
   );
