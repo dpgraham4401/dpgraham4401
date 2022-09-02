@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./features/Home";
 import TopNav from "./components/TopNav";
 import Article from "./features/Article";
+import BlogHome from "./features/BlogHome";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <TopNav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<p>hello</p>} />
+          <Route path="/blog" element={<BlogHome />} />
           <Route path="/blog/:id" element={<Article />} />
         </Routes>
       </main>

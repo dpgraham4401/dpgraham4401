@@ -5,7 +5,7 @@ import { Blog } from "../../types";
 import DpgCard from "../../components/DpgCard";
 import { Link } from "react-router-dom";
 
-function Home() {
+function BlogHome() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -13,9 +13,7 @@ function Home() {
     api
       .get("blog", null)
       .then((response) => {
-        let recentBlogs = response as Blog[];
-        recentBlogs = recentBlogs.slice(0, 3);
-        setBlogs(recentBlogs);
+        setBlogs(response as Blog[]);
       })
       .then(() => {
         setLoading(false);
@@ -25,7 +23,7 @@ function Home() {
   return (
     <Container>
       <DpgCard>
-        <DpgCard.Header title="Welcome!" />
+        <DpgCard.Header title="Ramblings for Consumption" />
         <DpgCard.Body>
           {loading ? (
             <DpgCard.Spinner />
@@ -61,4 +59,4 @@ function listArticles(blogs: Blog[]) {
   });
 }
 
-export default Home;
+export default BlogHome;
