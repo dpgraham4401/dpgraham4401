@@ -34,7 +34,7 @@ function NavMenu({ expand }: props) {
           </Link>
         </Nav>
       </Offcanvas.Body>
-      <Container>
+      <Container className="d-lg-none">
         <p className="text-white">
           {" Found a problem? "}
           <a

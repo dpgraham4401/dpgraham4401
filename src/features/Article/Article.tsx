@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { api } from "../../services";
 import { Blog } from "../../types";
 import ReactMarkdown from "react-markdown";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import DpgCard from "../../components/DpgCard";
 
 function Article() {
   const { id } = useParams();
@@ -17,30 +16,24 @@ function Article() {
     api
       .get(`blog/${id}`, null)
       .then((response) => {
-        console.log(response);
         setArticle(response as Blog);
       })
       .then(() => setLoading(false));
   }, [id]);
   return (
     <Container>
-      <Card>
-        <Card.Header>{article?.title}</Card.Header>
-        <Card.Body>
+      <DpgCard>
+        <DpgCard.Header title="hello card title" />
+        <DpgCard.Body>
           {loading ? (
-            <h1 className="d-flex justify-content-center bg-transparent py-3">
-              <FontAwesomeIcon
-                className="fa-spin text-muted"
-                icon={faCircleNotch}
-              />
-            </h1>
+            <DpgCard.Spinner />
           ) : article ? (
             <ReactMarkdown children={article.content} />
           ) : (
-            "yo"
+            "ERROR: We're sorry, we're having trouble fetching this article."
           )}
-        </Card.Body>
-      </Card>
+        </DpgCard.Body>
+      </DpgCard>
     </Container>
   );
 }
