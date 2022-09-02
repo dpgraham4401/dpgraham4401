@@ -31,6 +31,11 @@ body {
   height: 50px;
 }
 
+code {
+  background-color: var(--dpg-lightgray);
+  border-radius: 10px;
+}
+
 .dpg-dark-link {
   color: var(--dpg-lightgray);
 }
