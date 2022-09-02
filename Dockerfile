@@ -1,9 +1,9 @@
-# Mutlistage dockerize
+# Mutlistage dockerize dpgraham.com react.js front end
 # Build stage
 FROM node:16-alpine as builder
 WORKDIR /app
 COPY . .
-RUN npm ci
+RUN npm ci --silent
 RUN npm run build
 
 # Bundle stage
