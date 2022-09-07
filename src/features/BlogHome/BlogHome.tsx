@@ -4,6 +4,8 @@ import { api } from "../../services";
 import { Blog } from "../../types";
 import DpgCard from "../../components/DpgCard";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
+import TopNav from "../../components/TopNav";
 
 function BlogHome() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
@@ -21,20 +23,24 @@ function BlogHome() {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <Container>
-      <DpgCard>
-        <DpgCard.Header title="Ramblings for Consumption" />
-        <DpgCard.Body>
-          {loading ? (
-            <DpgCard.Spinner />
-          ) : blogs ? (
-            listArticles(blogs)
-          ) : (
-            "error"
-          )}
-        </DpgCard.Body>
-      </DpgCard>
-    </Container>
+    <>
+      <TopNav />
+      <Container>
+        <DpgCard>
+          <DpgCard.Header title="Ramblings for Consumption" />
+          <DpgCard.Body>
+            {loading ? (
+              <DpgCard.Spinner />
+            ) : blogs ? (
+              listArticles(blogs)
+            ) : (
+              "error"
+            )}
+          </DpgCard.Body>
+        </DpgCard>
+      </Container>
+      <Footer />
+    </>
   );
 }
 

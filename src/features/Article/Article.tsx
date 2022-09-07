@@ -5,6 +5,8 @@ import { api } from "../../services";
 import { Blog } from "../../types";
 import ReactMarkdown from "react-markdown";
 import DpgCard from "../../components/DpgCard";
+import Footer from "../../components/Footer";
+import TopNav from "../../components/TopNav";
 
 function Article() {
   const { id } = useParams();
@@ -21,20 +23,24 @@ function Article() {
       .then(() => setLoading(false));
   }, [id]);
   return (
-    <Container>
-      <DpgCard>
-        <DpgCard.Header title="hello card title" />
-        <DpgCard.Body>
-          {loading ? (
-            <DpgCard.Spinner />
-          ) : article ? (
-            <ReactMarkdown children={article.content} />
-          ) : (
-            "ERROR: We're sorry, we're having trouble fetching this article."
-          )}
-        </DpgCard.Body>
-      </DpgCard>
-    </Container>
+    <>
+      <TopNav />
+      <Container>
+        <DpgCard>
+          <DpgCard.Header title="hello card title" />
+          <DpgCard.Body>
+            {loading ? (
+              <DpgCard.Spinner />
+            ) : article ? (
+              <ReactMarkdown children={article.content} />
+            ) : (
+              "ERROR: We're sorry, we're having trouble fetching this article."
+            )}
+          </DpgCard.Body>
+        </DpgCard>
+      </Container>
+      <Footer />
+    </>
   );
 }
 
