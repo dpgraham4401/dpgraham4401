@@ -1,5 +1,5 @@
  name: Test, Build, Push & Deploy
- # This will run when a tag is pushed to main
+ # This will run when a tag is pushed
 
  on:
    push:
