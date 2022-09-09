@@ -18,14 +18,14 @@
 <!-- Top Languages -->
 <!-- 
 <p align='center'>
-  <a href="#"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&layout=compact&&exclude_repo=haztrakjs&hide=php,lua,vba,matlab,css,scss,html&theme=tokyonight"></a>
+  <a href="#"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&layout=compact&exclude_repo=haztrakjs,.dotfiles,glitchycyborg&hide=vba,css,scss,html&theme=dark&hide_border=true&custom_title=Commonly_Used_Languages"></a>
 </p>
-
 -->
+
 
 <!-- Github stats -->
 <p align='center'>
-   <a href="#"><img src="https://github-readme-stats.vercel.app/api?username=dpgraham4401&show_icons=true&count_private=true&theme=dark" width="450"></a>
+   <a href="#"><img src="https://github-readme-stats.vercel.app/api?username=dpgraham4401&show_icons=true&count_private=true&theme=dark&hide_border=true" width="450"></a>
 </p>
 
 <h4 align='center'>
