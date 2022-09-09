@@ -14,6 +14,14 @@
    </a>
 </p>
 
+
+<!-- Top Languages -->
+<!--
+<p align='center'>
+  <a href="#"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&hide=javascript,css,scss,html&theme=tokyonight"></a>
+</p>
+-->
+
 <!-- Github stats -->
 <p align='center'>
    <a href="#"><img src="https://github-readme-stats.vercel.app/api?username=dpgraham4401&show_icons=true&count_private=true&theme=dark" width="450"></a>
