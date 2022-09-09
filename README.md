@@ -16,10 +16,11 @@
 
 
 <!-- Top Languages -->
-<!--
+<!-- 
 <p align='center'>
-  <a href="#"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&hide=javascript,css,scss,html&theme=tokyonight"></a>
+  <a href="#"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&layout=compact&&exclude_repo=haztrakjs&hide=php,lua,vba,matlab,css,scss,html&theme=tokyonight"></a>
 </p>
+
 -->
 
 <!-- Github stats -->
