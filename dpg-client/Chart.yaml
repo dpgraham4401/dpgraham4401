@@ -1,0 +1,12 @@
+apiVersion: v2
+name: dpg-client
+description: A Helm chart to deploy dpg-client to the local home-lab cluster "Gaea"
+
+type: application
+
+# Both version should be incremented upon change
+
+# This is the charts version.
+version: 0.0.5
+# The appVersion will act as default docker image tag if not specified in Values.yaml
+appVersion: "v0.0.5"
