@@ -5,8 +5,6 @@ import { api } from "../../services";
 import { Blog } from "../../types";
 import ReactMarkdown from "react-markdown";
 import DpgCard from "../../components/DpgCard";
-import Footer from "../../components/Footer";
-import TopNav from "../../components/TopNav";
 
 function Article() {
   const { id } = useParams();
@@ -24,7 +22,6 @@ function Article() {
   }, [id]);
   return (
     <>
-      <TopNav />
       <Container>
         <DpgCard>
           <DpgCard.Header title="hello card title" />
@@ -39,7 +36,6 @@ function Article() {
           </DpgCard.Body>
         </DpgCard>
       </Container>
-      <Footer />
     </>
   );
 }

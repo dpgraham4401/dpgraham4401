@@ -4,8 +4,6 @@ import { api } from "../../services";
 import { Blog } from "../../types";
 import DpgCard from "../../components/DpgCard";
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer";
-import TopNav from "../../components/TopNav";
 
 function Home() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
@@ -26,7 +24,6 @@ function Home() {
   }, []);
   return (
     <>
-      <TopNav />
       <Container>
         <DpgCard>
           <DpgCard.Header title="Welcome!" />
@@ -41,7 +38,6 @@ function Home() {
           </DpgCard.Body>
         </DpgCard>
       </Container>
-      <Footer />
     </>
   );
 }

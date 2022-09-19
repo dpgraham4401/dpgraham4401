@@ -4,8 +4,6 @@ import { api } from "../../services";
 import { Blog } from "../../types";
 import DpgCard from "../../components/DpgCard";
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer";
-import TopNav from "../../components/TopNav";
 
 function BlogHome() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
@@ -24,7 +22,6 @@ function BlogHome() {
   }, []);
   return (
     <>
-      <TopNav />
       <Container>
         <DpgCard>
           <DpgCard.Header title="Ramblings for Consumption" />
@@ -39,7 +36,6 @@ function BlogHome() {
           </DpgCard.Body>
         </DpgCard>
       </Container>
-      <Footer />
     </>
   );
 }
