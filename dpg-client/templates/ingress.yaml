@@ -1,0 +1,32 @@
+{{- $fullName := include "dpg-client.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "dpg-client.fullname" . }}
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    {{- include "dpg-client.labels" . | nindent 4 }}
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.ingress.className }}
+    traefik.ingress.kubernetes.io/router.middlewares: {{.Values.namespace.name}}-{{ .Values.middleware.name }}@kubernetescrd
+spec:
+  tls:
+    - hosts:
+      {{ toYaml .Values.ingress.tls.hosts | indent 6 }}
+      secretName: {{ .Values.ingress.tls.secretName }}
+  rules:
+    {{- range .Values.ingress.hosts }}
+    - host: {{ .host | quote }}
+      http:
+        paths:
+          {{- range .paths }}
+          - path: {{ .path }}
+            pathType: {{ .pathType }}
+            backend:
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $svcPort }}
+          {{- end }}
+    {{- end }}
