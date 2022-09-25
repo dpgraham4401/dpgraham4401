@@ -41,6 +41,9 @@ function BlogHome() {
 }
 
 function listArticles(blogs: Blog[]) {
+  if (blogs.length === 0 || undefined) {
+    return <div></div>;
+  }
   return blogs.map((blog: Blog, i: number) => {
     return (
       <div key={i}>

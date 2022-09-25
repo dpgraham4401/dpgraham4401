@@ -13,10 +13,10 @@ namespace:
 image:
   repository: dpgraham4401
   imageName: dpg-client
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   port: 3000
   # Overrides the image tag whose default is the chart appVersion (i.e., should be the git/release tag)
-  tag: "v0.0.6"
+  tag: "v0.0.7"
 
 imagePullSecrets: [ ]
 nameOverride: ""
@@ -36,8 +36,8 @@ podSecurityContext: { }
 # fsGroup: 2000
 
 securityContext: { }
-  # capabilities:
-  #   drop:
+# capabilities:
+#   drop:
 #   - ALL
 # readOnlyRootFilesystem: true
 # runAsNonRoot: true
@@ -67,7 +67,7 @@ ingress:
       - dpgraham.com
 
 resources: { }
-  #   cpu: 100m
+#   cpu: 100m
 #   memory: 128Mi
 # requests:
 #   cpu: 100m

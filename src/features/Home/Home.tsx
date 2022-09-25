@@ -20,7 +20,10 @@ function Home() {
       .then(() => {
         setLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        setLoading(true);
+        console.log(error);
+      });
   }, []);
   return (
     <>
@@ -43,6 +46,9 @@ function Home() {
 }
 
 function listArticles(blogs: Blog[]) {
+  if (blogs.length === 0 || undefined) {
+    return <></>;
+  }
   return blogs.map((blog: Blog, i: number) => {
     return (
       <div key={i}>
