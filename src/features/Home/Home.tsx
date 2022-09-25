@@ -5,23 +5,35 @@ import { Blog } from "../../types";
 import DpgCard from "../../components/DpgCard";
 import { Link } from "react-router-dom";
 
+interface Error {
+  status?: number;
+  data: string;
+}
+
 function Home() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | undefined>(undefined);
   useEffect(() => {
     setLoading(true);
     api
       .get("blog", null)
       .then((response) => {
-        let recentBlogs = response as Blog[];
-        recentBlogs = recentBlogs.slice(0, 3);
-        setBlogs(recentBlogs);
+        console.log(response);
+        if (response.status === 200) {
+          let recentBlogs = response as Blog[];
+          recentBlogs = recentBlogs.slice(0, 3);
+          setBlogs(recentBlogs);
+        } else {
+          setError({ status: response.status, data: response.data });
+        }
       })
       .then(() => {
         setLoading(false);
       })
       .catch((error) => {
-        setLoading(true);
+        setLoading(false);
+        setError({ data: error });
         console.log(error);
       });
   }, []);
@@ -32,7 +44,13 @@ function Home() {
           <DpgCard.Header title="Welcome!" />
           <DpgCard.Body>
             {loading ? (
-              <DpgCard.Spinner />
+              <DpgCard.Spinner
+                title={
+                  error
+                    ? error.data
+                    : "sorry, we're experiencing technical issues"
+                }
+              />
             ) : blogs ? (
               listArticles(blogs)
             ) : (
@@ -46,6 +64,7 @@ function Home() {
 }
 
 function listArticles(blogs: Blog[]) {
+  console.log(blogs);
   if (blogs.length === 0 || undefined) {
     return <></>;
   }
