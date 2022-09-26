@@ -6,4 +6,4 @@ metadata:
   labels:
     {{- include "dpg-client.labels" . | nindent 4 }}
 data:
-  REACT_APP_API_URL: "https//dpgraham.com/api"
+  REACT_APP_API_URL: "https://dpgraham.com/api"

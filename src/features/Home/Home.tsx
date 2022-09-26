@@ -17,7 +17,7 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     api
-      .get("api/blog", null)
+      .get("blog", null)
       .then((response) => {
         console.log(response.status);
         console.log(response);

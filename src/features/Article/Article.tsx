@@ -14,7 +14,7 @@ function Article() {
   useEffect(() => {
     setLoading(true);
     api
-      .get(`api/blog/${id}`, null)
+      .get(`blog/${id}`, null)
       .then((response) => {
         console.log(response.status);
         console.log(response.headers);
