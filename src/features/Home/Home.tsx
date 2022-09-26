@@ -17,8 +17,9 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     api
-      .get("blog", null)
+      .get("api/blog", null)
       .then((response) => {
+        console.log(response.status);
         console.log(response);
         if (response.status === 200) {
           let recentBlogs = response as Blog[];

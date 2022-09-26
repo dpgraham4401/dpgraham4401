@@ -12,8 +12,10 @@ function BlogHome() {
   useEffect(() => {
     setLoading(true);
     api
-      .get("blog", null)
+      .get("api/blog", null)
       .then((response) => {
+        console.log(response.status);
+        console.log(response.headers);
         console.log(response);
         if (response.status === 200) {
           setBlogs(response as Blog[]);

@@ -14,8 +14,11 @@ function Article() {
   useEffect(() => {
     setLoading(true);
     api
-      .get(`blog/${id}`, null)
+      .get(`api/blog/${id}`, null)
       .then((response) => {
+        console.log(response.status);
+        console.log(response.headers);
+        console.log(response);
         setArticle(response as Blog);
       })
       .then(() => setLoading(false));

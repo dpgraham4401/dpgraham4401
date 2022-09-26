@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 interface RequestOptions {
   url: string;
@@ -19,6 +19,7 @@ function request(method: string) {
     if (body) {
       requestOptions.data = body;
     }
+    console.log(requestOptions.url);
     return axios(requestOptions as any).then((response) => {
       const { data } = response;
       return data;
@@ -28,10 +29,10 @@ function request(method: string) {
 
 // eslint-disable-next-line import/prefer-default-export
 const api = {
-  get: request('GET'),
-  post: request('POST'),
-  put: request('PUT'),
-  delete: request('DELETE'),
+  get: request("GET"),
+  post: request("POST"),
+  put: request("PUT"),
+  delete: request("DELETE"),
 };
 
 export default api;
