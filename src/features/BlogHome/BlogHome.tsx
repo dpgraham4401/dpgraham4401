@@ -8,17 +8,26 @@ import { Link } from "react-router-dom";
 function BlogHome() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | undefined>(undefined);
   useEffect(() => {
     setLoading(true);
     api
       .get("blog", null)
       .then((response) => {
-        setBlogs(response as Blog[]);
+        console.log(response);
+        if (response.status === 200) {
+          setBlogs(response as Blog[]);
+        } else {
+          setError(response.data);
+        }
       })
       .then(() => {
         setLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setError(error);
+      });
   }, []);
   return (
     <>
@@ -27,7 +36,7 @@ function BlogHome() {
           <DpgCard.Header title="Ramblings for Consumption" />
           <DpgCard.Body>
             {loading ? (
-              <DpgCard.Spinner />
+              <DpgCard.Spinner title={error?.message} />
             ) : blogs ? (
               listArticles(blogs)
             ) : (
