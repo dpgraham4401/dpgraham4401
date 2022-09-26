@@ -6,3 +6,5 @@ README.md
 .prettierrc.json
 .env.example
 node_modules/
+dpg-client/
+.github/
