@@ -16,10 +16,7 @@ function Article() {
     api
       .get(`blog/${id}`, null)
       .then((response) => {
-        console.log(response.status);
-        console.log(response.headers);
-        console.log(response);
-        setArticle(response as Blog);
+        setArticle(response.data as Blog);
       })
       .then(() => setLoading(false));
   }, [id]);

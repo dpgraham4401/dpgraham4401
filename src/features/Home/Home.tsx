@@ -19,10 +19,8 @@ function Home() {
     api
       .get("blog", null)
       .then((response) => {
-        console.log(response.status);
-        console.log(response);
         if (response.status === 200) {
-          let recentBlogs = response as Blog[];
+          let recentBlogs = response.data as Blog[];
           recentBlogs = recentBlogs.slice(0, 3);
           setBlogs(recentBlogs);
         } else {
@@ -42,7 +40,7 @@ function Home() {
     <>
       <Container>
         <DpgCard>
-          <DpgCard.Header title="Welcome!" />
+          <DpgCard.Header title="Recent Articles" />
           <DpgCard.Body>
             {loading ? (
               <DpgCard.Spinner
@@ -65,7 +63,6 @@ function Home() {
 }
 
 function listArticles(blogs: Blog[]) {
-  console.log(blogs);
   if (blogs.length === 0 || undefined) {
     return <></>;
   }

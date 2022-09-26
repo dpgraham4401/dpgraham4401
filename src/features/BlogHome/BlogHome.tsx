@@ -14,11 +14,8 @@ function BlogHome() {
     api
       .get("blog", null)
       .then((response) => {
-        console.log(response.status);
-        console.log(response.headers);
-        console.log(response);
         if (response.status === 200) {
-          setBlogs(response as Blog[]);
+          setBlogs(response.data as Blog[]);
         } else {
           setError(response.data);
         }

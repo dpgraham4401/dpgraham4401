@@ -19,10 +19,9 @@ function request(method: string) {
     if (body) {
       requestOptions.data = body;
     }
-    console.log(requestOptions.url);
     return axios(requestOptions as any).then((response) => {
-      const { data } = response;
-      return data;
+      // const { data } = response;
+      return response;
     });
   };
 }
