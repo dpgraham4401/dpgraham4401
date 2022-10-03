@@ -97,3 +97,4 @@ Stay away from pretty much every published by Packt
 
 - [ ] [Kubernetes Best Practices (Burns et al)](https://www.amazon.com/dp/B081J62KLW?ref=KC_GS_GB_US)
 - [ ] [Rust for Rustaceans (Gjengset)](https://www.amazon.com/Rust-Rustaceans-Programming-Experienced-Developers/dp/1718501854/ref=sr_1_1?keywords=rust+for+rustaceans&qid=1664802037&qu=eyJxc2MiOiIwLjc0IiwicXNhIjoiMC40MiIsInFzcCI6IjAuNTAifQ%3D%3D&sprefix=rust+for+ru%2Caps%2C86&sr=8-1)
+- [ ] [The Guns of August (Tuchman and Massie)](https://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093)
