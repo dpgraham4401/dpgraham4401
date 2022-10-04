@@ -22,11 +22,15 @@
 
 
 <!-- Github stats -->
+<!-- 
 <div align='center'>
-   <a href="https://github.com/dpgraham4401"><img height=150 src="https://github-readme-stats.vercel.app/api?username=dpgraham4401&show_icons=true&count_private=true&theme=dark&hide_border=true" alt="David Graham's Github stats"></a>
-   <a href="https://github.com/dpgraham4401"><img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&layout=compact&exclude_repo=haztrakjs,.dotfiles,glitchycyborg&hide=vba,matlab,css,scss,html&theme=dark&hide_border=true&custom_title=Commonly%20Used%20Languages" alt="David Graham's Top Languages"></a>
+   <a href="https://github.com/dpgraham4401"><img height=150 src="https://github-readme-stats.vercel.app/api/?username=dpgraham4401&show_icons=true&count_private=true&theme=dark&hide_border=true" alt="David Graham's Github stats"></a>
+  -->
+  <!-- 
+  <a href="https://github.com/dpgraham4401"><img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=dpgraham4401&layout=compact&exclude_repo=haztrakjs,.dotfiles,glitchycyborg&hide=vba,matlab,css,scss,html&theme=dark&hide_border=true&custom_title=Commonly%20Used%20Languages" alt="David Graham's Top Languages"></a>
 </div>
-
+ -->
+ 
 <h4 align='center'>
   Tech Stack
 </h4>  
