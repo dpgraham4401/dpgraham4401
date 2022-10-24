@@ -37,6 +37,9 @@ I currently am on a computer-oriented learning kick so this list skews that way.
 
 - [ ] [The Unix and Linux System Administration Handbook (Nemeth +)](https://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0134277554/ref=sr_1_1?keywords=unix+and+linux+system+administration+handbook&qid=1651783202&s=books&sprefix=The+unix+and+lin%2Cstripbooks%2C67&sr=1-1)
 
+- [x] [Docker Deep Dive (Poulton)](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF/ref=sr_1_1?crid=1RFW7X994LWD1&keywords=docker+deep+dive&qid=1666639274&qu=eyJxc2MiOiIxLjU4IiwicXNhIjoiMS40MSIsInFzcCI6IjEuMzIifQ%3D%3D&s=books&sprefix=docker+deep+dive%2Cstripbooks%2C67&sr=1-1)
+ * Well written coverage of how Docker works under the hood, not a full API/CLI reference but really takes Docker from the abstract to the concrete. Cheap, and gets updates.
+
 
 ### Fun
 
