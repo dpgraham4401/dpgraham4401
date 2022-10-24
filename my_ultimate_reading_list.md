@@ -9,7 +9,7 @@ I currently am on a computer-oriented learning kick so this list skews that way.
 - [ ] [The Pragmatic Prgrammer (Thomas and Hunt)](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=pd_bxgy_img_sccl_2/132-7763395-0841352?pd_rd_w=J7jlp&pf_rd_p=6b3eefea-7b16-43e9-bc45-2e332cbf99da&pf_rd_r=5YMBCJAG6Y6BW4QK46RV&pd_rd_r=f82b12a5-c7c0-4bc9-b45d-87f9118a423e&pd_rd_wg=E7KUG&pd_rd_i=0135957052&psc=1)
 
 - [X] [The Kubernetes Book - 2022 edition (Nigel Poulton)](https://www.amazon.com/Kubernetes-Book-Version-November-2018-ebook/dp/B072TS9ZQZ/ref=sr_1_3?keywords=the+kubernetes+book+2022+edition&qid=1660389961&sprefix=the+kuber%2Caps%2C54&sr=8-3)
- * Good for getting the core concepts. Good as an ebook.
+ * Great for the core concepts of K8. Good as an ebook.
 
 - [X] [Pro Git (Chacon & Straub)](https://www.amazon.com/Pro-Git-Scott-Chacon-ebook/dp/B01ISNIKES/ref=sr_1_1?crid=1O11N3VF3K50M&keywords=Pro+Git&qid=1660390419&sprefix=pro+git%2Caps%2C69&sr=8-1)
  * Good (free) comprehensive guide.
@@ -21,19 +21,19 @@ I currently am on a computer-oriented learning kick so this list skews that way.
  * On the To-Do list. 
 
 - [x] [Learning PHP, MySQL & JavaScript](https://www.amazon.com/Learning-MySQL-JavaScript-Step-Step/dp/1492093823/ref=sr_1_1?keywords=learning+php%2C+mysql+%26+javascript&qid=1654520437&s=books&sprefix=Learning+PHP%2Cstripbooks%2C69&sr=1-1)
- * Fantastic intro to hands on web development, this one is on here for sentimental reasons.
+ * This one is on here for sentimental reasons, one of my first hands on introductions to web development.
 
 - [x] [Learning TypeScript](https://www.amazon.com/Learning-TypeScript-Josh-Goldberg-ebook/dp/B0B35C211B/ref=sr_1_3?crid=148Z4U6J07WE8&keywords=Typescript&qid=1660389178&s=digital-text&sprefix=typescript%2Cdigital-text%2C57&sr=1-3)
  * Just as long as it needs to be and enjoyable.
 
 - [x] [The Rust Book](https://www.amazon.com/Rust-Programming-Language-Covers-2018-ebook/dp/B07SRQ97RD/ref=sr_1_5?crid=7GBV2VCB7YZU&keywords=the+rust+book&qid=1664799604&qu=eyJxc2MiOiIwLjQwIiwicXNhIjoiMC4zMiIsInFzcCI6IjAuNTIifQ%3D%3D&s=digital-text&sprefix=the+rust+book%2Cdigital-text%2C70&sr=1-5)
- * The self-proclaimed classic intro, good as ebook.
+ * The self-proclaimed classic intro. Good as an ebook.
 
 - [x] [The Twelve Factor App (?)](https://12factor.net/)
  * Free online guide.
 
 - [x] [The Phoenix Project (Kim, Behr, & Spafford)](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592)
- * Oddly entertaining narative on why devops is good, Good as Audiobook.
+ * Oddly entertaining narative on why devops is beneficial. Good as an Audiobook.
 
 - [ ] [The Unix and Linux System Administration Handbook (Nemeth +)](https://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0134277554/ref=sr_1_1?keywords=unix+and+linux+system+administration+handbook&qid=1651783202&s=books&sprefix=The+unix+and+lin%2Cstripbooks%2C67&sr=1-1)
 
