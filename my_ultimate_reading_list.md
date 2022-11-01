@@ -81,23 +81,29 @@ I currently am on a computer-oriented learning kick so this list skews that way.
 - [x] [Object-Oriented Python: Master OOP by Building Games and GUIs (Kalb) ](https://www.amazon.com/s?k=object+oriented+programming+python&i=digital-text&sprefix=object+orient%2Cdigital-text%2C65&ref=nb_sb_ss_ts-doa-p_2_13)
  * Great tid bits on object oriented programming that actually made me appreciate interfaces types in Golang much more, skip the gui/game making sections.
 
-- [x] [Docker for Developers (Bullington-McGuire et al)](https://www.amazon.com/Docker-Developers-application-containers-continuous/dp/1789536057/ref=sr_1_1?keywords=docker+for+developers&qid=1664803100&qu=eyJxc2MiOiIxLjU2IiwicXNhIjoiMC45MSIsInFzcCI6IjAuOTgifQ%3D%3D&sprefix=docker+for+%2Caps%2C76&sr=8-1)
- * A little verbose, but I haven't found a better alternative.
 
-
-# Do not recomend
+# Save your money
 
 Stay away from pretty much every published by Packt
 
 - [ ] [Python for Devops (Gift et al)](https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation-ebook/dp/B082P97LDW/ref=sr_1_1?crid=2HPQKFN8R1T64&keywords=python+for+devops&qid=1664799859&qu=eyJxc2MiOiIxLjMyIiwicXNhIjoiMC43NSIsInFzcCI6IjAuNDcifQ%3D%3D&s=digital-text&sprefix=python+for+devops%2Cdigital-text%2C63&sr=1-1)
- * Couldn't even finish, just ramblings with little useful info on using python for devops
+ * Couldn't even finish, just ramblings with little useful info on using python for devops ro automation that can't be found in a python 101 book.
  
  - [x] [Learning React (Banks and Porcello](https://www.amazon.com/Learning-React-Modern-Patterns-Developing-ebook/dp/B08B489X8Q/ref=sr_1_1?crid=NMF3RZKIIWEU&keywords=Learning+react&qid=1664800003&qu=eyJxc2MiOiIyLjU4IiwicXNhIjoiMi4wMCIsInFzcCI6IjIuMjgifQ%3D%3D&s=digital-text&sprefix=learning+react%2Cdigital-text%2C58&sr=1-1)
  * Not bad, but woudn't say it's good. Plenty of technical mistakes, but I would still take it over the out-dated react documentation 
-   
  
+ - [x] [Docker for Developers (Bullington-McGuire et al)](https://www.amazon.com/Docker-Developers-application-containers-continuous/dp/1789536057/ref=sr_1_1?keywords=docker+for+developers&qid=1664803100&qu=eyJxc2MiOiIxLjU2IiwicXNhIjoiMC45MSIsInFzcCI6IjAuOTgifQ%3D%3D&sprefix=docker+for+%2Caps%2C76&sr=8-1)
+ * Not bad necessarily, but not worth the dosh. I wish I had just went with Docker Deep Dive initially. 
+ 
+ - [x] [Wicked Cool Shell Scripts (Taylor)](https://www.amazon.com/Wicked-Cool-Shell-Scripts-2nd/dp/1593276028)
+ * I have mixed feelings about this one; the shell scripts may be cool, but that doesn't mean they're useful. 
+
+ - [x] [Node.js Cookbook (Griggs)](https://www.amazon.com/Node-Cookbook-techniques-server-side-development-ebook/dp/B08KTPD498/ref=sr_1_3?crid=1Q3YDCHYBGC53&keywords=node.js+cookbook&qid=1667305628&qu=eyJxc2MiOiIwLjAwIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=books&sprefix=node.js+cookbook%2Cstripbooks%2C56&sr=1-3)
+ * Again, like most books to come out of Packt publishing, it's not bad but offers little material that you couldn't just pick up from many package's 'Getting Started' section.
+
 # In the Hopper
 
 - [ ] [Kubernetes Best Practices (Burns et al)](https://www.amazon.com/dp/B081J62KLW?ref=KC_GS_GB_US)
 - [ ] [Rust for Rustaceans (Gjengset)](https://www.amazon.com/Rust-Rustaceans-Programming-Experienced-Developers/dp/1718501854/ref=sr_1_1?keywords=rust+for+rustaceans&qid=1664802037&qu=eyJxc2MiOiIwLjc0IiwicXNhIjoiMC40MiIsInFzcCI6IjAuNTAifQ%3D%3D&sprefix=rust+for+ru%2Caps%2C86&sr=8-1)
 - [ ] [The Guns of August (Tuchman and Massie)](https://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093)
+- [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
