@@ -1,5 +1,7 @@
 # Reads Worth Their Weight when Moving
 I currently am on a computer-oriented learning kick so this list skews that way.
+
+Got any Reading Suggestions? open a PR :)
   
 - [x] [The Cathedral and the Bazaar (Raymond)](https://www.amazon.com/Cathedral-Bazaar-Musings-Accidental-Revolutionary-ebook/dp/B0026OR3LM/ref=sr_1_1?keywords=the+cathedral+and+the+bazaar&qid=1651241395&s=books&sprefix=The+cathedral+an%2Cstripbooks%2C62&sr=1-1)
  * The classic take on why open-source is kick-butt.
@@ -107,3 +109,5 @@ Stay away from pretty much every published by Packt
 - [ ] [Rust for Rustaceans (Gjengset)](https://www.amazon.com/Rust-Rustaceans-Programming-Experienced-Developers/dp/1718501854/ref=sr_1_1?keywords=rust+for+rustaceans&qid=1664802037&qu=eyJxc2MiOiIwLjc0IiwicXNhIjoiMC40MiIsInFzcCI6IjAuNTAifQ%3D%3D&sprefix=rust+for+ru%2Caps%2C86&sr=8-1)
 - [ ] [The Guns of August (Tuchman and Massie)](https://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093)
 - [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
+- [ ] [Unit Testing: Principles, Practices and Patterns (Khorikov)](https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns/dp/1617296279)
+
