@@ -34,7 +34,11 @@ function Article() {
                 children={article.content}
                 components={{
                   img: ({ node, ...props }) => (
-                    <img style={{ maxWidth: "100%" }} {...props} />
+                    <img
+                      style={{ maxWidth: "100%" }}
+                      alt={"alt description"}
+                      {...props}
+                    />
                   ),
                 }}
               />
