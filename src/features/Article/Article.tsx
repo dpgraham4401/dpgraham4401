@@ -8,9 +8,9 @@ import DpgCard from "../../components/DpgCard";
 
 function Article() {
   const { id } = useParams();
-
   const [loading, setLoading] = useState<boolean>(true);
   const [article, setArticle] = useState<Blog | undefined>(undefined);
+
   useEffect(() => {
     setLoading(true);
     api
@@ -20,16 +20,24 @@ function Article() {
       })
       .then(() => setLoading(false));
   }, [id]);
+
   return (
     <>
       <Container>
         <DpgCard>
-          <DpgCard.Header title="hello card title" />
+          <DpgCard.Header title={article?.title} />
           <DpgCard.Body>
             {loading ? (
               <DpgCard.Spinner />
             ) : article ? (
-              <ReactMarkdown children={article.content} />
+              <ReactMarkdown
+                children={article.content}
+                components={{
+                  img: ({ node, ...props }) => (
+                    <img style={{ maxWidth: "100%" }} {...props} />
+                  ),
+                }}
+              />
             ) : (
               "ERROR: We're sorry, we're having trouble fetching this article."
             )}

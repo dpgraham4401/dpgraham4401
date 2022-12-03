@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, CardProps } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,7 +9,7 @@ interface DpgCardProps {
   message?: string;
 }
 
-function DpgCard({ children }: DpgCardProps) {
+function DpgCard({ children }: CardProps) {
   return <Card className="m-3 border-0">{children}</Card>;
 }
 
