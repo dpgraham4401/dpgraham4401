@@ -40,7 +40,7 @@ Got any Reading Suggestions? open a PR :)
 - [ ] [The Unix and Linux System Administration Handbook (Nemeth +)](https://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0134277554/ref=sr_1_1?keywords=unix+and+linux+system+administration+handbook&qid=1651783202&s=books&sprefix=The+unix+and+lin%2Cstripbooks%2C67&sr=1-1)
 
 - [x] [Docker Deep Dive (Poulton)](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF/ref=sr_1_1?crid=1RFW7X994LWD1&keywords=docker+deep+dive&qid=1666639274&qu=eyJxc2MiOiIxLjU4IiwicXNhIjoiMS40MSIsInFzcCI6IjEuMzIifQ%3D%3D&s=books&sprefix=docker+deep+dive%2Cstripbooks%2C67&sr=1-1)
- * Well written coverage of how Docker works under the hood, not a full API/CLI reference but really takes Docker from the abstract to the concrete. Cheap, and gets updates.
+ * Well written coverage of how Docker works under the hood, not a full API/CLI reference but really takes Docker from the abstract to the concrete. Cheap, and gets updates frequently.
 
 
 ### Fun
@@ -83,10 +83,12 @@ Got any Reading Suggestions? open a PR :)
 - [x] [Object-Oriented Python: Master OOP by Building Games and GUIs (Kalb) ](https://www.amazon.com/s?k=object+oriented+programming+python&i=digital-text&sprefix=object+orient%2Cdigital-text%2C65&ref=nb_sb_ss_ts-doa-p_2_13)
  * Great tid bits on object oriented programming that actually made me appreciate interfaces types in Golang much more, skip the gui/game making sections.
 
+- [x] [Rust for Rustaceans (Gjengset)](https://www.amazon.com/Rust-Rustaceans-Programming-Experienced-Developers/dp/1718501854/ref=sr_1_1?keywords=rust+for+rustaceans&qid=1664802037&qu=eyJxc2MiOiIwLjc0IiwicXNhIjoiMC40MiIsInFzcCI6IjAuNTAifQ%3D%3D&sprefix=rust+for+ru%2Caps%2C86&sr=8-1)
+ * Helped me start contributing quality code, as a collaboator, to my first open source Rust project.
 
 # Save your money
 
-Stay away from pretty much every published by Packt
+Stay away from pretty much every book published by Packt.
 
 - [ ] [Python for Devops (Gift et al)](https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation-ebook/dp/B082P97LDW/ref=sr_1_1?crid=2HPQKFN8R1T64&keywords=python+for+devops&qid=1664799859&qu=eyJxc2MiOiIxLjMyIiwicXNhIjoiMC43NSIsInFzcCI6IjAuNDcifQ%3D%3D&s=digital-text&sprefix=python+for+devops%2Cdigital-text%2C63&sr=1-1)
  * Couldn't even finish, just ramblings with little useful info on using python for devops ro automation that can't be found in a python 101 book.
@@ -105,9 +107,16 @@ Stay away from pretty much every published by Packt
 
 # In the Hopper
 
-- [ ] [Kubernetes Best Practices (Burns et al)](https://www.amazon.com/dp/B081J62KLW?ref=KC_GS_GB_US)
-- [ ] [Rust for Rustaceans (Gjengset)](https://www.amazon.com/Rust-Rustaceans-Programming-Experienced-Developers/dp/1718501854/ref=sr_1_1?keywords=rust+for+rustaceans&qid=1664802037&qu=eyJxc2MiOiIwLjc0IiwicXNhIjoiMC40MiIsInFzcCI6IjAuNTAifQ%3D%3D&sprefix=rust+for+ru%2Caps%2C86&sr=8-1)
-- [ ] [The Guns of August (Tuchman and Massie)](https://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093)
-- [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
-- [ ] [Unit Testing: Principles, Practices and Patterns (Khorikov)](https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns/dp/1617296279)
+Some of these I've started but just take a long time.
 
+- [ ] [Kubernetes Best Practices (Burns et al)](https://www.goodreads.com/book/show/50204703-kubernetes-best-practices?ac=1&from_search=true&qid=aoS7mRnwIJ&rank=1h)
+ * This is a slow read.
+- [ ] [The Guns of August (Tuchman and Massie)](https://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093)
+ * To Do
+- [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
+ * This is a slow read.
+- [ ] [Terraform: up and running (Brikman)](https://www.goodreads.com/book/show/42589303-terraform?ac=1&from_search=true&qid=s3HGSyWn7K&rank=4)
+ * Seems a little long, but I like the succinct writing style so we'll see.
+
+- [ ] [Unit Testing: Principles, Practices and Patterns (Khorikov)](https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns/dp/1617296279)
+ * Well written, great section on identifying what makes a quality test and doesn't just push the idea that you should have 100% code coverage.
