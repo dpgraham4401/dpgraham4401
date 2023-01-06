@@ -4,7 +4,7 @@
 </h1>
 
 <div align='center'>
-  <p>I'm a full-stack developer, with a master's degress in Geophysics, currently working for the EPA. I'm not afriad to pick up new skills to get a job done. </p>
+  <p>I'm a full-stack developer, with a master's degree in Geophysics, currently working for the EPA. I'm not afriad to pick up new skills to get a job done. </p>
 </div>
 
 <!-- Github stats -->
