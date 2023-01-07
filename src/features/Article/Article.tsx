@@ -3,8 +3,8 @@ import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { api } from "../../services";
 import { Blog } from "../../types";
-import ReactMarkdown from "react-markdown";
 import DpgCard from "../../components/DpgCard";
+import DpgMarkdown from "../../components/DpgMarkdown";
 
 function Article() {
   const { id } = useParams();
@@ -30,18 +30,7 @@ function Article() {
             {loading ? (
               <DpgCard.Spinner />
             ) : article ? (
-              <ReactMarkdown
-                children={article.content}
-                components={{
-                  img: ({ node, ...props }) => (
-                    <img
-                      style={{ maxWidth: "100%" }}
-                      alt={"alt description"}
-                      {...props}
-                    />
-                  ),
-                }}
-              />
+              <DpgMarkdown article={article} />
             ) : (
               "ERROR: We're sorry, we're having trouble fetching this article."
             )}
