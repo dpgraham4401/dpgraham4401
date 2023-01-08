@@ -5,8 +5,6 @@ import { Blog } from "../../types";
 import DpgCard from "../../components/DpgCard";
 import { Link } from "react-router-dom";
 import DpgToast from "../../components/DpgToast";
-import Footer from "../../components/Footer";
-import TopNav from "../../components/TopNav";
 
 interface Error {
   status?: number;
