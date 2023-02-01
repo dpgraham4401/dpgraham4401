@@ -33,11 +33,9 @@ I woulnd't say these categories are hard and fast. Don't get offended if you don
 - [ ] [The C Programming Language (Kernigan and Ritchie)](https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628/ref=sr_1_1?keywords=the+c+programming+language&qid=1651783300&s=books&sprefix=The+C+programm%2Cstripbooks%2C68&sr=1-1)
     * On the back burner, not using C a lot right now.
 
-- [ ] [Design Patterns: Elements of Reusable Object-Oriented Software (Gamma et al.)]()
+- [ ] [Design Patterns: Elements of Reusable Object-Oriented Software (Gamma et al.)](https://www.goodreads.com/book/show/85009.Design_Patterns)
 
-- [ ] [The DevOps Handbook (Kim et al.)]()
-
-- [ ] [Site Reliability Engineering (Beyer et al.)]()
+- [ ] [The DevOps Handbook (Allspaw et al.)](https://www.goodreads.com/book/show/26083308-the-devops-handbook?ref=nav_sb_ss_1_10)
 
 - [x] [The Rust Book](https://www.amazon.com/Rust-Programming-Language-Covers-2018-ebook/dp/B07SRQ97RD/ref=sr_1_5?crid=7GBV2VCB7YZU&keywords=the+rust+book&qid=1664799604&qu=eyJxc2MiOiIwLjQwIiwicXNhIjoiMC4zMiIsInFzcCI6IjAuNTIifQ%3D%3D&s=digital-text&sprefix=the+rust+book%2Cdigital-text%2C70&sr=1-5)
     * The self-proclaimed classic intro. Good as an ebook. Will make any programmer think.
