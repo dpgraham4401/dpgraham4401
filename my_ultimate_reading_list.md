@@ -75,7 +75,7 @@ These were books I enjoyed, got something out of, or found them useful in some w
 - [x] [Introducing Python - Modern Computing in Simple Packages (Lubanovic)](https://www.amazon.com/Introducing-Python-Modern-Computing-Packages-dp-1492051365/dp/1492051365/ref=dp_ob_title_bk)
     * Good as an all around reference for the language
 
-- [ ] [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D)
+- [x] [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D)
     * Interesting, but often a slog. coulnd't finsih.
 
 - [x] [Object-Oriented Python: Master OOP by Building Games and GUIs (Kalb) ](https://www.amazon.com/s?k=object+oriented+programming+python&i=digital-text&sprefix=object+orient%2Cdigital-text%2C65&ref=nb_sb_ss_ts-doa-p_2_13)
@@ -89,6 +89,9 @@ These were books I enjoyed, got something out of, or found them useful in some w
 
 - [x] [Javascript - The Definitive Guide (Flanagan)](https://www.amazon.com/JavaScript-Definitive-Most-Used-Programming-Language/dp/1491952024/ref=sr_1_1?keywords=javascript+the+definitive+guide&qid=1651783105&s=books&sprefix=javascript+the+%2Cstripbooks%2C81&sr=1-1)
     * This is a questionable inclusion, the section on the DOM was a little lacking IMO
+
+- [x] [How the Internet Happened (McCullough)](https://www.goodreads.com/en/book/show/38212134)
+    * enjoyable romp through recent history
  
 ## Save your money
 
