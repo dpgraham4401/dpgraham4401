@@ -8,12 +8,12 @@ interface State {
   hasError: boolean;
 }
 
-class FallbackError extends Component<Props, State> {
+export class FallbackError extends Component<Props, State> {
   public state: State = {
     hasError: false,
   };
 
-  public static getDerivedStateFromError(_: Error): State {
+  public static getDerivedStateFromError(): State {
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
   }
@@ -34,5 +34,3 @@ class FallbackError extends Component<Props, State> {
     return this.props.children;
   }
 }
-
-export default FallbackError;

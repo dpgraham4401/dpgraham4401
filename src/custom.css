@@ -1,0 +1,22 @@
+/* custom.css */
+:root {
+    --dpg-teal: #2db4ad;
+    --dpg-red-light: #f75e5f;
+    --dpg-red-dark: #6b0009;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--dpg-teal);
+}
+
+a:hover {
+    color: var(--dpg-red-light);
+}

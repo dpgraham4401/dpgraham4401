@@ -1,35 +1,53 @@
-import React from "react";
+import { Box, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import { customTheme } from "components/customTheme";
+import { DpgPageError, FallbackError } from "components/DpgError";
+import { AppHeader } from "components/Nav";
+import { NavDrawer } from "components/Nav/NavDrawer";
+import { AboutMe } from "features/AboutMe";
+import { Articles } from "features/Articles";
+import { Home } from "features/Home";
+import React, { useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "features/Home";
-import Article from "features/Article";
-import BlogHome from "features/BlogHome";
-import TopNav from "components/TopNav";
-import Footer from "components/Footer";
-import FallbackError from "components/FallbackError";
-import DpgError from "components/DpgError";
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
+  const prefersDarkMode: boolean = useMediaQuery(
+    "(prefers-color-scheme: dark)"
+  );
+  const [darkMode, setDarkMode] = useState<boolean>(prefersDarkMode);
+
+  const theme = useMemo(() => customTheme(darkMode), [darkMode]);
+
   return (
     <>
-      <FallbackError>
-        <BrowserRouter>
-          <main className="bg-dark flex-fill py-1">
-            <TopNav />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/blog" element={<BlogHome />} />
-              <Route path="/blog/:id" element={<Article />} />
-              <Route
-                path="*"
-                element={
-                  <DpgError statusCode={404} message={"page not found"} />
-                }
-              />
-            </Routes>
-          </main>
-          <Footer />
-        </BrowserRouter>
-      </FallbackError>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <FallbackError>
+          <BrowserRouter>
+            <AppHeader
+              showMenu={showMenu}
+              setShowMenu={setShowMenu}
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+            />
+            <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
+            {/* padding around the main content */}
+            <Box p={4}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/articles/*" element={<Articles />} />
+                <Route path="/about" element={<AboutMe />} />
+                <Route
+                  path="*"
+                  element={
+                    <DpgPageError statusCode={404} message={"page not found"} />
+                  }
+                />
+              </Routes>
+            </Box>
+          </BrowserRouter>
+        </FallbackError>
+      </ThemeProvider>
     </>
   );
 }
