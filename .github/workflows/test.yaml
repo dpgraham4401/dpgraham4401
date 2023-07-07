@@ -1,4 +1,4 @@
-name: Test, Build, Push & Deploy
+name: Test
 # This will run when a tag is pushed
 
 on:
