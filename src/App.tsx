@@ -1,4 +1,5 @@
-import { Box, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import { AppContext } from "components/appContext";
 import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
 import { AppHeader } from "components/Nav";
@@ -21,19 +22,18 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <FallbackError>
-          <BrowserRouter>
-            <AppHeader
-              showMenu={showMenu}
-              setShowMenu={setShowMenu}
-              darkMode={darkMode}
-              setDarkMode={setDarkMode}
-            />
-            <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
-            {/* padding around the main content */}
-            <Box p={4}>
+      <AppContext.Provider value={{ showMenu, darkMode }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <FallbackError>
+            <BrowserRouter>
+              <AppHeader
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+              />
+              <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/articles/*" element={<Articles />} />
@@ -46,10 +46,11 @@ function App() {
                   }
                 />
               </Routes>
-            </Box>
-          </BrowserRouter>
-        </FallbackError>
-      </ThemeProvider>
+              {/*</Box>*/}
+            </BrowserRouter>
+          </FallbackError>
+        </ThemeProvider>
+      </AppContext.Provider>
     </>
   );
 }

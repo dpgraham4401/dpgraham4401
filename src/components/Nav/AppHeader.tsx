@@ -1,8 +1,8 @@
-import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
-import React, { Dispatch, SetStateAction } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
+import React, { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface TopNavProps {
@@ -23,17 +23,23 @@ export function AppHeader({
   };
   const navigate = useNavigate();
 
+  let iconBG = "#2db4ad";
+  if (!darkMode) {
+    iconBG = "#282828";
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{p: 1}}>
+      <AppBar position="static" sx={{ p: 1 }}>
         <Toolbar>
           <IconButton
             size="small"
             edge="start"
-            aria-label="menu"
+            aria-label="home"
+            name="home"
             sx={{ mr: 2 }}
             onClick={() => navigate("/")}
-            style={{ backgroundColor: "#2db4ad" }}
+            style={{ backgroundColor: iconBG }}
           >
             <img
               src="/rp_bg_trans.png"
@@ -44,11 +50,21 @@ export function AppHeader({
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
           {/* Dark Mode button*/}
-          <IconButton onClick={toggleDarkMode} color="inherit">
+          <IconButton
+            onClick={toggleDarkMode}
+            color="inherit"
+            aria-label="dark-mode-button"
+            name="toggle-dark-mode"
+          >
             {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
           {/* Toggle navigation button*/}
-          <IconButton color="inherit" onClick={() => setShowMenu(!showMenu)}>
+          <IconButton
+            color="inherit"
+            onClick={() => setShowMenu(!showMenu)}
+            aria-label="toggle-menu-button"
+            name="toggle-menu"
+          >
             <MenuIcon fontSize="large" />
           </IconButton>
         </Toolbar>
