@@ -32,16 +32,16 @@
 ### 🔭 I’m currently working on ...
 
   - [Haztrak](https://github.com/USEPA/haztrak) An open-source hazardous waste management web application designed to track and sign for hazardous waste shipments through EPA's services.
-  - Obtaining my Google [Associate Cloud Engineer certification](https://cloud.google.com/learn/certification/cloud-engineer) 
+  - Migrating my personal website, https://dpgraham.com, from a self-managed k8 cluster to Google Cloud and obtaining my GCP [Associate Cloud Engineer certification](https://cloud.google.com/learn/certification/cloud-engineer) in the process. 
 
 ### 🌱 I’m currently learning ...
-
+  
+  - Home DIY repairs
   - Reading up on [Devops concepts and best practices](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
        - [IaC with Terraform](https://www.goodreads.com/book/show/42589303-terraform)
-       - Implementing [on Google Cloud](https://cloud.google.com/)
+       - Implementing the above on [Google Cloud](https://cloud.google.com/)
        - and putting them into practice with my [home cluster](/assets/homeserver.JPG)
   - Building intuitive and accessible user interfaces with [React](https://react.dev/)
-  - Checking out how to use [Rust with Python](https://github.com/dpgraham4401/seis) with any remaining time
 
 ### 📖 I’m currently reading ...
 
