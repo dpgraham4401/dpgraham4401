@@ -5,8 +5,10 @@ name: Deploy to Development Environment
 
 on:
   push:
-#      branches:
-#      - main
+    branches:
+      - main
+    tags-ignore:
+      - '*'
 
 jobs:
   build_gcp_image:
@@ -29,5 +31,5 @@ jobs:
     with:
       environment: development
       version: ${{ needs.build_gcp_image.outputs.version }}
-      service: dpgraham-frontend
+      service: client-dev
     secrets: inherit

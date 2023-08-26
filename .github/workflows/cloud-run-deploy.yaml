@@ -9,7 +9,6 @@ on:
         description: 'The environment to deploy to'
         required: true
         type: string
-        default: 'production'
       version:
         description: 'The version of the image to deploy'
         required: true
@@ -19,7 +18,7 @@ on:
         description: 'The name of the Cloud Run service to deploy to'
         required: true
         type: string
-        default: 'dpgraham-frontend'
+        default: 'client'
 
 env:
   PROJECT_ID: ${{ vars.PROJECT_ID }}
