@@ -22,6 +22,9 @@ jobs:
   deploy_to_cloud_run:
     name: Deploy to Cloud Run
     if: github.repository == 'dpgraham-com/dpgraham-client'
+    permissions:
+      id-token: write
+      contents: read
     uses: ./.github/workflows/cloud-run-deploy.yaml
     needs: build_gcp_image
     with:
