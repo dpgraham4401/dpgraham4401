@@ -46,6 +46,14 @@ Books that talk about abstract concepts, system design, and idea worms that'll h
 
 - [ ] [The DevOps Handbook (Allspaw et al.)](https://www.goodreads.com/book/show/26083308-the-devops-handbook?ref=nav_sb_ss_1_10)
 
+- [ ] [Infrastructure as Code 2nd edition (Kief Morris)](https://www.goodreads.com/book/show/53481701-infrastructure-as-code)
+    - so far it's very high level, arguably too high.
+
+- [ ] [Network Warrior(Gary A. Donahue)](https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp)
+
+- [ ] [Observability Engineering(Charity Majors)]([https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp](https://www.goodreads.com/notes/61046909-observability-engineering/159242665-kelly-graham?ref=abp))
+
+
 ### Technical Skills
 
 These were books I read to pick up a new skill.
@@ -101,7 +109,7 @@ These were books I read to pick up a new skill.
 - [ ] [Kubernetes Best Practices (Burns et al)](https://www.goodreads.com/book/show/50204703-kubernetes-best-practices?ac=1&from_search=true&qid=aoS7mRnwIJ&rank=1h)
     - This is a slow read.
 
-- [ ] [Terraform: up and running (Brikman)](https://www.goodreads.com/book/show/42589303-terraform?ac=1&from_search=true&qid=s3HGSyWn7K&rank=4)
+- [x] [Terraform: up and running (Brikman)](https://www.goodreads.com/book/show/42589303-terraform?ac=1&from_search=true&qid=s3HGSyWn7K&rank=4)
     - Seems a little long, it meanders into thing it should just assume the reader knows, but I like the writing style so far.
 
 
@@ -158,4 +166,4 @@ This are books I usually felt that I could have done without, or maybe there was
     - Again, like most books to come out of Packt publishing, it's not bad but offers little material that you couldn't just pick up online the documentation.
 
 - [x] [Think Java: How to Think Like a Computer Scientist](https://www.goodreads.com/book/show/51787793-think-java)
-    - The title should be "basics of computer programming with java". Ok if that's what you need.
+    - I only take issue with the title, which should be "basics of programming with java". Not bad if that's what you're looking for.
