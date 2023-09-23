@@ -1,5 +1,5 @@
 import { Box, Grid, IconButton, Typography } from "@mui/material";
-import { useTitle } from "components/hooks";
+import { useTitle } from "hooks";
 import React from "react";
 
 /**
@@ -27,7 +27,9 @@ export function Home() {
               sx={{ marginTop: "200px", backgroundColor: "#1fafa8" }}
             >
               <img
-                src="/rp_bg_trans.png"
+                src={`${
+                  import.meta.env.VITE_SITE_URL
+                }/static/images/rp_bg_trans.png`}
                 width={"200"}
                 height={"175"}
                 alt="DPGraham"
