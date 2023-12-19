@@ -44,15 +44,16 @@ Books that talk about abstract concepts, system design, and idea worms that'll h
 - [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
     - This is a slow read.
 
-- [ ] [The DevOps Handbook (Allspaw et al.)](https://www.goodreads.com/book/show/26083308-the-devops-handbook?ref=nav_sb_ss_1_10)
+- [x] [The DevOps Handbook (Allspaw et al.)](https://www.goodreads.com/book/show/26083308-the-devops-handbook?ref=nav_sb_ss_1_10)
 
-- [ ] [Infrastructure as Code 2nd edition (Kief Morris)](https://www.goodreads.com/book/show/53481701-infrastructure-as-code)
+- [x] [Infrastructure as Code 2nd edition (Kief Morris)](https://www.goodreads.com/book/show/53481701-infrastructure-as-code)
     - so far it's very high level, arguably too high.
 
 - [ ] [Network Warrior(Gary A. Donahue)](https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp)
 
-- [ ] [Observability Engineering(Charity Majors)]([https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp](https://www.goodreads.com/notes/61046909-observability-engineering/159242665-kelly-graham?ref=abp))
+- [x] [Observability Engineering(Charity Majors)]([https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp](https://www.goodreads.com/notes/61046909-observability-engineering/159242665-kelly-graham?ref=abp))
 
+- [x] [Building Microservices (Sam Newman)](https://www.goodreads.com/book/show/22512931)
 
 ### Technical Skills
 
