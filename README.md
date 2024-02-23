@@ -33,17 +33,12 @@
 
   - [Haztrak](https://github.com/USEPA/haztrak) An open-source hazardous waste management web application designed to track and sign for hazardous waste shipments through EPA's services.
   - Migrating my personal website, https://dpgraham.com, from a self-managed k8 cluster to Google Cloud and obtaining my GCP [Associate Cloud Engineer certification](https://cloud.google.com/learn/certification/cloud-engineer) in the process. 
+  - [The Manifest Game](https://github.com/USEPA/the-manifest-game), An interactive decision tree to help e-Manifest
+  users determine the correct course of action.
 
 ### 🌱 I’m currently learning ...
   
-  - Home DIY repairs
-  - Reading up on [Devops concepts and best practices](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
-       - [IaC with Terraform](https://www.goodreads.com/book/show/42589303-terraform)
-       - Implementing the above on [Google Cloud](https://cloud.google.com/)
-       - and putting them into practice with my [home cluster](/assets/homeserver.JPG)
-  - Building intuitive and accessible user interfaces with [React](https://react.dev/)
-
-### 📖 I’m currently reading ...
-
-  - Whatever is on the docket of my [ultimate reading list](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
-
+  - Inhaling any audiobook [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
+       - Re-reading the Robert C. Martin Clean * books. They're better the second go around.
+  - Checking out some Arduino kits for fun.
+  - [Practicing the design patterns](https://github.com/dpgraham4401/design-patterns) described in [Design Patterns: Elements of Reusable Object-Oriented Softare](https://www.goodreads.com/book/show/85009.Design_Patterns?ref=nav_sb_ss_1_15) 

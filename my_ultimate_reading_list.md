@@ -27,7 +27,13 @@ Books that talk about abstract concepts, system design, and idea worms that'll h
 - [x] [Clean Code (Martin)](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
  
 - [x] [Clean Architecture (Martin)](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=pd_bxgy_img_sccl_1/132-7763395-0841352?pd_rd_w=kosNV&pf_rd_p=6b3eefea-7b16-43e9-bc45-2e332cbf99da&pf_rd_r=ES82JM82CTAYB524G4NT&pd_rd_r=b6173348-8ff7-4339-a387-8acb159a2d94&pd_rd_wg=nJnV4&pd_rd_i=0134494164&psc=1)
-    - I initially didn't appreciate this book like I did clean code, but I continue to revisist this book and it continues to give me those *aHa!* moments.
+    - I continue to revisist this book and it continues to give me those *aHa!* moments.
+
+- [x] [The Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder)
+    - Not as much of a page turner as Clean Code and Clean Architecture but glad I listened to it. It was good as an audio book.
+
+- [] [Clean Agile](https://www.goodreads.com/book/show/45280021-clean-agile)
+    - Listening as audio book. Seems more like a memoir.
 
 - [x] [The Pragmatic Prgrammer (Thomas and Hunt)](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=pd_bxgy_img_sccl_2/132-7763395-0841352?pd_rd_w=J7jlp&pf_rd_p=6b3eefea-7b16-43e9-bc45-2e332cbf99da&pf_rd_r=5YMBCJAG6Y6BW4QK46RV&pd_rd_r=f82b12a5-c7c0-4bc9-b45d-87f9118a423e&pd_rd_wg=E7KUG&pd_rd_i=0135957052&psc=1)
     - Just read in piecemeal.
@@ -54,6 +60,9 @@ Books that talk about abstract concepts, system design, and idea worms that'll h
 - [x] [Observability Engineering(Charity Majors)]([https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp](https://www.goodreads.com/notes/61046909-observability-engineering/159242665-kelly-graham?ref=abp))
 
 - [x] [Building Microservices (Sam Newman)](https://www.goodreads.com/book/show/22512931)
+
+- [] [How to Win Friends and influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People?ac=1&from_search=true&qid=BDDCIEPZAE&rank=1)
+    - Good as Audio book.
 
 ### Technical Skills
 
