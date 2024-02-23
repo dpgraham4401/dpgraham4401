@@ -41,4 +41,5 @@
   - Inhaling any audiobook [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
        - Re-reading the Robert C. Martin Clean * books. They're better the second go around.
   - Checking out some Arduino kits for fun.
-  - [Practicing the design patterns](https://github.com/dpgraham4401/design-patterns) described in [Design Patterns: Elements of Reusable Object-Oriented Softare](https://www.goodreads.com/book/show/85009.Design_Patterns?ref=nav_sb_ss_1_15) 
+  - [Practicing the design patterns](https://github.com/dpgraham4401/design-patterns) described in [Design Patterns: Elements of Reusable Object-Oriented Softare](https://www.goodreads.com/book/show/85009.Design_Patterns?ref=nav_sb_ss_1_15)
+  - Java web development with Spring Boot. Working on a new language and framework has been a fantastic eye opener and I think has, surprisingly, made me a better Django developer! 
