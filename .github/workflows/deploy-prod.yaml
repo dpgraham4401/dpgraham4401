@@ -50,10 +50,3 @@ jobs:
       - name: 'Deploy to GitHub Pages'
         id: deployment
         uses: actions/deploy-pages@v4
-
-  build_ghcr_image:
-    name: Build Image for GHCR
-    uses: ./.github/workflows/build-ghcr-image.yaml
-    secrets: inherit
-    with:
-      environment: 'production'
