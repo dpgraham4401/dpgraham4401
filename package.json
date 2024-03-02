@@ -9,7 +9,7 @@
     "serve": "serve dist",
     "test": "vitest --run",
     "test:watch": "vitest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
