@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ include "dpg-client.fullname" . }}-config
-  namespace: {{ .Values.namespace.name }}
-  labels:
-    {{- include "dpg-client.labels" . | nindent 4 }}
-data:
-  REACT_APP_API_URL: "https://dpgraham.com/api"
