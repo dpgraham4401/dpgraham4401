@@ -1,3 +1,4 @@
+import plantPicture from "/assets/images/rp_bg_trans.png";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -41,14 +42,7 @@ export function AppHeader({
             onClick={() => navigate("/")}
             style={{ backgroundColor: iconBG }}
           >
-            <img
-              src={`${
-                import.meta.env.VITE_SITE_URL
-              }/static/images/rp_bg_trans.png`}
-              width={"60"}
-              height={"50"}
-              alt="DPGraham"
-            />
+            <img src={plantPicture} width={"60"} height={"50"} alt="DPGraham" />
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
           {/* Dark Mode button*/}

@@ -1,3 +1,4 @@
+import plantPicture from "/assets/images/rp_bg_trans.png";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
 import { useTitle } from "hooks";
 import React from "react";
@@ -27,9 +28,7 @@ export function Home() {
               sx={{ marginTop: "200px", backgroundColor: "#1fafa8" }}
             >
               <img
-                src={`${
-                  import.meta.env.VITE_SITE_URL
-                }/static/images/rp_bg_trans.png`}
+                src={plantPicture}
                 width={"200"}
                 height={"175"}
                 alt="DPGraham"
