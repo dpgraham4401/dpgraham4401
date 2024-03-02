@@ -1,5 +1,8 @@
 name: 'Deploy'
 
+# Requires the repo settings has the Pages source set to actions,
+# and actions need to have write permissions for packages.
+
 on:
   release:
     types: [ published ]
@@ -10,7 +13,7 @@ jobs:
     name: 'Deploy to GH Pages'
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     concurrency:
