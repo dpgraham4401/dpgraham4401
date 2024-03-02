@@ -27,7 +27,7 @@ export function Resume() {
         color="success"
         variant="extended"
         href={`${
-          import.meta.env.VITE_SITE_URL
+          import.meta.env.VITE_STORAGE_URL
         }static/resume/DavidGrahamResume.pdf`}
       >
         <Download />
