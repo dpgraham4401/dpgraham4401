@@ -1,12 +1,12 @@
-name: 'Deploy'
+name: 'Development Deployment'
 
 # Requires the repo settings has the Pages source set to actions,
 # and actions need to have write permissions for packages.
 
 on:
-  release:
-    types: [ published ]
   push:
+    branches:
+      - main
 
 jobs:
   deploy:

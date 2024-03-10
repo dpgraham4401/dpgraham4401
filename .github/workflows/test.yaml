@@ -37,7 +37,7 @@ jobs:
           VITE_MODE: 'TEST'
 
   build:
-    name: 'Test Build'
+    name: 'Build'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -60,7 +60,7 @@ jobs:
         run: npm run build
 
   test_image_builds:
-    name: 'Test Build Image'
+    name: 'Build Image'
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
