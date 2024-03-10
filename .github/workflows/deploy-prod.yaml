@@ -4,9 +4,9 @@ name: 'Deploy'
 # and actions need to have write permissions for packages.
 
 on:
-  release:
-    types: [ published ]
   push:
+    branches:
+      - main
 
 jobs:
   deploy:
