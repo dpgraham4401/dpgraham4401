@@ -5,6 +5,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_SITE_URL: string;
+  readonly VITE_STORAGE_URL: string;
   // more env variables...
 }
 

@@ -1,41 +1,52 @@
-# This Workflow builds a docker image using the production Dockerfile and deploys it to Google Cloud Run.
-# It will only run if the repo is dpgraham-com/dpgraham-client and triggered by a published release.
+name: 'Deploy'
 
-name: Deploy to Production
+# Requires the repo settings has the Pages source set to actions,
+# and actions need to have write permissions for packages.
 
 on:
   release:
     types: [ published ]
+  push:
 
 jobs:
-  build_gcp_image:
-    name: Build Image for Production
-    if: github.repository == 'dpgraham-com/dpgraham-client'
+  deploy:
+    name: 'Deploy to GH Pages'
+    runs-on: ubuntu-latest
     permissions:
+      contents: write
+      pages: write
       id-token: write
-      contents: read
-    uses: ./.github/workflows/build-gcp-image.yaml
-    with:
-      environment: 'production'
-    secrets: inherit
+    concurrency:
+      group: 'pages'
+      cancel-in-progress: true
+    environment:
+      name: development
+      url: ${{ steps.deployment.outputs.page_url }}
 
-  deploy_to_cloud_run:
-    name: Deploy to Cloud Run
-    if: github.repository == 'dpgraham-com/dpgraham-client'
-    permissions:
-      id-token: write
-      contents: read
-    uses: ./.github/workflows/cloud-run-deploy.yaml
-    needs: build_gcp_image
-    with:
-      environment: 'production'
-      version: ${{ needs.build_gcp_image.outputs.version }}
-      service: 'client'
-    secrets: inherit
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
 
-  build_ghcr_image:
-    name: Build Image for GHCR
-    uses: ./.github/workflows/build-ghcr-image.yaml
-    secrets: inherit
-    with:
-      environment: 'production'
+      - name: 'Setup Node'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 'Install dependencies'
+        run: npm ci
+
+      - name: 'Build project'
+        run: npm run build
+
+      - name: 'Setup Pages'
+        uses: actions/configure-pages@v3
+
+      - name: 'Upload artifact'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+      - name: 'Deploy to GitHub Pages'
+        id: deployment
+        uses: actions/deploy-pages@v4

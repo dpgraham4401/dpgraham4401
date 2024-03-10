@@ -6,30 +6,33 @@ import { Root } from "components/Layout";
 import React, { useMemo, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "",
-        lazy: () => import("./features/Home"),
-      },
-      {
-        path: "resume",
-        lazy: () => import("./features/Resume"),
-      },
-      {
-        path: "about",
-        lazy: () => import("./features/AboutMe"),
-      },
-      {
-        path: "*",
-        element: <DpgPageError statusCode={404} message={"page not found"} />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        {
+          path: "",
+          lazy: () => import("./features/Home"),
+        },
+        {
+          path: "resume",
+          lazy: () => import("./features/Resume"),
+        },
+        {
+          path: "about",
+          lazy: () => import("./features/AboutMe"),
+        },
+        {
+          path: "*",
+          element: <DpgPageError statusCode={404} message={"page not found"} />,
+        },
+      ],
+    },
+  ],
+  { basename: import.meta.env.BASE_URL },
+);
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);

@@ -3,6 +3,7 @@ import blogUrl from "/assets/images/blog.png";
 import constructionUrl from "/assets/images/construction.png";
 import docUrl from "/assets/images/file.png";
 import recycleUrl from "/assets/images/recycle-symbol.png";
+import hierarchyUrl from "/assets/images/hierarchical-structure.png";
 import {
   Box,
   Card,
@@ -171,6 +172,30 @@ export function AboutMe() {
                         primary={"e-Manifest Services Documentation"}
                         secondary={
                           "Deep dive on using the e-Manifest API to track hazardous waste electronically"
+                        }
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Grid>
+                <Grid xs={12}>
+                  <ListItem>
+                    <ListItemButton
+                      href="https://github.com/usepa/the-manifest-game.git"
+                      target="_blank"
+                      sx={{ borderRadius: 5 }}
+                    >
+                      <ListItemIcon>
+                        <img
+                          src={hierarchyUrl}
+                          alt="hierarchy icon"
+                          height={35}
+                          width={35}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={"The Manifest Game"}
+                        secondary={
+                          "An interactive game for learning about the hazardous waste manifest system"
                         }
                       />
                     </ListItemButton>
