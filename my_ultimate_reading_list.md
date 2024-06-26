@@ -32,11 +32,11 @@ Books that talk about abstract concepts, system design, and idea worms that'll h
 - [x] [The Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder)
     - Not as much of a page turner as Clean Code and Clean Architecture but glad I listened to it. It was good as an audio book.
 
-- [] [Clean Agile](https://www.goodreads.com/book/show/45280021-clean-agile)
-    - Listening as audio book. Seems more like a memoir.
+- [x] [Clean Agile](https://www.goodreads.com/book/show/45280021-clean-agile)
+    - Listening as audio book. Seems more like a memoir. I honestly did not absorb this well. 
 
 - [x] [The Pragmatic Prgrammer (Thomas and Hunt)](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=pd_bxgy_img_sccl_2/132-7763395-0841352?pd_rd_w=J7jlp&pf_rd_p=6b3eefea-7b16-43e9-bc45-2e332cbf99da&pf_rd_r=5YMBCJAG6Y6BW4QK46RV&pd_rd_r=f82b12a5-c7c0-4bc9-b45d-87f9118a423e&pd_rd_wg=E7KUG&pd_rd_i=0135957052&psc=1)
-    - Just read in piecemeal.
+    - Just read in piecemeal. Reread as an audiobook, good the second go around.  
 
 - [x] [Design Patterns: Elements of Reusable Object-Oriented Software (Gamma et al.)](https://www.goodreads.com/book/show/85009.Design_Patterns)
     - Not a particularly fun book IMO, and a little old, but still applicable. 
@@ -57,12 +57,21 @@ Books that talk about abstract concepts, system design, and idea worms that'll h
 
 - [ ] [Network Warrior(Gary A. Donahue)](https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp)
 
-- [x] [Observability Engineering(Charity Majors)]([https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp](https://www.goodreads.com/notes/61046909-observability-engineering/159242665-kelly-graham?ref=abp))
+- [ ] [Observability Engineering(Charity Majors)]([https://www.goodreads.com/notes/19045104-network-warrior/159242665-kelly-graham?ref=abp](https://www.goodreads.com/notes/61046909-observability-engineering/159242665-kelly-graham?ref=abp))
 
 - [x] [Building Microservices (Sam Newman)](https://www.goodreads.com/book/show/22512931)
 
-- [] [How to Win Friends and influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People?ac=1&from_search=true&qid=BDDCIEPZAE&rank=1)
+- [ ] [How to Win Friends and influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People?ac=1&from_search=true&qid=BDDCIEPZAE&rank=1)
     - Good as Audio book.
+
+- [x] [Principles of Web Design]([url](https://www.goodreads.com/book/show/58437874-principles-of-web-design))
+    - Great primer on web page design, SEO, and page element.
+     
+- [x] [Building Your Storybrand]([url](https://www.goodreads.com/book/show/34460583-building-a-storybrand?ac=1&from_search=true&qid=6ttgYnacGU&rank=1))
+    - Simple message, well packaged, method of developing your brand.
+
+- [x] [Algorithms to Live by]([url](https://www.goodreads.com/book/show/25666050-algorithms-to-live-by))
+    - Loved it, new way of thinking about things I encounter on a daily basis. 
 
 ### Technical Skills
 
