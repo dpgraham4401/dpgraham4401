@@ -18,7 +18,7 @@
   </a>
   <br>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,redux,django,postgres,matlab" />
+    <img src="https://skillicons.dev/icons?i=react,redux,django,postgres,gcp" />
   </a>
   <br>
   <a href="https://skillicons.dev">
@@ -32,7 +32,6 @@
 ### 🔭 I’m currently working on ...
 
   - [Haztrak](https://github.com/USEPA/haztrak) An open-source hazardous waste management web application designed to track and sign for hazardous waste shipments through EPA's services.
-  - Migrating my personal website, https://dpgraham.com, from a self-managed k8 cluster to Google Cloud and obtaining my GCP [Associate Cloud Engineer certification](https://cloud.google.com/learn/certification/cloud-engineer) in the process. 
   - [The Manifest Game](https://github.com/USEPA/the-manifest-game), An interactive decision tree to help e-Manifest
   users determine the correct course of action.
 
@@ -42,4 +41,4 @@
        - Re-reading the Robert C. Martin Clean * books. They're better the second go around.
   - Checking out some Arduino kits for fun.
   - [Practicing the design patterns](https://github.com/dpgraham4401/design-patterns) described in [Design Patterns: Elements of Reusable Object-Oriented Softare](https://www.goodreads.com/book/show/85009.Design_Patterns?ref=nav_sb_ss_1_15)
-  - Java web development with Spring Boot. Working on a new language and framework has been a fantastic eye opener and I think has, surprisingly, made me a better Django developer! 
+  - Java and [Spring Boot]([url](https://spring.io/projects/spring-boot)). Learning a new language and framework to keep the balde sharp. 
