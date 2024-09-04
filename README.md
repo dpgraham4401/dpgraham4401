@@ -32,13 +32,12 @@
 ### 🔭 I’m currently working on ...
 
   - [Haztrak](https://github.com/USEPA/haztrak) An open-source hazardous waste management web application designed to track and sign for hazardous waste shipments through EPA's services.
-  - [The Manifest Game](https://github.com/USEPA/the-manifest-game), An interactive decision tree to help e-Manifest
-  users determine the correct course of action.
+  - [The Manifest Game](https://github.com/USEPA/the-manifest-game), An interactive decision tree to help e-Manifest users determine the correct course of action.
 
 ### 🌱 I’m currently learning ...
   
-  - Inhaling any audiobook [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
-       - Re-reading the Robert C. Martin Clean * books. They're better the second go around.
-  - Checking out some Arduino kits for fun.
+  - Taking Comp. Sci. classes online through University of Marland
+  - [Concurrent Python with Asyncio]([url](https://www.goodreads.com/book/show/57553043-python-concurrency-with-asyncio))
+  - Picking up Java and [Spring Boot]([url](https://spring.io/projects/spring-boot)) to keep the mind sharp and learn a new language and framework.
   - [Practicing the design patterns](https://github.com/dpgraham4401/design-patterns) described in [Design Patterns: Elements of Reusable Object-Oriented Softare](https://www.goodreads.com/book/show/85009.Design_Patterns?ref=nav_sb_ss_1_15)
-  - Java and [Spring Boot]([url](https://spring.io/projects/spring-boot)). Learning a new language and framework to keep the balde sharp. 
+  - Inhaling any audiobook [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
