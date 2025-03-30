@@ -13,6 +13,7 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "target": "esnext",
+    "jsx": "preserve",
     "paths": {
       "@components/*": ["src/components/*"],
       "@/*": ["src/*"]
