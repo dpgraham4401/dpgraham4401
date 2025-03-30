@@ -26,3 +26,4 @@ pnpm-debug.log*
 .run/
 
 pnpm-lock.yaml
+/tsconfig.tsbuildinfo
