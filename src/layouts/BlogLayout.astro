@@ -1,11 +1,6 @@
 ---
 import Section from "../components/common/Section.vue";
 import type { ArticleFrontmatter } from "../lib/types";
-import {
-  getShortDescription,
-  processArticleDate,
-  generateSourceUrl,
-} from "../lib/utils";
 import { GLOBAL } from "../lib/variables";
 import type { MarkdownLayoutProps } from "astro";
 import Prose from "../components/Prose.astro";
@@ -14,9 +9,6 @@ import Layout from "./Layout.astro";
 type Props = MarkdownLayoutProps<ArticleFrontmatter>;
 
 const { frontmatter } = Astro.props;
-const shortDescription = getShortDescription(frontmatter.description);
-const articleDate = processArticleDate(frontmatter.timestamp);
-const sourceUrl = generateSourceUrl(frontmatter.filename, "blog");
 ---
 
 <Layout>
@@ -24,16 +16,13 @@ const sourceUrl = generateSourceUrl(frontmatter.filename, "blog");
     <title>{frontmatter.title} • {GLOBAL.username}</title>
     <meta name="description" content={frontmatter.description} />
     <meta property="og:title" content={`${frontmatter.title} • ${GLOBAL.username}`} />
-    <meta property="og:description" content={shortDescription} />
     <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
     <meta property="og:url" content={frontmatter.url} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${frontmatter.title} • ${GLOBAL.username}`} />
-    <meta name="twitter:description" content={shortDescription} />
     <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
-    <link rel="canonical" href={sourceUrl} />
   </Fragment>
   <Section class="pt-8">
     <div class="flex flex-col gap-4 mt-8 mb-16">
@@ -43,7 +32,6 @@ const sourceUrl = generateSourceUrl(frontmatter.filename, "blog");
         {frontmatter.title}
       </h1>
       <div class="flex justify-between">
-        <span>{articleDate}</span>
         <span>{frontmatter.time} min</span>
       </div>
     </div>

@@ -1,5 +1,4 @@
 ---
-import { processArticleDate } from "../lib/utils";
 import Anchor from "./common/Anchor.astro";
 
 export type Props = {
@@ -23,7 +22,6 @@ const { title, description, url, duration, timestamp } = Astro.props;
   <div
     class="zag-muted zag-transition flex justify-between items-center"
   >
-    {timestamp ? <p>{processArticleDate(timestamp)}</p> : null}
     {duration ? <p>{duration}</p> : null}
   </div>
 </div>
