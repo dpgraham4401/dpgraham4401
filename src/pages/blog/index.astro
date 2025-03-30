@@ -2,11 +2,10 @@
 import { GLOBAL } from "@/lib/variables";
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/common/Section.vue";
+import { getCollection } from "astro:content";
 
+const posts = await getCollection("blog");
 
-import { getCollection } from 'astro:content';
-const posts = await getCollection('blog');
-console.log("posts", posts);
 ---
 
 <Layout>
@@ -41,4 +40,13 @@ console.log("posts", posts);
     <ul>
     </ul>
   </Section>
+    <Section class="my-8">
+      {posts.map((post) => (
+        <li key={post.id} class="mb-4">
+          <a href={`/blog/${post.id}`} class="text-blue-500 hover:underline">
+            {post.data.title}
+          </a>
+        </li>
+      ))}
+    </Section>
 </Layout>
