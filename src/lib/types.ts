@@ -1,33 +1,20 @@
 export type ProjectFrontmatter = {
-  /**
-   * The title of the project
-   */
+  /** The title of the project */
   title: string;
 
-  /**
-   * The description of the project
-   */
+  /** The description of the project */
   description: string;
 
-  /**
-   * The tags of the project
-   * (eg. ["JavaScript", "React", "Node.js"])
-   */
+  /** The tags of the project (eg. ["JavaScript", "React", "Node.js"]) */
   tags?: string[];
 
-  /**
-   * The GitHub URL of the project
-   */
+  /** The GitHub URL of the project */
   githubUrl?: string;
 
-  /**
-   * The live URL of the project
-   */
+  /** The live URL of the project */
   liveUrl?: string;
 
-  /**
-   * Whether the project should be featured on the homepage
-   */
+  /** Whether the project should be featured on the homepage */
   featured?: boolean;
 
   /**
@@ -44,40 +31,24 @@ export type ProjectFrontmatter = {
 };
 
 export type ArticleFrontmatter = {
-  /**
-   * The title of the article
-   */
+  /** The title of the article */
   title: string;
 
-  /**
-   * THe summary description of the article
-   */
+  /** THe summary description of the article */
   description: string;
 
-  /**
-   * The tags of the article
-   * (eg. ["JavaScript", "React", "Node.js"])
-   */
+  /** The tags of the article (eg. ["JavaScript", "React", "Node.js"]) */
   tags?: string[];
 
-  /**
-   * The estimated time to read the article in minutes
-   */
+  /** The estimated time to read the article in minutes */
   time: number;
 
-  /**
-   * Whether the article should be featured on the homepage
-   */
+  /** Whether the article should be featured on the homepage */
   featured: boolean;
 
-  /**
-   * The timestamp the article was published in W3C format
-   */
+  /** The timestamp the article was published in W3C format */
   timestamp: string;
 
-  /**
-   * The URL of the article on the website
-   * (eg. https://zaggonaut.dev/blog/my-article)
-   */
+  /** The URL of the article on the website (eg. https://zaggonaut.dev/blog/my-article) */
   filename: string;
 };
