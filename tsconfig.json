@@ -6,7 +6,7 @@
     "node_modules",
   ],
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -24,5 +24,9 @@
     "types": ["vite/client"],
     "module": "esnext",
     "target": "esnext",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@/*": ["src/*"]
+    },
   }
 }
