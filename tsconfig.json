@@ -1,22 +1,38 @@
 {
-  "extends": ["astro/tsconfigs/strict"],
-  "include": ["src/**/*"],
+  "extends": [
+    "astro/tsconfigs/strict"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
   "exclude": [
     "dist",
-    "node_modules",
+    "node_modules"
   ],
   "compilerOptions": {
     "baseUrl": ".",
-    "strictNullChecks": true,
-    "allowJs": true,
-    "strict": false,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "target": "esnext",
     "jsx": "preserve",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@/*": ["src/*"]
-    },
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    }
   }
 }
