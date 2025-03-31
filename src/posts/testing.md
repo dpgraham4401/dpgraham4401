@@ -1,12 +1,11 @@
 ---
-title: A Basic Introduction to HTML
-description: HTML is the foundation of all websites. This guide will walk you through creating your first simple website using HTML.
-tags: [ "code", "html" ]
+title: Testing is your friend
+description: Convincing the team to write tests
+tags: [ "code", "tests" ]
 time: 4
-featured: true
-timestamp: 2024-12-18T02:39:03+00:00
-filename: html-intro
-published: true
+timestamp: 2025-12-18T02:39:03+00:00
+filename: testing
+published: false
 ---
 
 HTML (HyperText Markup Language) is the foundation of all websites. Even with modern frameworks and tools, understanding
