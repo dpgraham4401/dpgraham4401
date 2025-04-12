@@ -1,24 +1,41 @@
 {
+  "extends": [
+    "astro/tsconfigs/base"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.astro"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
   "compilerOptions": {
-    "baseUrl": "src",
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "strictNullChecks": true,
+    // add if using `base` template
+    "allowJs": true,
+    // required, and included with all Astro templates
+    "sourceMap": true,
+    "strict": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "types": ["vite/client"]
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "build"]
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    }
+  }
 }

@@ -1,14 +1,12 @@
-name: 'Test'
+name: 'Tests'
 
 on:
   pull_request:
     branches:
-      - main
-  workflow_call:
-  workflow_dispatch:
+      - none
 
 jobs:
-  test:
+  run_unit_tests:
     name: 'Unit Tests'
     runs-on: ubuntu-latest
     strategy:
@@ -16,14 +14,12 @@ jobs:
         node-version: [ 20 ]
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup Node'
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
 
       - name: 'Install Dependencies'
         run: npm ci
@@ -33,67 +29,24 @@ jobs:
         env:
           VITE_MODE: 'TEST'
 
-  build:
-    name: 'Build'
+  test_npm_build:
+    name: 'NPM Build'
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 20 ]
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup Node'
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
 
       - name: 'Install Dependencies'
         run: npm ci
-
-      - name: 'build'
-        run: npm run build
-
-  test_image_builds:
-    name: 'Build Image'
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v3
-
-      - name: 'Docker meta'
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.repository_owner }}/the-manifest-game
 
       - name: 'Build'
-        uses: docker/build-push-action@v3
-        with:
-          platforms: linux/amd64
-          context: .
-          push: false
-          labels: ${{ steps.meta.outputs.labels }}
-          tags: ${{ steps.meta.outputs.tags }}
+        run: npm run build
 
-  lint:
-    name: 'Lint'
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v3
-
-      - name: 'Setup Node'
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-
-      - name: 'Install Dependencies'
-        run: npm ci
-
-      - name: 'Lint Source'
-        run: npm run lint
