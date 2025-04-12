@@ -1,14 +1,14 @@
-<script setup>
+<script lang="ts" setup>
 
-const props = defineProps({
-  url: String,
-  external: Boolean | undefined,
-  ariaLabel: String,
-  class: String | undefined
-});
+type Props = {
+  url: string,
+  external?: boolean,
+  ariaLabel: string,
+  class?: string
+};
 
-const { url, external, ariaLabel } = props;
-
+// define props with types and default values
+const { external = false } = defineProps<Props>();
 </script>
 
 <template>
