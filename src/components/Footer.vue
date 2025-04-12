@@ -1,12 +1,12 @@
 <script>
 import Section from "@components/common/Section.vue";
-import Anchor from "./common/Anchor.astro";
+import Anchor from "./common/Anchor.vue";
 import { GLOBAL } from "@/lib/variables";
 
 export default {
   components: {
     Section,
-    Anchor
+    Anchor: Anchor
   },
   setup() {
     const date = new Date();

@@ -8,7 +8,7 @@ export type ProjectFrontmatter = {
   /** The tags of the project (eg. ["JavaScript", "React", "Node.js"]) */
   tags?: string[];
 
-  /** The GitHub URL of the project */
+  /** The Anchor URL of the project */
   githubUrl?: string;
 
   /** The live URL of the project */

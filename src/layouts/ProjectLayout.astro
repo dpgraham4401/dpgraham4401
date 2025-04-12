@@ -4,7 +4,7 @@ import type { MarkdownLayoutProps } from "astro";
 import Prose from "@components/Prose.astro";
 import Layout from "./Layout.astro";
 import Section from "@components/common/Section.vue";
-import Anchor from "@components/common/Anchor.astro";
+import Anchor from "src/components/common/Anchor.vue";
 import { GLOBAL } from "@/lib/variables";
 
 
@@ -35,10 +35,10 @@ const { frontmatter } = Astro.props;
         {
           frontmatter.tags
             ? frontmatter.tags.map((tag) => (
-                <span class="-zag-text -zag-bg zag-transition font-semibold py-1 px-2">
+              <span class="-zag-text -zag-bg zag-transition font-semibold py-1 px-2">
                   {tag}
                 </span>
-              ))
+            ))
             : null
         }
       </div>
