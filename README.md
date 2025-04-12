@@ -1,43 +1,42 @@
-# dpgraham-client
+<!-- Title -->
+<h1 align='center'>
+  Hi! I'm David 👋.
+</h1>
 
-## Introduction
+<div align='center'>
+  <p>I'm a full-stack developer, with a master's degree in Geophysics, currently working for the <a href="https://epa.gov/e-manifest">EPA e-Manifest team</a> where I work on both web development and regulatory rulemaking. I'm not afriad to pick up new skills to get the job done.</p>
+</div>
 
-Welcome to `dpgraham-client`, my personal website and a project I use for experimentation and learning.
-I used to include articles, such as blogs and tutorials, but I didn't have time to maintain them and update them.
 
-## Installation and Setup
+ 
+<h4 align='center'>
+  My Toolkit
+</h4>  
+<div align="center" valign="top">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=bash,go,python,rust,js,ts,html,css" />
+  </a>
+  <br>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,redux,django,postgres,vite,vitest" />
+  </a>
+  <br>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,github,githubactions,kubernetes,gcp,aws,docker,vim,linux,terraform" />
+  </a>
+</div><br>
 
-To run the dpgraham-client application locally, follow the steps below:
 
-1. Clone this repository and cd to repo root:
+---
 
-    ```shell
-    git clone https://github.com/dpgraham4401/dpgraham-client.git && cd dpgraham-client
-    ```
+### 🔭 I’m currently working on ...
 
-2. Install the necessary dependencies using a package manager such as npm or yarn:
+  - [The re-write of HERO](https://heronetnext.epa.gov/), Health and Environmental Research Online, EPA's system of record for scientific studies.
 
-    ```shell
-    npm install
-    ```
-
-3. configure the environment variables:
-
-    ```shell
-    cp ./config/.env.example .env
-    ```
-4. Start the development server:
-
-    ```shell
-    npm start
-    ```
-
-## Contact
-
-If you have any questions, suggestions, or feedback regarding this project, please feel free to reach out to me. You can
-contact me through the following channels:
-
-- [LinkedIn](https://www.linkedin.com/in/dpgraham4401/)
-- Open an [issue on GitHub](https://github.com/dpgraham4401/dpgraham-client/issues)
-
-Thank you for your interest in the dpgraham-client project. Happy coding!
+### 🌱 I’m currently learning ...
+  
+  - [Concurrent Python with Asyncio]([url](https://www.goodreads.com/book/show/57553043-python-concurrency-with-asyncio))
+  - Deep diving on Rust and [using it with Python]([url](https://pyo3.rs)).
+  - Getting hands on experience making system architecture decisions.
+  - Taking Comp. Sci. classes online through University of Maryland
+  - Still any good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
