@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ArticleFrontmatter } from "@/lib/types";
-import ArticleSnippet from "src/components/ArticleSnippet";
+import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
 type Props = {

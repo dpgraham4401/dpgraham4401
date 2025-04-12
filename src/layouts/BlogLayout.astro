@@ -1,12 +1,12 @@
 ---
 import Section from "@components/common/Section.vue";
-import type { ArticleFrontmatter } from "@/lib/types";
 import { GLOBAL } from "@/lib/variables";
-import type { MarkdownLayoutProps } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Prose from "src/components/Prose.vue";
+import type { Blog } from "src/content.config";
 import Layout from "./Layout.astro";
 
-type Props = MarkdownLayoutProps<ArticleFrontmatter>;
+type Props = CollectionEntry<Blog>;
 
 const { frontmatter } = Astro.props;
 ---

@@ -47,7 +47,7 @@ export default {
       >
         <ul class="flex flex-col gap-2">
           <li v-for="(url, name) in GLOBAL.menu" :key="name">
-            <Anchor :url="url">{{ name }}</Anchor>
+            <Anchor :url="url" aria-label="foo">{{ name }}</Anchor>
           </li>
         </ul>
         <div class="flex flex-start items-start gap-4 w-full">

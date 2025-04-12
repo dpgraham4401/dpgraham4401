@@ -45,14 +45,14 @@ const { frontmatter } = Astro.props;
       <div class="flex gap-2">
         {
           frontmatter.githubUrl ? (
-            <Anchor url={frontmatter.githubUrl} class="text-base" external>
+            <Anchor ariaLabel="GitHub profile" url={frontmatter.githubUrl} class="text-base" external>
               GitHub
             </Anchor>
           ) : null
         }
         {
           frontmatter.liveUrl ? (
-            <Anchor url={frontmatter.liveUrl} class="text-base" external>
+            <Anchor ariaLabel="Project live demo" url={frontmatter.liveUrl} class="text-base" external>
               Live
             </Anchor>
           ) : null

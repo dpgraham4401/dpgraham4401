@@ -29,12 +29,12 @@ import ThemeToggle from "./ThemeToggle.astro";
       class="flex flex-col font-mono font-medium gap-4 sm:flex-row px-4 sm:px-0 mt-16 sm:mt-0"
     >
       {Object.entries(GLOBAL.menu).map((i) => (
-        <Anchor url={i[1]}>{i[0]}</Anchor>
+        <Anchor ariaLabel="foo" url={i[1]}>{i[0]}</Anchor>
       ))}
     </div>
     <div class="flex gap-4 justify-between px-4 sm:px-0">
       {GLOBAL.githubProfile && (
-        <Anchor url={GLOBAL.githubProfile} aria-label="GitHub Repository" external>
+        <Anchor url={GLOBAL.githubProfile} ariaLabel="GitHub Repository" external>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
