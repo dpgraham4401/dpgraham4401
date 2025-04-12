@@ -54,26 +54,26 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 <script>
   const button = document.querySelector("button");
-  const nav = document.querySelector("nav");
-  let isOpen = false;
+    const nav = document.querySelector("nav");
+    let isOpen = false;
 
-  function updateNavState() {
-    const isMobile = window.matchMedia("(max-width: 640px)").matches;
-    if (isMobile) {
-      nav!.style.transform = isOpen ? "translateY(0)" : "translateY(-100%)";
-    } else {
-      nav!.style.transform = "translateY(0)";
-      isOpen = false;
-    }
-  }
+    function updateNavState() {
+      const isMobile = window.matchMedia("(max-width: 640px)").matches;
+      if (isMobile) {
+        nav!.style.transform = isOpen ? "translateY(0)" : "translateY(-100%)";
+        } else {
+        nav!.style.transform = "translateY(0)";
+        isOpen = false;
+        }
+      }
 
-  function toggleNav() {
-    isOpen = !isOpen;
+    function toggleNav() {
+      isOpen = !isOpen;
+      updateNavState();
+      }
+
+    button?.addEventListener("click", toggleNav);
+    window.addEventListener("resize", updateNavState);
+
     updateNavState();
-  }
-
-  button?.addEventListener("click", toggleNav);
-  window.addEventListener("resize", updateNavState);
-
-  updateNavState();
 </script>
