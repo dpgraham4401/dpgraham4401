@@ -1,22 +1,13 @@
-<script>
+<script setup>
 
-export default {
-  name: "Anchor",
-  props: {
-    url: {
-      type: String,
-      required: true
-    },
-    external: {
-      type: Boolean,
-      default: false
-    },
-    ariaLabel: {
-      type: String,
-      default: ""
-    }
-  }
-};
+const props = defineProps({
+  url: String,
+  external: Boolean | undefined,
+  ariaLabel: String,
+  class: String | undefined
+});
+
+const { url, external, ariaLabel } = props;
 
 </script>
 
@@ -44,5 +35,4 @@ export default {
 </template>
 
 <style scoped>
-/* Add any additional styles here if needed */
 </style>

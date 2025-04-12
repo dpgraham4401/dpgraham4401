@@ -1,22 +1,22 @@
-// Set any item to undefined to remove it from the site or to use the default value
+// any item set to 'undefined' is removed it from the site
 
 export const GLOBAL = {
   // Site metadata
-  username: "dpgraham4401",
+  username: "vimpirate",
   rootUrl: "https://vimpirate.com",
   shortDescription: "David Paul Graham",
-  longDescription: "Zaggonaut is a retro-inspired theme for Astro, built using TypeScript, TailwindCSS, and Astro.",
-  
+  longDescription: "David Paul Grahams person website, blog, and portfolio.",
+
   // Social media links
-  githubProfile: "https://github.com/dpgraham4401",
+  githubProfile: "https://github.com/vimpirate",
   twitterProfile: "https://twitter.com/",
-  linkedinProfile: "https://www.linkedin.com/dpgraham4401",
-  
+  linkedinProfile: "https://www.linkedin.com/in/dpgraham4401",
+
   // Common text names used throughout the site
   articlesName: "Articles",
   projectsName: "Projects",
   viewAll: "View All",
-  
+
   // Common descriptions used throughout the site
   noArticles: "No featured articles yet.",
   noProjects: "No featured projects yet.",
@@ -38,6 +38,6 @@ export const GLOBAL = {
   menu: {
     home: "/",
     projects: "/projects",
-    blog: "/blog",
+    blog: "/blog"
   }
 };
