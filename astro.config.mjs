@@ -5,12 +5,13 @@ import vue from "@astrojs/vue";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()],
-  },
-  server:{
-    port:3000,
-  },
+    vite: {
+        plugins: [tailwindcss()],
+    },
+    site: 'https://vimpirate.github.io/vimpirate/',
+    server: {
+        port: 3000,
+    },
 
-  integrations: [vue()],
+    integrations: [vue()],
 });
