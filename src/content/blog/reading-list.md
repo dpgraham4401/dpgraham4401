@@ -1,3 +1,13 @@
+---
+title: My Ultimate Reading List
+description: Books that I think that every developer should read, and some others.
+tags: [ "code", "reading" ]
+time: 5
+timestamp: 2025-04-18T02:39:03+00:00
+filename: Reading List
+published: false
+---
+
 # Reads Worth Their Weight When Moving
 
 This list doesn't encompass everything I've read, mostly just things I've read to pick up new skills and my
