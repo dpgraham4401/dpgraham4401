@@ -1,35 +1,27 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
-  <!--Waves Container-->
-  <div class="rounded-full">
-    <svg class="waves" preserveAspectRatio="none"
-         shape-rendering="auto"
-         viewBox="0 24 150 28" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <path id="gentle-wave"
-              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-      </defs>
-      <g class="parallax">
-        <use class="fill-blue-400" x="48" xlink:href="#gentle-wave" y="0" />
-        <use class="fill-blue-500" x="48" xlink:href="#gentle-wave" y="7" />
-      </g>
-    </svg>
+  <div class="header bg-white rounded-full w-10 h-10 relative overflow-hidden">
+    <!--Waves Container-->
+    <div>
+      <svg class="absolute bottom-0 left-0 w-full h-full" preserveAspectRatio="none"
+           shape-rendering="auto"
+           viewBox="0 24 150 28" xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use class="fill-blue-300" x="48" xlink:href="#gentle-wave" y="0" />
+          <use class="fill-blue-400" x="48" xlink:href="#gentle-wave" y="3" />
+          <use class="fill-blue-500" x="48" xlink:href="#gentle-wave" y="7" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
   </div>
-  <!--Waves end-->
 </template>
 
 <style scoped>
-.waves {
-  position: relative;
-  width: 100%;
-  min-height: 10px;
-  max-height: 15px;
-}
-
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
@@ -68,14 +60,6 @@
   .waves {
     height: 40px;
     min-height: 40px;
-  }
-
-  .content {
-    height: 30vh;
-  }
-
-  h1 {
-    font-size: 24px;
   }
 }
 </style>
