@@ -13,5 +13,5 @@ export default defineConfig({
         port: 3000,
     },
 
-    integrations: [vue()],
+    integrations: [vue({devtools: true})],
 });
