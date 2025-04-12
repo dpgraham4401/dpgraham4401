@@ -8,7 +8,7 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-    site: 'https://vimpirate.com',
+    site: 'https://hazguardian.com',
     server: {
         port: 3000,
     },
