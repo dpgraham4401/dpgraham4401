@@ -16,26 +16,26 @@ defineProps<Props>();
 <template>
   <div class="flex flex-col gap-3 pb-8">
     <div class="flex flex-col gap-3 sm:flex-row sm:justify-between">
-      <Anchor :url="url" class="text-xl">
+      <Anchor :url="url" ariaLabel="go to project" class="text-xl">
         {{ title }}
       </Anchor>
       <div class="flex gap-2">
         <!-- v-if to conditionally render links -->
         <Anchor
           v-if="githubUrl"
-          :external
           :url="githubUrl"
-          aria-label="GitHub link"
+          ariaLabel="GitHub link"
           class="text-base"
+          external
         >
           GitHub
         </Anchor>
         <Anchor
           v-if="liveUrl"
-          :external
           :url="liveUrl"
-          aria-label="Live link"
+          ariaLabel="Live link"
           class="text-base"
+          external
         >
           Live
         </Anchor>
