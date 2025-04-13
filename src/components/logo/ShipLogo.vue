@@ -88,6 +88,7 @@
 /* Attach the bob+tilt animation to the logo */
 .logo-bob-rotate {
   animation: bobAndTilt 4s ease-in-out infinite;
+  animation-timing-function: linear;
 }
 
 
