@@ -1,8 +1,8 @@
 import {expect, test} from '@playwright/test';
 
-test('has title', async ({page}) => {
+test('Test navigating to the blog', async ({page}) => {
   await page.goto('/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/vimpirate/);
+  await expect(page.getByRole('main')).toContainText('vimpirate');
+  await page.getByRole('navigation').getByText('blog').click();
+  await expect(page.getByRole('heading')).toContainText('Articles');
 });
