@@ -1,6 +1,6 @@
 ---
-title: Testing is your friend
-description: Convincing the team to write tests
+title: Syn-coding tests
+description: Writing tests as you code will save you later.
 tags: [ "code", "tests" ]
 time: 4
 timestamp: 2025-12-18T02:39:03+00:00
@@ -8,119 +8,41 @@ filename: testing
 published: false
 ---
 
-HTML (HyperText Markup Language) is the foundation of all websites. Even with modern frameworks and tools, understanding
-HTML basics remains essential for web development. This guide will walk you through creating your first simple website
-using HTML.
+# Syn-coding tests
 
-## Understanding HTML Basics
+We all have that coworker, (lets call them Joe). During standup, Joe often says
+**"I'm almost done with this feature, I just need to write the tests"**.
+Every time I hear this, I know pain is headed my way.
+It's inevitable, like Thanos, except instead of a snap, it's a PR.
 
-HTML uses elements enclosed in tags to structure content. Most elements have opening and closing tags that wrap around
-content:
+A few days later, the PR comes. I can see the entire lifespan of the code in their PR.
 
-```html
+1. Joe wrote the code, got it working, but didn't write any tests as they were going.
+2. Joe decide to submit the PR, but they know it'll be rejected without tests.
+3. Joe started to write tests, but they realize that they can't easily test the new code.
+4. Instead of refactoring the new code's API, Joe throws what tests they easily can and moves on.
 
-<tagname>Content goes here</tagname>
-```
+## What's wrong with this?
 
-## Essential Tools
+This is a common pattern in software development, but it can lead to a lot of problems.
+Joe's tests usually have at least one of the following attributes:
 
-To get started, you'll need:
+- They are slow and unfocused
+- They test private methods and implementation details
+- They are hard to read
+- They are brittle (
+  e.g.,[monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch))
 
-- A text editor (like VS Code, Sublime Text, or even Notepad)
-- A web browser to view your website
+## When did things go wrong?
 
-## Creating Your First HTML Page
+Take a look at point 4 in the list above.
+If Joe had written test as they coded, they test would have become the first client of their
+new code's API. This would have forced Joe to think about the API they were creating.
 
-1. Open your text editor and create a new file
-2. Save it as "index.html"
-3. Add the following code:
+Testing while you write the production code improves:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
-</head>
-<body>
-<h1>Welcome to My Website</h1>
-<p>This is my first website created with HTML.</p>
-</body>
-</html>
-```
+- The APi of the class.
+- The I/O of the functions/method parameters.
+- The name of the functions/methods.
+- the dependencies of the class.
 
-4. Save the file and open it in your browser
-
-## Understanding the Structure
-
-- `<!DOCTYPE html>`: Tells browsers you're using HTML5
-- `<html>`: The root element of your page
-- `<head>`: Contains meta-information about your document
-- `<title>`: Sets the page title shown in browser tabs
-- `<body>`: Contains all visible content
-
-## Adding More Content
-
-### Headings
-
-HTML offers six heading levels:
-
-```html
-<h1>Main Heading</h1>
-<h2>Subheading</h2>
-<h3>Smaller Subheading</h3>
-<!-- and so on to h6 -->
-```
-
-### Paragraphs and Text Formatting
-
-```html
-<p>This is a paragraph.</p>
-<p>This is <strong>bold text</strong> and <em>italic text</em>.</p>
-```
-
-### Links
-
-```html
-<a href="https://example.com">Visit Example.com</a>
-```
-
-### Images
-
-```html
-<img src="image.jpg" alt="Description of image">
-```
-
-### Lists
-
-Unordered list:
-
-```html
-
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ul>
-```
-
-Ordered list:
-
-```html
-
-<ol>
-  <li>First item</li>
-  <li>Second item</li>
-</ol>
-```
-
-## Next Steps
-
-After mastering basic HTML, consider learning:
-
-- CSS for styling your website
-- JavaScript for adding interactivity
-- Responsive design techniques
-
-Remember, every website you visit is built with HTML at its core. With practice, you'll be able to create increasingly
-complex web pages that form the foundation of your web development journey.
