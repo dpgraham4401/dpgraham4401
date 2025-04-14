@@ -1,40 +1,48 @@
 ---
-title: Syn-coding tests
+title: Test as you go, not after
 description: Writing tests as you code will save you later.
 tags: [ "code", "tests" ]
 time: 4
 timestamp: 2025-12-18T02:39:03+00:00
 filename: testing
-published: false
+published: true
 ---
 
 # Test as you go
 
-We all have that coworker, (lets call them Joe). During standup, Joe often says
+#### TL;DR
+
+Practicing Test Driven Development (TDD) instead of writing tests after, results in higher
+quality code.
+
+## The problem
+
+We've all been there, during standup, somebody says something like:
 **"I'm almost done with this ticket, I just need to write the tests"**.
-Every time I hear this, I know pain is headed my way.
+When I hear that, I brace myself a little.
+Not because it's wrong, but because I’ve learned what comes next.
 It's inevitable, like Thanos, except instead of a snap, it's a PR.
 
 I can usually see how the feature was implemented in the git history.
 
-1. Joe wrote the code, got it working, but didn't write any tests.
-2. Joe decide they were ready to submit, but they knew it would be rejected without tests.
-3. When they started to write tests, they realize that they can't easily test the new code.
-4. Instead of refactoring the new code's API, Joe throws what tests they easily can and moves on.
+1. Code gets written and it works—awesome.
+2. Now it’s time for tests...
+3. But suddenly, testing it isn’t so easy, because the code wasn’t written with testing in mind.
+4. So some quick tests are added where possible, and then it’s off to the next task.
 
 ## So what's the problem?
 
-The tests usually have at least one of the following attributes, if not more:
+The tests usually have at least one of the following attributes, maybe all of them:
 
 - Coverage is low
-- They are slow and unfocused
+- The tests are slow and unfocused
 - They test private methods and implementation details
 - They are hard to read
 - They are brittle (
   e.g.,[monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch))
-- **The API is poorly thought out**
+- **_The API is poorly thought out_**
 
-I only want to talk about one, because I think it has the biggest tangible impact on the codebase.
+I’ll focus on just one of these issues, since it tends to have the biggest long-term impact.
 
 ### The API is poorly thought out
 
@@ -75,8 +83,8 @@ def process(data, format, db=False, extra=None, verbose=False):
     return output
 ```
 
-And of course, Joe was just concerned with getting it working so they didn't add type annotations
-or a helpful docstring.
+And since the focus was on getting it working, things like type hints or a helpful docstring got
+skipped.
 
 Reading this function is not too difficult, but what happens when you try to read the client code?
 
@@ -84,7 +92,7 @@ Reading this function is not too difficult, but what happens when you try to rea
 output = process(retrieved, "json", True, extra={"foo": "bar"}, True)
 ```
 
-What do these parameters mean? What is the function doing? What are the boolean flags for?
+What do these parameters mean? What is the function processing? What are the boolean flags for?
 Is this saying it accepts "json" or outputs "json"?
 
 The only way to figure what this function call means is to read the function's code
@@ -94,14 +102,27 @@ tests become the first client of your new code.
 
 ## When did things go wrong?
 
-Take a look at point 4 in the list above.
-If Joe had written test as they coded, they test would have become the first client of their
-new code's API. This would have forced Joe to think about the API they were creating.
+The trouble usually starts when we begin writing code that’s meant for production, but we haven’t
+shifted into a “testing mindset” yet.
 
-Testing while you write the production code improves:
+What would have happened if we had written test as we wrote production code?
+TDD would have naturally nudged us to slow down and think more deliberately about the API they
+were building.
 
-- The APi of the class.
-- The I/O of the functions/method parameters.
-- The name of the functions/methods.
-- the dependencies of the class.
+From Martin
+Fowler's [Test Driven Development](https://martinfowler.com/articles/ruby.html#TestDrivenDevelopment):
+
+> When we write a test, we imagine the perfect interface for our operation. We are telling ourselves
+> a story about how the operation will look from the outside.
+>
+> Our story won’t always come true, but
+> it’s better to start from the best-possible application program interface (API) and work backward
+> than to make things complicated, ugly, and “realistic” from the get-go.
+
+## Let's Refactor and TDD while we go
+
+```python
+
+```
+
 
