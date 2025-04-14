@@ -3,38 +3,58 @@ import {GLOBAL} from "@/lib/variables";
 import Layout from "@/layouts/Layout.astro";
 import Hero from "src/components/home/Hero.vue";
 import Section from "@components/common/Section.vue";
+import type {CollectionEntry} from "astro:content";
+import type {Blog} from "src/content.config";
+import type {ContentEntryModule} from "astro";
+import {getCollection} from "astro:content";
+import FeaturedArticles from "@components/home/FeaturedArticles.vue";
+
+const posts: ContentEntryModule[] = await getCollection("blog");
+const featuredPost: CollectionEntry<Blog>[] = posts.filter((post: CollectionEntry<Blog>) => {
+  if (post.data.isFeatured) {
+    return post.data
+  }
+});
+// const featuredPost = posts.filter((post: CollectionEntry<Blog>) => {
+//   if (post.data.isFeatured) {
+//     return post.data
+//   }
+// });
 ---
 
 <Layout>
-    <Fragment slot="head">
-        <title>{GLOBAL.username} | {GLOBAL.shortDescription}</title>
-        <meta
-                name="description"
-                content={GLOBAL.longDescription}
-        />
-        <meta
-                property="og:title"
-                content={`${GLOBAL.username} | ${GLOBAL.shortDescription}`}
-        />
-        <meta
-                property="og:description"
-                content={GLOBAL.longDescription}
-        />
-        <meta property="og:url" content={GLOBAL.rootUrl}/>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta
-                name="twitter:title"
-                content={`${GLOBAL.username} | ${GLOBAL.shortDescription}`}
-        />
-        <meta
-                name="twitter:description"
-                content={GLOBAL.longDescription}
-        />
-        <meta http-equiv="content-language" content="en"/>
-        <meta name="language" content="English"/>
-        <link rel="canonical" href={GLOBAL.rootUrl}/>
-    </Fragment>
-    <Section class="my-16">
-        <Hero/>
-    </Section>
+  <Fragment slot="head">
+    <title>{GLOBAL.username} | {GLOBAL.shortDescription}</title>
+    <meta
+      name="description"
+      content={GLOBAL.longDescription}
+    />
+    <meta
+      property="og:title"
+      content={`${GLOBAL.username} | ${GLOBAL.shortDescription}`}
+    />
+    <meta
+      property="og:description"
+      content={GLOBAL.longDescription}
+    />
+    <meta property="og:url" content={GLOBAL.rootUrl}/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta
+      name="twitter:title"
+      content={`${GLOBAL.username} | ${GLOBAL.shortDescription}`}
+    />
+    <meta
+      name="twitter:description"
+      content={GLOBAL.longDescription}
+    />
+    <meta http-equiv="content-language" content="en"/>
+    <meta name="language" content="English"/>
+    <link rel="canonical" href={GLOBAL.rootUrl}/>
+  </Fragment>
+  <Section class="my-16">
+    <Hero/>
+  </Section>
+  <Section class="my-16">
+    <FeaturedArticles articles={featuredPost}/>
+  </Section>
 </Layout>
