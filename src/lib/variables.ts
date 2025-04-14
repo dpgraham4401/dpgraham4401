@@ -22,14 +22,14 @@ export const GLOBAL = {
   noProjects: "No featured projects yet.",
 
   // Blog metadata
-  blogTitle: "My Thoughts & Takes",
+  blogTitle: "Blog",
   blogShortDescription: "Practical wisdom, unfiltered thoughts, and hot takes.",
   blogLongDescription: "Web development, tech trends, and the occasional programming mishap.",
 
   // Project metadata
-  projectTitle: "Projects and Code",
-  projectShortDescription: "A list of my web development projects and developer tools.",
-  projectLongDescription: "All of my projects, including both frontend and full-stack applications.",
+  projectTitle: "Projects",
+  projectShortDescription: "A list of projects I've worked on and developer tools.",
+  projectLongDescription: "All of my projects, ranging from dotfiles, static websites, full-blown web applications, CLIs, and more.",
 
   // Profile image
   profileImage: "img/rp_bg_trans.png",
