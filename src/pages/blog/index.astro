@@ -4,7 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/common/Section.vue";
 import {getCollection} from "astro:content";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blogs");
 ---
 
 <Layout>
@@ -20,7 +20,7 @@ const posts = await getCollection("blog");
       content={GLOBAL.blogShortDescription}
     />
     <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}/>
-    <meta property="og:url" content={`${GLOBAL.rootUrl}/blog`}/>
+    <meta property="og:url" content={`${GLOBAL.rootUrl}/blogs`}/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content={`${GLOBAL.blogTitle} | ${GLOBAL.username}`}/>
     <meta
@@ -30,7 +30,7 @@ const posts = await getCollection("blog");
     <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}/>
     <meta http-equiv="content-language" content="en"/>
     <meta name="language" content="English"/>
-    <link rel="canonical" href={`${GLOBAL.rootUrl}/blog`}/>
+    <link rel="canonical" href={`${GLOBAL.rootUrl}/blogs`}/>
   </Fragment>
   <Section class="my-8">
     <div class="flex items-center gap-4 pt-8 pb-16">
