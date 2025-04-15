@@ -1,20 +1,25 @@
 <script lang="ts" setup>
-import type {ArticleFrontmatter} from "@/lib/types";
+import type {Blog} from "@/content.config.ts";
+import {GLOBAL} from "@/lib/variables.ts";
 import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
 type Props = {
-  articles: Array<ArticleFrontmatter>;
+  articles: Array<Blog>;
 }
 
-defineProps<Props>();
 
+const props = defineProps<Props>();
+
+const {articles} = props;
+
+console.log(articles);
 </script>
 
 <template>
   <div class="flex justify-between items-center w-full">
-    <h3 class="font-display text-lg sm:text-xl leading-loose">{GLOBAL.articlesName}</h3>
-    <Anchor ariaLabel="View All" class="text-base" url="/blog">{GLOBAL.viewAll}</Anchor>
+    <h3 class="font-display text-lg sm:text-xl leading-loose">{{ GLOBAL.articlesName }}</h3>
+    <Anchor ariaLabel="View All" class="text-base" url="/blog">{{ GLOBAL.viewAll }}</Anchor>
   </div>
   <ul class="my-8">
     <li
@@ -23,7 +28,7 @@ defineProps<Props>();
     >
       <ArticleSnippet
         :description="article.description"
-        :duration="`${article.time} min`"
+        :duration="article.time"
         :timestamp="article.timestamp"
         :title="article.title"
         :url="article.filename"
