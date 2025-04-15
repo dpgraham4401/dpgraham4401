@@ -4,7 +4,7 @@ import {getCollection} from "astro:content";
 import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blogs");
 const featuredPosts = posts.filter((post) => post.data.isFeatured);
 </script>
 
