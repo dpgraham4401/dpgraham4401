@@ -3,10 +3,8 @@
     "astro/tsconfigs/base"
   ],
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/**/*.astro"
+    ".astro/types.d.ts",
+    "**/*"
   ],
   "exclude": [
     "dist",
@@ -17,6 +15,7 @@
     "module": "esnext",
     "target": "esnext",
     "jsx": "preserve",
+    "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -36,6 +35,11 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   }
 }

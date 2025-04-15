@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-import type {Blog} from "@/content.config.ts";
 import {GLOBAL} from "@/lib/variables.ts";
 import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
 type Props = {
-  articles: Array<Blog>;
+  articles: Collection;
 }
-
 
 const props = defineProps<Props>();
 

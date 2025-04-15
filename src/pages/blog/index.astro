@@ -2,10 +2,9 @@
 import {GLOBAL} from "@/lib/variables";
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/common/Section.vue";
-import type {ContentEntryModule} from "astro";
 import {getCollection} from "astro:content";
 
-const posts: ContentEntryModule[] = await getCollection("blog");
+const posts = await getCollection("blog");
 ---
 
 <Layout>

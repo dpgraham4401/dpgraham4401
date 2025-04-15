@@ -18,6 +18,3 @@ const blog = defineCollection({
 });
 
 export const collections = {blog};
-
-// @ts-expect-error -- allows us to type the blog collection
-export type Blog = z.infer<typeof blog.schema>;
