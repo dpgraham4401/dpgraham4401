@@ -15,8 +15,8 @@ defineProps<Props>();
 
 <template>
   <div class="zag-text zag-transition flex flex-col gap-3 pb-8">
-    <Anchor aria-label="full article" class="text-xl" url={url}>
-      {title}
+    <Anchor ariaLabel="full article" class="text-xl" :url="url">
+      {{ title }}
     </Anchor>
     <p class="">
       {{ description }}

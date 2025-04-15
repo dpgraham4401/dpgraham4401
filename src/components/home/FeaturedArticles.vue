@@ -1,32 +1,29 @@
 <script lang="ts" setup>
-import type { ArticleFrontmatter } from "@/lib/types";
+import {GLOBAL} from "@/lib/variables.ts";
+import {getCollection} from "astro:content";
 import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
-type Props = {
-  featuredArticles: Array<ArticleFrontmatter>;
-}
-
-defineProps<Props>();
-
+const posts = await getCollection("blog");
+const featuredPosts = posts.filter((post) => post.data.isFeatured);
 </script>
 
 <template>
   <div class="flex justify-between items-center w-full">
-    <h3 class="font-display text-lg sm:text-xl leading-loose">{GLOBAL.articlesName}</h3>
-    <Anchor aria-label="View All" class="text-base" url="/blog">{GLOBAL.viewAll}</Anchor>
+    <h3 class="font-display text-lg sm:text-xl leading-loose">{{ GLOBAL.articlesName }}</h3>
+    <Anchor ariaLabel="View All" class="text-base" url="/blog">{{ GLOBAL.viewAll }}</Anchor>
   </div>
   <ul class="my-8">
     <li
-      v-for="(article, index) in featuredArticles"
+      v-for="(post, index) in featuredPosts"
       :key="index"
     >
       <ArticleSnippet
-        :description="article.description"
-        :duration="`${article.time} min`"
-        :timestamp="article.timestamp"
-        :title="article.title"
-        :url="article.filename"
+        :description="post.data.description"
+        :duration="post.data.readTime"
+        :timestamp="post.data.timestamp"
+        :title="post.data.title"
+        :url="`${post.collection}/${post.id}`"
       />
     </li>
   </ul>
