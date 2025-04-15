@@ -3,6 +3,7 @@ import {GLOBAL} from "@/lib/variables";
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/common/Section.vue";
 import {getCollection} from "astro:content";
+import ArticleSnippet from "@components/ArticleSnippet.vue";
 
 const posts = await getCollection("blogs");
 ---
@@ -43,11 +44,8 @@ const posts = await getCollection("blogs");
     {posts
       .filter((post) => post.data.published !== false)
       .map((post) => (
-        <li class="mb-4">
-          <a href={`/blog/${post.id}`} class="text-blue-500 hover:underline">
-            {post.data.title}
-          </a>
-        </li>
+        <ArticleSnippet title={post.data.title} description={post.data.description}
+                        url={`${post.collection}/${post.id}`}/>
       ))}
   </Section>
 </Layout>
