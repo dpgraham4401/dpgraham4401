@@ -3,13 +3,7 @@ import {GLOBAL} from "@/lib/variables";
 import Layout from "@/layouts/Layout.astro";
 import Hero from "src/components/home/Hero.vue";
 import Section from "@components/common/Section.vue";
-import {getCollection} from "astro:content";
 import FeaturedArticles from "@components/home/FeaturedArticles.vue";
-
-const posts = await getCollection("blog");
-const blogs = posts.map((post => post.data))
-
-const featuredPosts = blogs.filter((blog) => (blog.isFeatured));
 ---
 
 <Layout>
@@ -45,6 +39,6 @@ const featuredPosts = blogs.filter((blog) => (blog.isFeatured));
     <Hero/>
   </Section>
   <Section class="my-16">
-    <FeaturedArticles articles={featuredPosts}/>
+    <FeaturedArticles/>
   </Section>
 </Layout>

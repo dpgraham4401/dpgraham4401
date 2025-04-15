@@ -1,17 +1,11 @@
 <script lang="ts" setup>
 import {GLOBAL} from "@/lib/variables.ts";
+import {getCollection} from "astro:content";
 import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
-type Props = {
-  articles: Collection;
-}
-
-const props = defineProps<Props>();
-
-const {articles} = props;
-
-console.log(articles);
+const posts = await getCollection("blog");
+const featuredPosts = posts.filter((post) => post.data.isFeatured);
 </script>
 
 <template>
@@ -21,15 +15,15 @@ console.log(articles);
   </div>
   <ul class="my-8">
     <li
-      v-for="(article, index) in articles"
+      v-for="(post, index) in featuredPosts"
       :key="index"
     >
       <ArticleSnippet
-        :description="article.description"
-        :duration="article.time"
-        :timestamp="article.timestamp"
-        :title="article.title"
-        :url="article.filename"
+        :description="post.data.description"
+        :duration="post.data.readTime"
+        :timestamp="post.data.timestamp"
+        :title="post.data.title"
+        :url="`${post.collection}/${post.id}`"
       />
     </li>
   </ul>
