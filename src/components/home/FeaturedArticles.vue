@@ -11,7 +11,7 @@ const featuredPosts = posts.filter((post) => post.data.isFeatured);
 <template>
   <div class="flex justify-between items-center w-full">
     <h3 class="font-display text-lg sm:text-xl leading-loose">{{ GLOBAL.articlesName }}</h3>
-    <Anchor ariaLabel="View All" class="text-base" url="/blog">{{ GLOBAL.viewAll }}</Anchor>
+    <Anchor ariaLabel="View All" class="text-base" url="/blogs">{{ GLOBAL.viewAll }}</Anchor>
   </div>
   <ul class="my-8">
     <li

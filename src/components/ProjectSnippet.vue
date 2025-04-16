@@ -7,7 +7,7 @@ type Props = {
   url: string
   githubUrl?: string
   liveUrl?: string
-  tags: string[]
+  tags?: string[]
 }
 
 defineProps<Props>();
@@ -47,6 +47,7 @@ defineProps<Props>();
     <div class="flex flex-row wrap gap-2">
       <!-- v-for to loop over tags -->
       <span
+        v-if="tags"
         v-for="(tag, index) in tags"
         :key="index"
         class="-zag-text -zag-bg zag-transition px-2 py-1 text-sm font-semibold"
