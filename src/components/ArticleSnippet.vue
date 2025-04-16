@@ -6,7 +6,7 @@ type Props = {
   description: string;
   url: string;
   timeToRead?: string;
-  timestamp?: string;
+  timestamp?: Date;
   tags?: string[];
 };
 
@@ -24,6 +24,9 @@ defineProps<Props>();
     <div
       class="zag-muted zag-transition flex justify-between items-center"
     >
+      <p v-if="timestamp">
+        {{ timestamp.toLocaleDateString() }}
+      </p>
       <p v-if="timeToRead">
         {{ timeToRead }} min
       </p>
