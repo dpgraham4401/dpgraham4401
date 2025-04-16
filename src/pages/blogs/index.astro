@@ -44,8 +44,12 @@ const posts = await getCollection("blogs");
     {posts
       .filter((post) => post.data.published !== false)
       .map((post) => (
-        <ArticleSnippet title={post.data.title} description={post.data.description}
-                        url={`${post.collection}/${post.id}`}/>
+        <ArticleSnippet
+          title={post.data.title}
+          description={post.data.description}
+          url={`${post.collection}/${post.id}`}
+          timeToRead={post.data.timeToRead}
+        />
       ))}
   </Section>
 </Layout>

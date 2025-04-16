@@ -2,7 +2,7 @@
 title: Test as you go, not after
 description: Writing tests as you code will save you later.
 tags: [ "code", "tests" ]
-time: 4
+timeToRead: 5
 timestamp: 2025-12-18T02:39:03+00:00
 filename: testing
 published: true

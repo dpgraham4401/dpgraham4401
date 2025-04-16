@@ -5,12 +5,12 @@ type Props = {
   title: string;
   description: string;
   url: string;
-  duration?: string;
+  timeToRead?: string;
   timestamp?: string;
+  tags?: string[];
 };
 
 defineProps<Props>();
-
 </script>
 
 <template>
@@ -24,8 +24,8 @@ defineProps<Props>();
     <div
       class="zag-muted zag-transition flex justify-between items-center"
     >
-      <p v-if="duration">
-        {{ duration }}
+      <p v-if="timeToRead">
+        {{ timeToRead }} min
       </p>
     </div>
   </div>
