@@ -5,7 +5,7 @@ type Props = {
   title: string;
   description: string;
   url: string;
-  timeToRead?: string;
+  timeToRead?: number;
   timestamp?: Date;
   tags?: string[];
 };
