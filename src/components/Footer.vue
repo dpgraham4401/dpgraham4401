@@ -1,7 +1,7 @@
 <script>
 import Section from "@components/common/Section.vue";
 import Anchor from "./common/Anchor.vue";
-import { GLOBAL } from "@/lib/variables";
+import {GLOBAL} from "@/lib/variables";
 
 export default {
   components: {
@@ -14,16 +14,50 @@ export default {
 
     const quotes = [
       {
-        quote:
-          "The purple elephant dances only when the moon whispers forgotten lullabies.",
-        source: "Professor Whimsy's Guide to Improbable Physics"
+        quote: "Talk is cheap. Show me code.",
+        source: "Linus Torvalds"
       },
       {
         quote:
           "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
         source: "Martin Fowler"
-      }
-      // Add the rest of the quotes here...
+      },
+      {
+        quote: "Never laugh at live dragons.",
+        source: "Bilbo Baggins,  J.R.R. Tolkien"
+      },
+      {
+        quote: "In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.",
+        source: "The Hitchhiker's Guide to the Galaxy, Douglas Adams"
+      },
+      {
+        quote: "Don't Panic!",
+        source: "The Hitchhiker's Guide to the Galaxy, Douglas Adams"
+      },
+      {
+        quote: "Never memorize what you could look up in a book.",
+        source: "Albert Einstein"
+      },
+      {
+        quote: "All men make mistakes, but a good man yields when he knows his course is wrong, and repairs the evil. The only crime is pride.",
+        source: "Sophocles"
+      },
+      {
+        quote: "Today is tomorrow's yesterday.",
+        source: "Bob's Burgers"
+      },
+      {
+        quote: "Clean code always looks like it was written by someone who cares.",
+        source: "Robert C. Martin"
+      },
+      {
+        quote: "They say stress is the silent killer. But poison darts are also pretty darn quiet.",
+        source: "Sterling Archer, Archer"
+      },
+      {
+        quote: " have no special talent. I am only passionately curious.",
+        source: "Albert Einstein"
+      },
     ];
 
     const randomIndex = Math.floor(Math.random() * quotes.length);
