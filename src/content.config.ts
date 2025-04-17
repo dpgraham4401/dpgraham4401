@@ -2,11 +2,11 @@
  * See Astros docs on Content Collections https://docs.astro.build/en/guides/content-collections/
  */
 
-import {glob} from "astro/loaders";
-import {defineCollection, z} from "astro:content";
+import { glob } from "astro/loaders";
+import { defineCollection, z } from "astro:content";
 
 const blogs = defineCollection({
-  loader: glob({pattern: "**/*.md", base: "src/content/blogs"}),
+  loader: glob({ pattern: "**/*.md", base: "src/content/blogs" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -15,22 +15,24 @@ const blogs = defineCollection({
     tags: z.array(z.string()).optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.string().optional(),
+    readTime: z.string().optional()
   })
 });
 
 const projects = defineCollection({
-  loader: glob({pattern: "**/*.md", base: "src/content/projects"}),
+  loader: glob({ pattern: "**/*.md", base: "src/content/projects" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()).optional(),
     timeToRead: z.number().optional(),
+    githubUrl: z.string().optional(),
+    liveUrl: z.string().optional(),
     timestamp: z.date().optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.string().optional(),
+    readTime: z.string().optional()
   })
 });
 
-export const collections = {blogs, projects};
+export const collections = { blogs, projects };

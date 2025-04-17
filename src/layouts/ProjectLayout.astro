@@ -4,32 +4,21 @@ import Layout from "./Layout.astro";
 import Section from "@components/common/Section.vue";
 import Anchor from "src/components/common/Anchor.vue";
 import { GLOBAL } from "@/lib/variables";
+import type { InferEntrySchema } from "astro:content";
 
 interface Props {
   post: {
     id: string,
-    data: {
-      title: string,
-      description: string,
-      tags: string[],
-      githubUrl?: string,
-      liveUrl?: string,
-    },
+    data: InferEntrySchema<"projects">,
     body?: string,
-    filePath: string,
+    filePath?: string,
     digest?: string,
-    rendered: {
-      html: string,
-      metadata: {
-        headings: string[],
-        localImagePaths: string[],
-      }
-    }
+    rendered?: any,
     collection: string,
   };
 }
 
-const { post: { data, id } } = Astro.props as Props;
+const { post: { data } } = Astro.props as Props;
 ---
 
 <Layout>
