@@ -3,33 +3,57 @@ import Prose from "src/components/Prose.vue";
 import Layout from "./Layout.astro";
 import Section from "@components/common/Section.vue";
 import Anchor from "src/components/common/Anchor.vue";
-import {GLOBAL} from "@/lib/variables";
+import { GLOBAL } from "@/lib/variables";
 
-const {frontmatter} = Astro.props;
+interface Props {
+  post: {
+    id: string,
+    data: {
+      title: string,
+      description: string,
+      tags: string[],
+      githubUrl?: string,
+      liveUrl?: string,
+    },
+    body: string,
+    filePath: string,
+    digest: string,
+    rendered: {
+      html: string,
+      metadata: {
+        headings: string[],
+        localImagePaths: string[],
+      }
+    }
+    collection: string,
+  };
+}
+
+const { post: { data, id } } = Astro.props as Props;
+console.log(id);
 ---
 
 <Layout>
   <Fragment slot="head">
-    <title>{GLOBAL.username} | {frontmatter.title}</title>
-    <meta name="description" content={frontmatter.description}/>
-    <meta property="og:title" content={`${GLOBAL.username} | ${frontmatter.title}`}/>
-    <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}/>
-    <meta property="og:url" content={frontmatter.url}/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content={`${frontmatter.title} | ${GLOBAL.username}`}/>
-    <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}/>
-    <meta http-equiv="content-language" content="en"/>
-    <meta name="language" content="English"/>
+    <title>{GLOBAL.username} | {data.title}</title>
+    <meta name="description" content={data.description} />
+    <meta property="og:title" content={`${GLOBAL.username} | ${data.title}`} />
+    <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${data.title} | ${GLOBAL.username}`} />
+    <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="language" content="English" />
   </Fragment>
   <Section class="mt-8">
     <div class="flex flex-col gap-4 mt-8 mb-16">
       <h1 class="text-3xl sm:text-4xl leading-tight font-display">
-        {frontmatter.title}
+        {data.title}
       </h1>
       <div class="flex text-sm gap-2">
         {
-          frontmatter.tags
-            ? frontmatter.tags.map((tag: string) => (
+          data.tags
+            ? data.tags.map((tag: string) => (
               <span class="-zag-text -zag-bg zag-transition font-semibold py-1 px-2">
                   {tag}
                 </span>
@@ -39,16 +63,16 @@ const {frontmatter} = Astro.props;
       </div>
       <div class="flex gap-2">
         {
-          frontmatter.githubUrl ? (
-            <Anchor ariaLabel="GitHub profile" url={frontmatter.githubUrl} class="text-base"
+          data.githubUrl ? (
+            <Anchor ariaLabel="GitHub profile" url={data.githubUrl} class="text-base"
                     external>
               GitHub
             </Anchor>
           ) : null
         }
         {
-          frontmatter.liveUrl ? (
-            <Anchor ariaLabel="Project live demo" url={frontmatter.liveUrl} class="text-base"
+          data.liveUrl ? (
+            <Anchor ariaLabel="Project live demo" url={data.liveUrl} class="text-base"
                     external>
               Live
             </Anchor>
@@ -57,7 +81,7 @@ const {frontmatter} = Astro.props;
       </div>
     </div>
     <Prose>
-      <slot/>
+      <slot />
     </Prose>
   </Section>
 </Layout>
