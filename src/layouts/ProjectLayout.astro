@@ -15,9 +15,9 @@ interface Props {
       githubUrl?: string,
       liveUrl?: string,
     },
-    body: string,
+    body?: string,
     filePath: string,
-    digest: string,
+    digest?: string,
     rendered: {
       html: string,
       metadata: {
@@ -30,7 +30,6 @@ interface Props {
 }
 
 const { post: { data, id } } = Astro.props as Props;
-console.log(id);
 ---
 
 <Layout>
