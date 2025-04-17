@@ -1,10 +1,20 @@
+<script lang="ts" setup>
+import { GLOBAL } from "@/lib/variables";
+import { getCollection } from "astro:content";
+import Anchor from "src/components/common/Anchor.vue";
+import ProjectSnippet from "src/components/ProjectSnippet.vue";
+
+const posts = await getCollection("projects");
+const featuredProjects = posts.filter((post) => post.data.isFeatured);
+</script>
+
 <template>
   <div class="flex justify-between items-center w-full">
     <!-- Display the heading and link from GLOBAL -->
     <h3 class="font-display text-lg sm:text-xl leading-loose">
       {{ GLOBAL.projectsName }}
     </h3>
-    <Anchor class="text-base" url="/projects">
+    <Anchor ariaLabel="view all" class="text-base" url="/projects">
       {{ GLOBAL.viewAll }}
     </Anchor>
   </div>
@@ -23,29 +33,15 @@
       >
         <!-- Pass project props into the ProjectSnippet component -->
         <ProjectSnippet
-          :description="project.description"
-          :githubUrl="project.githubUrl"
-          :liveUrl="project.liveUrl"
-          :tags="project.tags ?? []"
-          :title="project.title"
-          :url="project.filename"
+          :description="project.data.description"
+          :githubUrl="project.data. githubUrl"
+          :liveUrl="project.data.liveUrl"
+          :tags="project.data. tags ?? []"
+          :title="project.data. title"
+          :url="`${project.collection}/${project.id}`"
         />
       </li>
     </template>
   </ul>
 </template>
 
-<script lang="ts" setup>
-import type { ProjectFrontmatter } from "@/lib/types";
-import { GLOBAL } from "@/lib/variables";
-import Anchor from "src/components/common/Anchor.vue";
-import ProjectSnippet from "src/components/ProjectSnippet.vue";
-
-// Define the prop type using an interface (or type alias)
-interface Props {
-  featuredProjects: Array<ProjectFrontmatter>;
-}
-
-// Use defineProps from the composition API
-defineProps<Props>();
-</script>

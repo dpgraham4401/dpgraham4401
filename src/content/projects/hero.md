@@ -5,7 +5,7 @@ description: Health and Environmental Research Online (HERO), EPA's system for r
 tags: [ "Django", "Python", "PostgresSQL", "AWS" ]
 liveUrl: https://heronetnext.epa.gov/
 timestamp: 2025-04-30T00:00:00+00:00
-featured: true
+isFeatured: true
 filename: hero
 published: true
 ---

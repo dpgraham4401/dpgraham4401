@@ -4,7 +4,7 @@ description: An interactive decision tree to help users fill out the electronic 
 tags: [ "TypeScript", "React" ]
 githubUrl: https://github.com/usepa/the-manifest-game
 timestamp: 2024-09-08T00:00:00+00:00
-featured: false
+isFeatured: false
 filename: manifest-game
 published: true
 ---
