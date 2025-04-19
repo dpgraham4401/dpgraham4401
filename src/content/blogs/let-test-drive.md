@@ -1,14 +1,14 @@
 ---
-title: Test as you go, not after
+title: Tests, take the wheel
 description: Writing tests as you code will save you later.
 tags: [ "code", "tests" ]
-timeToRead: 5
-timestamp: 2025-04-13
+readTime: 5
+timestamp: 2025-04-18
 filename: testing
 published: true
 ---
 
-# Test as you go
+# Let the tests drive your code
 
 #### TL;DR
 

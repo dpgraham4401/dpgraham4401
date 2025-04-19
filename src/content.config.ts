@@ -10,12 +10,11 @@ const blogs = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    timeToRead: z.number().optional(),
     timestamp: z.date().optional(),
     tags: z.array(z.string()).optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.string().optional()
+    readTime: z.number().optional()
   })
 });
 
@@ -25,13 +24,12 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()).optional(),
-    timeToRead: z.number().optional(),
     githubUrl: z.string().optional(),
     liveUrl: z.string().optional(),
     timestamp: z.date().optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.string().optional()
+    readTime: z.number().optional()
   })
 });
 

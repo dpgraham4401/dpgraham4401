@@ -3,39 +3,43 @@ import Section from "@components/common/Section.vue";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import ProjectSnippet from "@components/ProjectSnippet.vue";
-import { GLOBAL } from "src/lib/variables";
+import { GLOBAL } from "src/lib/constants";
 
 const posts = await getCollection("projects");
+
+const collectionId = posts[0].collection;
+
+const pageUrl = `${GLOBAL.site.rootUrl}/${collectionId}`;
 ---
 
 <Layout>
   <Fragment slot="head">
-    <title>{GLOBAL.username} | {GLOBAL.projectTitle}</title>
+    <title>{GLOBAL.site.name} | Projects </title>
     <meta
       name="description"
-      content={GLOBAL.projectLongDescription}
+      content={GLOBAL.projects.longDescription}
     />
-    <meta property="og:title" content={`${GLOBAL.username} | ${GLOBAL.projectTitle}`} />
+    <meta property="og:title" content={`${GLOBAL.site.name} | ${GLOBAL.projects.title}`} />
     <meta
       property="og:description"
-      content={GLOBAL.projectShortDescription}
+      content={GLOBAL.projects.shortDescription}
     />
-    <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
-    <meta property="og:url" content={`${GLOBAL.rootUrl}/projects`} />
+    <meta property="og:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta property="og:url" content={`${GLOBAL.site.rootUrl}/projects`} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={`${GLOBAL.username} | ${GLOBAL.projectTitle}`} />
+    <meta property="twitter:title" content={`${GLOBAL.site.name} | ${GLOBAL.projects.title}`} />
     <meta
       name="twitter:description"
-      content={GLOBAL.projectShortDescription}
+      content={GLOBAL.projects.shortDescription}
     />
-    <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
-    <link rel="canonical" href={`${GLOBAL.rootUrl}/projects`} />
+    <link rel="canonical" href={pageUrl} />
   </Fragment>
   <Section class="py-4 my-8">
     <div class="flex items-center gap-4 pt-8 pb-16">
-      <h1 class="font-display text-3xl sm:text-4xl leading-loose">{GLOBAL.projectsName}</h1>
+      <h1 class="font-display text-3xl sm:text-4xl leading-loose">{GLOBAL.projects.title}</h1>
     </div>
     {posts
       .filter((post) => post.data.published !== false)

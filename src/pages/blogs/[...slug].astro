@@ -1,21 +1,46 @@
 ---
 import type { GetStaticPaths } from "astro";
+import type { InferEntrySchema } from "astro:content";
 import { getCollection, render } from "astro:content";
 import BlogLayout from "src/layouts/BlogLayout.astro";
+import { GLOBAL } from "src/lib/constants";
 
+
+type Props = {
+  post: {
+    id: string
+    body?: string
+    collection: "blogs"
+    data: InferEntrySchema<"blogs">
+    rendered?: any
+    filePath?: string
+  }
+}
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection("blogs");
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { post }
+    props: { post } as Props
   }));
 }) satisfies GetStaticPaths;
 
-const { post } = Astro.props;
+const post = Astro.props.post;
+const { id, collection, data: { title, description, readTime, timestamp } } = post;
+const pageUrl = `${GLOBAL.site.rootUrl}/${collection}/${id}`;
 const { Content } = await render(post);
 ---
 
-<BlogLayout frontmatter={post}>
+<BlogLayout title={title} readTime={readTime} timestamp={timestamp}>
+  <Fragment slot="head">
+    <title>{GLOBAL.site.name} | {title}</title>
+    <meta property="og:title" content={`${GLOBAL.site.name} | ${title}`} />
+    <meta property="og:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta property="og:url" content={pageUrl} />
+    <meta name="twitter:title" content={`${title} | ${GLOBAL.site.name}`} />
+    <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta name="description" content={description} />
+    <title>foo</title>
+  </Fragment>
   <Content />
 </BlogLayout>

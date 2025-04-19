@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection, render } from "astro:content";
 import ProjectLayout from "src/layouts/ProjectLayout.astro";
+import { GLOBAL } from "src/lib/constants";
 
 
 export const getStaticPaths = (async () => {
@@ -11,9 +12,20 @@ export const getStaticPaths = (async () => {
   }));
 }) satisfies GetStaticPaths;
 
-const { post } = Astro.props;
+const post = Astro.props.post;
+const { id, collection, data: { title, description } } = post;
+const pageUrl = `${GLOBAL.site.rootUrl}/${collection}/${id}`;
 const { Content } = await render(post);
 ---
-<ProjectLayout post={post}>
+<ProjectLayout data={post.data}>
+  <Fragment slot="head">
+    <title>{GLOBAL.site.name} | {title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${GLOBAL.site.name} | ${title}`} />
+    <meta property="og:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta property="og:url" content={pageUrl} />
+    <meta name="twitter:title" content={`${title} | ${GLOBAL.site.name}`} />
+    <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
+  </Fragment>
   <Content />
 </ProjectLayout>

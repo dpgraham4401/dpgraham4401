@@ -1,7 +1,7 @@
 <script>
 import Section from "@components/common/Section.vue";
 import Anchor from "./common/Anchor.vue";
-import {GLOBAL} from "@/lib/variables";
+import { GLOBAL } from "@/lib/constants.js";
 
 export default {
   components: {
@@ -57,7 +57,7 @@ export default {
       {
         quote: " have no special talent. I am only passionately curious.",
         source: "Albert Einstein"
-      },
+      }
     ];
 
     const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -101,8 +101,8 @@ export default {
         </div>
         <div class="flex flex-row sm:flex-col gap-4">
           <Anchor
-            v-if="GLOBAL.githubProfile"
-            :url="GLOBAL.githubProfile"
+            v-if="GLOBAL.social.github"
+            :url="GLOBAL.social.github"
             aria-label="GitHub Profile"
           >
             <svg
@@ -118,8 +118,8 @@ export default {
             </svg>
           </Anchor>
           <Anchor
-            v-if="GLOBAL.linkedinProfile"
-            :url="GLOBAL.linkedinProfile"
+            v-if="GLOBAL.social.linkedin"
+            :url="GLOBAL.social.linkedin"
             aria-label="LinkedIn Profile"
           >
             <svg
@@ -139,7 +139,7 @@ export default {
       </div>
     </Section>
     <p class="zag-text zag-transition text-center text-sm font-medium">
-      &copy; {{ year }} {{ GLOBAL.username }}. All rights reserved.
+      &copy; {{ year }} {{ GLOBAL.site.name }}. All rights reserved.
     </p>
   </footer>
 </template>

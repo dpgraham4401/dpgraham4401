@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import {GLOBAL} from "@/lib/variables.ts";
-import {getCollection} from "astro:content";
+import { GLOBAL } from "@/lib/constants.ts";
+import { getCollection } from "astro:content";
 import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
@@ -10,8 +10,8 @@ const featuredPosts = posts.filter((post) => post.data.isFeatured);
 
 <template>
   <div class="flex justify-between items-center w-full">
-    <h3 class="font-display text-lg sm:text-xl leading-loose">{{ GLOBAL.articlesName }}</h3>
-    <Anchor ariaLabel="View All" class="text-base" url="/blogs">{{ GLOBAL.viewAll }}</Anchor>
+    <h3 class="font-display text-lg sm:text-xl leading-loose">{{ GLOBAL.articles.title }}</h3>
+    <Anchor ariaLabel="View All" class="text-base" url="/blogs">View All</Anchor>
   </div>
   <ul class="my-8">
     <li
