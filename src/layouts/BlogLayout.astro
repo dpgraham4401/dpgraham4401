@@ -1,34 +1,49 @@
 ---
 import Section from "@components/common/Section.vue";
 import { GLOBAL } from "@/lib/constants";
+import type { InferEntrySchema } from "astro:content";
 import Prose from "src/components/Prose.vue";
 import Layout from "./Layout.astro";
 
-const { frontmatter } = Astro.props;
+type Props = {
+  post: {
+    id: string
+    body?: string
+    collection: "blogs"
+    data: InferEntrySchema<"blogs">
+    rendered?: any
+    filePath?: string
+  }
+}
+
+const post = Astro.props.post;
+const { id, collection, data: { title, description, readTime } } = post;
+const pageUrl = `${GLOBAL.site.rootUrl}/${collection}/${id}`;
 ---
 
 <Layout>
   <Fragment slot="head">
-    <title>{GLOBAL.site.name} | {frontmatter.title}</title>
-    <meta name="description" content={frontmatter.description} />
-    <meta property="og:title" content={`${GLOBAL.site.name} | ${frontmatter.title}`} />
+    <title>{GLOBAL.site.name} | {title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${GLOBAL.site.name} | ${title}`} />
     <meta property="og:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
-    <meta property="og:url" content={frontmatter.url} />
+    <meta property="og:url" content={pageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${frontmatter.title} | ${GLOBAL.site.name}`} />
+    <meta name="twitter:title" content={`${title} | ${GLOBAL.site.name}`} />
     <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
+    <slot name="head" />
   </Fragment>
   <Section class="pt-8">
     <div class="flex flex-col gap-4 mt-8 mb-16">
       <h1
         class="text-3xl sm:text-4xl leading-normal sm:leading-normal font-display"
       >
-        {frontmatter.title}
+        {title}
       </h1>
       <div class="flex justify-between">
-        <span>{frontmatter.time}</span>
+        <span>{readTime}</span>
       </div>
     </div>
     <Prose>
