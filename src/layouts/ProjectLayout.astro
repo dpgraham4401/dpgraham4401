@@ -1,47 +1,33 @@
 ---
+import type { InferEntrySchema } from "astro:content";
 import Prose from "src/components/Prose.vue";
 import Layout from "./Layout.astro";
 import Section from "@components/common/Section.vue";
 import Anchor from "src/components/common/Anchor.vue";
-import { GLOBAL } from "@/lib/constants";
-import type { InferEntrySchema } from "astro:content";
 
-interface Props {
-  post: {
-    id: string,
-    data: InferEntrySchema<"projects">,
-    body?: string,
-    filePath?: string,
-    digest?: string,
-    rendered?: any,
-    collection: string,
-  };
+type Props = {
+  data: InferEntrySchema<"projects">
 }
 
-const { post: { data } } = Astro.props as Props;
+const { data: { title, readTime, timestamp, tags, githubUrl, liveUrl } } = Astro.props as Props;
 ---
 
 <Layout>
-  <Fragment slot="head">
-    <title>{GLOBAL.site.name} | {data.title}</title>
-    <meta name="description" content={data.description} />
-    <meta property="og:title" content={`${GLOBAL.site.name} | ${data.title}`} />
-    <meta property="og:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
+  <Fragment>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${data.title} | ${GLOBAL.site.name}`} />
-    <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
+    <slot name="head" />
   </Fragment>
   <Section class="mt-8">
     <div class="flex flex-col gap-4 mt-8 mb-16">
       <h1 class="text-3xl sm:text-4xl leading-tight font-display">
-        {data.title}
+        {title}
       </h1>
       <div class="flex text-sm gap-2">
         {
-          data.tags
-            ? data.tags.map((tag: string) => (
+          tags
+            ? tags.map((tag: string) => (
               <span class="-zag-text -zag-bg zag-transition font-semibold py-1 px-2">
                   {tag}
                 </span>
@@ -51,16 +37,16 @@ const { post: { data } } = Astro.props as Props;
       </div>
       <div class="flex gap-2">
         {
-          data.githubUrl ? (
-            <Anchor ariaLabel="GitHub profile" url={data.githubUrl} class="text-base"
+          githubUrl ? (
+            <Anchor ariaLabel="GitHub profile" url={githubUrl} class="text-base"
                     external>
               GitHub
             </Anchor>
           ) : null
         }
         {
-          data.liveUrl ? (
-            <Anchor ariaLabel="Project live demo" url={data.liveUrl} class="text-base"
+          liveUrl ? (
+            <Anchor ariaLabel="Project live demo" url={liveUrl} class="text-base"
                     external>
               Live
             </Anchor>
