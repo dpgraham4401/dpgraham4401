@@ -22,7 +22,7 @@ defineProps<Props>();
       {{ description }}
     </p>
     <div
-      class="zag-muted zag-transition flex justify-between items-center"
+      class="text-neutral-600 dark:text-neutral-400 zag-transition flex justify-between items-center"
     >
       <p v-if="timestamp">
         {{ timestamp.toLocaleDateString() }}

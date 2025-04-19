@@ -81,13 +81,6 @@
         }
     }
 
-    .zag-muted {
-        color: var(--color-zag-dark-muted);
-        @variant dark {
-            color: var(--color-zag-light-muted);
-        }
-    }
-
     .zag-fill {
         fill: var(--color-zag-dark);
         @variant dark {
