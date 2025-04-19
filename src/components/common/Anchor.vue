@@ -14,7 +14,7 @@ const { external = false } = defineProps<Props>();
 <template>
   <a
     :aria-label="ariaLabel"
-    :class="['zag-offset', 'underline', 'font-medium', 'flex', 'items-center', 'focus:outline-2', 'focus:outline-offset-2', 'focus:outline-zag-dark', 'dark:focus:outline-zag-light']"
+    :class="['px-1.5', 'underline', 'font-medium', 'flex', 'items-center', 'focus:outline-2', 'focus:outline-offset-2', 'focus:outline-zag-dark', 'dark:focus:outline-zag-light']"
     :href="url"
     :target="external ? '_blank' : '_self'"
   >
