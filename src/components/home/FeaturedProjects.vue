@@ -37,6 +37,7 @@ const featuredProjects = posts.filter((post) => post.data.isFeatured);
           :githubUrl="project.data. githubUrl"
           :liveUrl="project.data.liveUrl"
           :tags="project.data. tags ?? []"
+          :readTime="project.data.readTime"
           :title="project.data. title"
           :url="`${project.collection}/${project.id}`"
         />

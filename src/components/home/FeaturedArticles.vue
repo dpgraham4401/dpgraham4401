@@ -22,6 +22,7 @@ const featuredPosts = posts.filter((post) => post.data.isFeatured);
         :description="post.data.description"
         :duration="post.data.readTime"
         :timestamp="post.data.timestamp"
+        :readTime="post.data.readTime"
         :title="post.data.title"
         :url="`${post.collection}/${post.id}`"
       />
