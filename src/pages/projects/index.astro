@@ -6,6 +6,10 @@ import ProjectSnippet from "@components/ProjectSnippet.vue";
 import { GLOBAL } from "src/lib/constants";
 
 const posts = await getCollection("projects");
+
+const collectionId = posts[0].collection;
+
+const pageUrl = `${GLOBAL.site.rootUrl}/${collectionId}`;
 ---
 
 <Layout>
@@ -31,7 +35,7 @@ const posts = await getCollection("projects");
     <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
-    <link rel="canonical" href={`${GLOBAL.site.rootUrl}/projects`} />
+    <link rel="canonical" href={pageUrl} />
   </Fragment>
   <Section class="py-4 my-8">
     <div class="flex items-center gap-4 pt-8 pb-16">

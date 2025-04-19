@@ -5,6 +5,8 @@ import Hero from "src/components/home/Hero.vue";
 import Section from "@components/common/Section.vue";
 import FeaturedArticles from "@components/home/FeaturedArticles.vue";
 import FeaturedProjects from "@components/home/FeaturedProjects.vue";
+
+const rootUrl = GLOBAL.site.rootUrl;
 ---
 
 <Layout>
@@ -19,7 +21,7 @@ import FeaturedProjects from "@components/home/FeaturedProjects.vue";
     <meta name="twitter:description" content={GLOBAL.site.longDescription} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
-    <link rel="canonical" href={GLOBAL.site.rootUrl} />
+    <link rel="canonical" href={rootUrl} />
   </Fragment>
   <Section class="my-8">
     <Hero />
