@@ -1,8 +1,8 @@
 ---
-import {GLOBAL} from "@/lib/variables";
+import { GLOBAL } from "@/lib/variables";
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/common/Section.vue";
-import {getCollection} from "astro:content";
+import { getCollection } from "astro:content";
 import ArticleSnippet from "@components/ArticleSnippet.vue";
 
 const posts = await getCollection("blogs");
@@ -15,23 +15,23 @@ const posts = await getCollection("blogs");
       name="description"
       content={GLOBAL.blogLongDescription}
     />
-    <meta property="og:title" content={`${GLOBAL.username} | ${GLOBAL.blogTitle}`}/>
+    <meta property="og:title" content={`${GLOBAL.username} | ${GLOBAL.blogTitle}`} />
     <meta
       property="og:description"
       content={GLOBAL.blogShortDescription}
     />
-    <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}/>
-    <meta property="og:url" content={`${GLOBAL.rootUrl}/blogs`}/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content={`${GLOBAL.blogTitle} | ${GLOBAL.username}`}/>
+    <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta property="og:url" content={`${GLOBAL.rootUrl}/blogs`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${GLOBAL.blogTitle} | ${GLOBAL.username}`} />
     <meta
       name="twitter:description"
       content={GLOBAL.blogShortDescription}
     />
-    <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}/>
-    <meta http-equiv="content-language" content="en"/>
-    <meta name="language" content="English"/>
-    <link rel="canonical" href={`${GLOBAL.rootUrl}/blogs`}/>
+    <meta name="twitter:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="language" content="English" />
+    <link rel="canonical" href={`${GLOBAL.rootUrl}/blogs`} />
   </Fragment>
   <Section class="my-8">
     <div class="flex items-center gap-4 pt-8 pb-16">
@@ -47,7 +47,7 @@ const posts = await getCollection("blogs");
         <ArticleSnippet
           title={post.data.title}
           description={post.data.description}
-          url={`${post.collection}/${post.id}`}
+          url={`/${post.collection}/${post.id}`}
           timeToRead={post.data.timeToRead}
           timestamp={post.data.timestamp}
         />
