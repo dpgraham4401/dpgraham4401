@@ -2,7 +2,7 @@
 title: My Ultimate Reading List
 description: Books that I think that many developer will find useful, and some others.
 tags: [ "code", "reading" ]
-timeToRead: 5
+readTime: 5
 timestamp: 2024-08-18
 filename: Reading List
 published: true
