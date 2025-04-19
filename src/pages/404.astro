@@ -1,12 +1,12 @@
 ---
 import Section from "@components/common/Section.vue";
 import Layout from "@/layouts/Layout.astro";
-import { GLOBAL } from "@/lib/variables";
+import { GLOBAL } from "@/lib/constants";
 ---
 
 <Layout>
   <Fragment slot="head">
-    <title> {GLOBAL.username} | Not Found</title>
+    <title> {GLOBAL.site.name} | Not Found</title>
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
   </Fragment>
