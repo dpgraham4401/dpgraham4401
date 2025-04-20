@@ -1,5 +1,5 @@
 ---
-title: Tests, take the wheel
+title: Unit tests, take the wheel
 description: Writing tests as you code will save you later.
 tags: [ "code", "tests" ]
 readTime: 5
@@ -8,76 +8,85 @@ filename: testing
 published: true
 ---
 
-# Let the tests drive your code
+# Unit tests, take the wheel
 
 #### TL;DR
 
-Practicing Test Driven Development (TDD) instead of writing tests after, results in higher
-quality code.
+While [Test Driven Development (TDD)](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
+gets a lot of flak these days, writing test as you go, instead
+of after the fact can make your code more readable and make sure your APIs are well-thought-out.
 
 ## The problem
 
 We've all been there, during standup, somebody says something like:
 **"I'm almost done with this ticket, I just need to write the tests"**.
-When I hear that, I brace myself a little.
-Not because it's wrong, but because I’ve learned what comes next.
-It's inevitable, like Thanos, except instead of a snap, it's a PR.
 
-I can usually see how the feature was implemented in the git history.
+When the PR comes in, I can usually see how the feature was implemented in the git history.
 
-1. Code gets written and it works—awesome.
+1. Code gets written, and it works.
 2. Now it’s time for tests...
 3. But suddenly, testing it isn’t so easy, because the code wasn’t written with testing in mind.
 4. So some quick tests are added where possible, and then it’s off to the next task.
 
 ## So what's the problem?
 
-The tests usually have at least one of the following attributes, maybe all of them:
+The tests usually have at least one of the following qualities, maybe all of them:
 
 - Coverage is low
+  - I don't know anyone with the motivation to write tests for a feature that is already working.
+    but this usually leads to low coverage, and by extension, low confidence when refactoring.
 - The tests are slow and unfocused
+  - These after-thought integration tests enter at higher-level classes/functions like HTTP handers
+    that touch many parts of the system that slow down the test, like the database, and don't
+    isolate the functionality being tested.
 - They test private methods and implementation details
-- They are hard to read
-- They are brittle (
-  e.g.,[monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch))
+  - It's rare, but sometimes the temptation is just too strong for a junior dev.
+    These inevitably break when the implementation changes.
+- They are brittle
+  - [monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch),
+    I've never seen a test that used patching that didn't break when a minor detail changed,
+    like the import path changing, or a header for an external API changes.
 - **_The API is poorly thought out_**
 
-I’ll focus on just one of these issues, since it tends to have the biggest long-term impact.
+While there are clearly many problems with after-thought tests, this post will focus primarily on
+the last one. The effects that testing has on the API of your code.
 
-### The API is poorly thought out
+### When unit tests navigate, you end up in a better place
 
-Writing tests while you code forces you to think about the API of whatever you're working on.
+TDD forces you to think about where you want to end up before you get there.
 
-For example, let's say Joe is working on a function that serializes data to JSON,
-and saving to the database. Since Joe isn't testing as they go, they don't really stop and
-think much about the API of the function, and they end up writing a function that has
-all the concerns mixed together.
+For example, let's say we're working on a function that serializes data to JSON
+and saves to the database. If we're not testing as we go, we usually end up hyper-focusing on
+making the code work instead of how our code will be called by the client code.
+If we're not careful, we end up with a function that does too much and has a poorly thought-out
+API.
+
+> Talk is cheap, show me the code
+> - Linus Torvalds
 
 ```python
 # lib/process.py
 
 import json
 
-# Since this function does too much, it has a generic name that doesn't really help people understand
-# what it does.
+# A generic function name, with many parameters, is a sign that the function is doing too much.
 def process(data, format, db=False, extra=None, verbose=False):
   """Process data and save to db."""
-    # This one function handles logging...
+    # Amoung the many things this function does...
+    # some amatuer logging
     if verbose:
         print("Starting processing...")
 
-    # serializing data
+    # Adding extra data to be serialized
     if extra:
         data.update(extra)
 
     # determining the serialization format
     if format == "json":
-        # The actual serialization, with all the branches
         output = json.dumps(data)
     elif format == "xml":
         output = "<data>" + str(data) + "</data>"
     else:
-        # CSV
         output = ",".join(data.values())
 
     # And saving to the database
@@ -87,10 +96,9 @@ def process(data, format, db=False, extra=None, verbose=False):
     return output
 ```
 
-And since the focus was on getting it working, things like type hints or a helpful docstring got
-skipped.
+While reading this function is straightforward, we're missing type hints or a helpful docstring.
 
-Reading this function is not too difficult, but what happens when you try to read the client code?
+What happens when we try to read the calling code?
 
 ```python
 # main.py
@@ -108,9 +116,6 @@ What do these parameters mean? What is the function processing? What are the boo
 Is this saying it accepts "json" or outputs "json"?
 
 The only way to figure what this function call means is to read the function's code
-
-Writing tests as you code forces you to stop and think about the API of your new code. Your
-tests become the first client of your new code.
 
 ## When did things go wrong?
 
