@@ -33,6 +33,12 @@
     --font-serif: "Literata Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --color-vim-dark: var(--color-neutral-900);
     --color-vim-light: var(--color-neutral-100);
+    --color-solarized-base0: #839496;
+    --color-solarized-base1: #93a1a1;
+    --color-solarized-base2: #eee8d5;
+    --color-solarized-base00: #657b83;
+    --color-solarized-base01: #586e75;
+    --color-solarized-base02: #073642;
 }
 
 @layer base {
@@ -72,7 +78,7 @@
         }
     }
 
-    .-vim-text {
+    .vim-text-secondary {
         color: var(--color-vim-light);
         @variant dark {
             color: var(--color-vim-dark);

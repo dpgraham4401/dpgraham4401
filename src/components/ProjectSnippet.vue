@@ -50,7 +50,7 @@ defineProps<Props>();
         v-if="tags"
         v-for="(tag, index) in tags"
         :key="index"
-        class="-vim-text -vim-bg vim-transition px-2 py-1 text-sm font-semibold"
+        class="vim-text-secondary -vim-bg vim-transition px-2 py-1 text-sm font-semibold"
       >
         {{ tag }}
       </span>
