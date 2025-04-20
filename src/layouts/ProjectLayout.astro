@@ -28,7 +28,8 @@ const { data: { title, readTime, timestamp, tags, githubUrl, liveUrl } } = Astro
         {
           tags
             ? tags.map((tag: string) => (
-              <span class="vim-text-secondary -vim-bg vim-transition font-semibold py-1 px-2">
+              <span
+                class="vim-text-secondary -vim-bg transition-transform duration-150 ease-in-out  font-semibold py-1 px-2">
                   {tag}
                 </span>
             ))

@@ -42,21 +42,6 @@
 }
 
 @layer base {
-    :root {
-        --vim-transition-duration: 0.15s;
-        --vim-transition-timing-function: ease-in-out;
-    }
-
-    .vim-transition {
-        @media (prefers-reduced-motion: no-preference) {
-            transition: background-color var(--vim-transition-duration) var(--vim-transition-timing-function),
-            color var(--vim-transition-duration) var(--vim-transition-timing-function),
-            fill var(--vim-transition-duration) var(--vim-transition-timing-function),
-            border-color var(--vim-transition-duration) var(--vim-transition-timing-function),
-            transform var(--vim-transition-duration) var(--vim-transition-timing-function);
-        }
-    }
-
     .vim-bg {
         background-color: var(--color-vim-light);
         @variant dark {

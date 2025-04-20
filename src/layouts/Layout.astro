@@ -7,38 +7,38 @@ import "@/styles/global.css";
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" href="/favicon.ico"/>
-    <meta name="generator" content={Astro.generator}/>
-    <link rel="preconnect" href="https://fonts.bunny.net"/>
-    <link
-            href="https://fonts.bunny.net/css?family=ibm-plex-mono:400,400i,500,500i,600,600i,700,700i"
-            rel="stylesheet"
-    />
-    <slot name="head"/>
-    <script is:inline>
-        // Used to avoid a flash of the theme during navigation between pages for now
-        let theme = localStorage.getItem('theme');
-        if (!theme) {
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                theme = 'dark';
-            } else {
-                theme = 'light';
-            }
-        }
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link
+    href="https://fonts.bunny.net/css?family=ibm-plex-mono:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet"
+  />
+  <slot name="head" />
+  <script is:inline>
+    // Used to avoid a flash of the theme during navigation between pages for now
+    let theme = localStorage.getItem("theme");
+    if (!theme) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        theme = "dark";
+      } else {
+        theme = "light";
+      }
+    }
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
 </head>
-<body class="vim-bg vim-text vim-transition font-mono">
-<Header/>
+<body class="vim-bg vim-text transition-transform duration-150 ease-in-out  font-mono">
+<Header />
 <main>
-    <slot/>
+  <slot />
 </main>
-<Footer/>
+<Footer />
 </body>
 </html>
