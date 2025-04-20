@@ -2,8 +2,6 @@
 
 @plugin "@tailwindcss/typography";
 
-@variant dark (&:where(.dark, .dark *));
-
 @font-face {
     font-family: "Literata Variable";
     font-style: normal;
