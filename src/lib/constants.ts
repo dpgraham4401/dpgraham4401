@@ -42,7 +42,7 @@ export const GLOBAL: GlobalConstants = {
     linkedin: "https://www.linkedin.com/in/dpgraham4401"
   },
   articles: {
-    title: "articles",
+    title: "Articles",
     shortDescription: "Practical wisdom, unfiltered thoughts, and hot takes.",
     longDescription: "Web development, tech trends, and the occasional programming mishap."
   },
