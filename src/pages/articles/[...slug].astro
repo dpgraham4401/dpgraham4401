@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import type { InferEntrySchema } from "astro:content";
 import { getCollection, render } from "astro:content";
-import BlogLayout from "src/layouts/BlogLayout.astro";
+import ArticleLayout from "src/layouts/ArticleLayout.astro";
 import { GLOBAL } from "src/lib/constants";
 
 
@@ -10,18 +10,18 @@ type Props = {
   post: {
     id: string
     body?: string
-    collection: "blogs"
-    data: InferEntrySchema<"blogs">
+    collection: "articles"
+    data: InferEntrySchema<"articles">
     rendered?: any
     filePath?: string
   }
 }
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("blogs");
+  const posts = await getCollection("articles");
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { post } as Props
+    props: { post }
   }));
 }) satisfies GetStaticPaths;
 
@@ -31,7 +31,7 @@ const pageUrl = `${GLOBAL.site.rootUrl}/${collection}/${id}`;
 const { Content } = await render(post);
 ---
 
-<BlogLayout title={title} readTime={readTime} timestamp={timestamp}>
+<ArticleLayout title={title} readTime={readTime} timestamp={timestamp}>
   <Fragment slot="head">
     <title>{GLOBAL.site.name} | {title}</title>
     <meta property="og:title" content={`${GLOBAL.site.name} | ${title}`} />
@@ -43,4 +43,4 @@ const { Content } = await render(post);
     <title>foo</title>
   </Fragment>
   <Content />
-</BlogLayout>
+</ArticleLayout>

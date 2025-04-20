@@ -34,7 +34,7 @@ export const GLOBAL: GlobalConstants = {
     name: "Vim Pirate",
     rootUrl: "https://vimpirate.com",
     shortDescription: "Ahoy Matey! Welcome aboard my corner of the internet.",
-    longDescription: "David Paul Grahams person website, blog, and portfolio."
+    longDescription: "David Paul Grahams personal website, articles, and portfolio."
   },
   social: {
     github: "https://github.com/vimpirate",
@@ -42,7 +42,7 @@ export const GLOBAL: GlobalConstants = {
     linkedin: "https://www.linkedin.com/in/dpgraham4401"
   },
   articles: {
-    title: "Blog",
+    title: "Articles",
     shortDescription: "Practical wisdom, unfiltered thoughts, and hot takes.",
     longDescription: "Web development, tech trends, and the occasional programming mishap."
   },
@@ -55,6 +55,6 @@ export const GLOBAL: GlobalConstants = {
   menu: {
     home: "/",
     projects: "/projects",
-    blog: "/blogs"
+    articles: "/articles"
   }
 };

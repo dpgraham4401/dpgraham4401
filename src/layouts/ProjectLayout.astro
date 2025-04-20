@@ -9,7 +9,7 @@ type Props = {
   data: InferEntrySchema<"projects">
 }
 
-const { data: { title, readTime, timestamp, tags, githubUrl, liveUrl } } = Astro.props as Props;
+const { data: { title, tags, githubUrl, liveUrl } } = Astro.props as Props;
 ---
 
 <Layout>
@@ -28,7 +28,8 @@ const { data: { title, readTime, timestamp, tags, githubUrl, liveUrl } } = Astro
         {
           tags
             ? tags.map((tag: string) => (
-              <span class="-zag-text -zag-bg zag-transition font-semibold py-1 px-2">
+              <span
+                class="vim-text-secondary -vim-bg transition-transform duration-150 ease-in-out  font-semibold py-1 px-2">
                   {tag}
                 </span>
             ))
