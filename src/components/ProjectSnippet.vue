@@ -41,7 +41,7 @@ defineProps<Props>();
         </Anchor>
       </div>
     </div>
-    <p class="zag-text zag-transition">
+    <p class="vim-text vim-transition">
       {{ description }}
     </p>
     <div class="flex flex-row wrap gap-2">
@@ -50,7 +50,7 @@ defineProps<Props>();
         v-if="tags"
         v-for="(tag, index) in tags"
         :key="index"
-        class="-zag-text -zag-bg zag-transition px-2 py-1 text-sm font-semibold"
+        class="-vim-text -vim-bg vim-transition px-2 py-1 text-sm font-semibold"
       >
         {{ tag }}
       </span>

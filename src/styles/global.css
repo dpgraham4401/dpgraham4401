@@ -31,66 +31,66 @@
     --font-mono: "IBM Plex Mono", ui-monospace, monospace;
     --font-display: "press-start-2p", ui-monospace, monospace;
     --font-serif: "Literata Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --color-zag-dark: var(--color-neutral-900);
-    --color-zag-light: var(--color-neutral-100);
+    --color-vim-dark: var(--color-neutral-900);
+    --color-vim-light: var(--color-neutral-100);
 }
 
 @layer base {
     :root {
-        --zag-transition-duration: 0.15s;
-        --zag-transition-timing-function: ease-in-out;
+        --vim-transition-duration: 0.15s;
+        --vim-transition-timing-function: ease-in-out;
     }
 
-    .zag-transition {
+    .vim-transition {
         @media (prefers-reduced-motion: no-preference) {
-            transition: background-color var(--zag-transition-duration) var(--zag-transition-timing-function),
-            color var(--zag-transition-duration) var(--zag-transition-timing-function),
-            fill var(--zag-transition-duration) var(--zag-transition-timing-function),
-            border-color var(--zag-transition-duration) var(--zag-transition-timing-function),
-            transform var(--zag-transition-duration) var(--zag-transition-timing-function);
+            transition: background-color var(--vim-transition-duration) var(--vim-transition-timing-function),
+            color var(--vim-transition-duration) var(--vim-transition-timing-function),
+            fill var(--vim-transition-duration) var(--vim-transition-timing-function),
+            border-color var(--vim-transition-duration) var(--vim-transition-timing-function),
+            transform var(--vim-transition-duration) var(--vim-transition-timing-function);
         }
     }
 
-    .zag-bg {
-        background-color: var(--color-zag-light);
+    .vim-bg {
+        background-color: var(--color-vim-light);
         @variant dark {
-            background-color: var(--color-zag-dark);
+            background-color: var(--color-vim-dark);
         }
     }
 
-    .-zag-bg {
-        background-color: var(--color-zag-dark);
+    .-vim-bg {
+        background-color: var(--color-vim-dark);
         @variant dark {
-            background-color: var(--color-zag-light);
+            background-color: var(--color-vim-light);
         }
     }
 
-    .zag-text {
-        color: var(--color-zag-dark);
+    .vim-text {
+        color: var(--color-vim-dark);
         @variant dark {
-            color: var(--color-zag-light);
+            color: var(--color-vim-light);
         }
     }
 
-    .-zag-text {
-        color: var(--color-zag-light);
+    .-vim-text {
+        color: var(--color-vim-light);
         @variant dark {
-            color: var(--color-zag-dark);
+            color: var(--color-vim-dark);
         }
     }
 
-    .zag-fill {
-        fill: var(--color-zag-dark);
+    .vim-fill {
+        fill: var(--color-vim-dark);
         @variant dark {
-            fill: var(--color-zag-light);
+            fill: var(--color-vim-light);
         }
     }
 
-    .zag-border-b {
+    .vim-border-b {
         border-bottom: 2px solid;
-        border-color: var(--color-zag-dark);
+        border-color: var(--color-vim-dark);
         @variant dark {
-            border-color: var(--color-zag-light);
+            border-color: var(--color-vim-light);
         }
     }
 }

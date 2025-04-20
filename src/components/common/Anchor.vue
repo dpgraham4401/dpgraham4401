@@ -14,7 +14,7 @@ const { external = false } = defineProps<Props>();
 <template>
   <a
     :aria-label="ariaLabel"
-    :class="['px-1.5', 'underline', 'font-medium', 'flex', 'items-center', 'focus:outline-2', 'focus:outline-offset-2', 'focus:outline-zag-dark', 'dark:focus:outline-zag-light']"
+    :class="['px-1.5', 'underline', 'font-medium', 'flex', 'items-center', 'focus:outline-2', 'focus:outline-offset-2', 'focus:outline-vim-dark', 'dark:focus:outline-vim-light']"
     :href="url"
     :target="external ? '_blank' : '_self'"
   >
@@ -26,7 +26,7 @@ const { external = false } = defineProps<Props>();
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        class="zag-fill zag-transition"
+        class="vim-fill vim-transition"
         d="M362.666 149.333V320H320l-.001-97.831l-154.51 154.51l-30.169-30.17L289.829 192h-97.83v-42.666z"
         fill-rule="evenodd"
       />
