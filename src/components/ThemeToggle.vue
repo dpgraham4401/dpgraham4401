@@ -65,8 +65,8 @@ function initializeTheme() {
  * Toggle the theme between light and dark, then persist it.
  */
 function handleToggleClick() {
-  theme.value = "solarized";
-  applyThemeToDOM("solarized");
+  theme.value = theme.value === "light" ? "dark" : "light";
+  applyThemeToDOM(theme.value);
   if (typeof localStorage !== "undefined") {
     localStorage.setItem("theme", theme.value);
   }

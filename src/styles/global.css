@@ -58,12 +58,18 @@
         @variant dark {
             background-color: var(--color-vim-light);
         }
+        @variant solarized {
+            background-color: var(--color-solarized-base00);
+        }
     }
 
     .vim-text {
         color: var(--color-vim-dark);
         @variant dark {
             color: var(--color-vim-light);
+        }
+        @variant solarized {
+            color: var(--color-white)
         }
     }
 
@@ -72,12 +78,18 @@
         @variant dark {
             color: var(--color-vim-dark);
         }
+        @variant solarized {
+            color: var(--color-solarized-base1);
+        }
     }
 
     .vim-fill {
         fill: var(--color-vim-dark);
         @variant dark {
             fill: var(--color-vim-light);
+        }
+        @variant solarized {
+            fill: var(--color-white);
         }
     }
 
@@ -86,6 +98,9 @@
         border-color: var(--color-vim-dark);
         @variant dark {
             border-color: var(--color-vim-light);
+        }
+        @variant solarized {
+            border-color: var(--color-solarized-base1);
         }
     }
 }
