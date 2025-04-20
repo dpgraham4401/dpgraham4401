@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@custom-variant solarized (&:where([data-theme="solarized"], [data-theme="solarized"] *));
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @plugin "@tailwindcss/typography";
 
 @font-face {
@@ -44,6 +47,9 @@
         background-color: var(--color-vim-light);
         @variant dark {
             background-color: var(--color-vim-dark);
+        }
+        @variant solarized {
+            background-color: var(--color-solarized-base02);
         }
     }
 

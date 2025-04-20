@@ -27,18 +27,16 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 
+type ThemeOptions = "light" | "dark" | "solarized";
+
 // We’ll store the user’s current theme in a reactive reference
-const theme = ref<"light" | "dark">("light");
+const theme = ref<ThemeOptions>("light");
 
 /**
  * Apply the currently selected theme to the <html> element.
  */
-function applyTheme() {
-  if (theme.value === "light") {
-    document.documentElement.classList.remove("dark");
-  } else {
-    document.documentElement.classList.add("dark");
-  }
+function applyThemeToDOM(option: ThemeOptions) {
+  document.documentElement.dataset.theme = option;
 }
 
 /**
@@ -48,16 +46,17 @@ function initializeTheme() {
   // Check localStorage
   if (typeof localStorage !== "undefined") {
     const savedTheme = localStorage.getItem("theme");
+    // If a theme is saved in localStorage, use it
     if (savedTheme) {
-      theme.value = savedTheme as "light" | "dark";
+      theme.value = savedTheme as ThemeOptions;
     } else {
-      // Check system preference if no stored theme
+      // If no theme is saved, check system preference, default to light
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       theme.value = prefersDark ? "dark" : "light";
     }
 
     // Apply theme and store it
-    applyTheme();
+    applyThemeToDOM(theme.value);
     localStorage.setItem("theme", theme.value);
   }
 }
@@ -66,9 +65,8 @@ function initializeTheme() {
  * Toggle the theme between light and dark, then persist it.
  */
 function handleToggleClick() {
-  theme.value = theme.value === "light" ? "dark" : "light";
-  applyTheme();
-  // Save to local storage
+  theme.value = "solarized";
+  applyThemeToDOM("solarized");
   if (typeof localStorage !== "undefined") {
     localStorage.setItem("theme", theme.value);
   }
