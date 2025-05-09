@@ -1,6 +1,7 @@
 <template>
-  <div
-    class="header bg-white rounded-full w-28 h-16 relative overflow-hidden flex items-start justify-center">
+  <a href="/"
+     aria-label="Home"
+     class="header bg-white rounded-full w-28 h-16 relative overflow-hidden flex items-start justify-center focus:outline-offset-2 focus:outline-vim-dark dark:focus:outline-vim-light">
     <div>
       <!--Waves behind pirate ship-->
       <svg class="absolute bottom-0 left-0 w-full h-2/5" preserveAspectRatio="none"
@@ -41,7 +42,7 @@
       </svg>
     </div>
     <!--Waves end-->
-  </div>
+  </a>
 </template>
 
 <style scoped>
