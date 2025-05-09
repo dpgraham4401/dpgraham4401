@@ -1,7 +1,7 @@
 ---
 import { GLOBAL } from "@/lib/constants";
 import Anchor from "./common/Anchor.vue";
-import ThemeToggle from "./ThemeToggle.vue";
+import ThemeToggle from "./ThemeToggle.astro";
 import ShipLogo from "./logo/ShipLogo.vue";
 ---
 
@@ -24,20 +24,15 @@ import ShipLogo from "./logo/ShipLogo.vue";
     </button>
   </div>
   <nav
-
-    class="vim-bg vim-border-b transition-transform duration-150 ease-in-out  fixed sm:relative inset-x-0 top-0 h-auto sm:px-4 flex justify-between flex-col gap-8 py-4 text-xl sm:flex-row max-w-2xl mx-auto sm:pt-4 sm:border-none"
-  >
-    <div
-      class="flex flex-col font-mono font-medium gap-4 sm:flex-row px-4 sm:px-0 mt-16 sm:mt-0"
+    class="vim-bg vim-border-b transition-transform duration-150 ease-in-out  fixed sm:relative inset-x-0 top-0 h-auto sm:px-4 flex justify-between flex-col gap-8 py-4 text-xl sm:flex-row max-w-2xl mx-auto sm:pt-4 sm:border-none">
+    <div class="flex flex-col items-center font-mono font-medium gap-4 sm:flex-row px-4 sm:px-0 mt-16 sm:mt-0"
     >
-      <Anchor ariaLabel="Home" url="/">
-        <ShipLogo />
-      </Anchor>
+      <ShipLogo />
       {Object.entries(GLOBAL.menu).map((i) => (
         <Anchor ariaLabel="foo" url={i[1]}>{i[0]}</Anchor>
       ))}
     </div>
-    <div class="flex gap-4 justify-between px-4 sm:px-0">
+    <div class="flex gap-4 items-center justify-between px-4 sm:px-0">
       {GLOBAL.social.github && (
         <Anchor url={GLOBAL.social.github} ariaLabel="GitHub Repository">
           <svg
@@ -52,7 +47,7 @@ import ShipLogo from "./logo/ShipLogo.vue";
             ></path>
           </svg>
         </Anchor>)}
-      <ThemeToggle client:only />
+      <ThemeToggle />
     </div>
   </nav>
 </header>
