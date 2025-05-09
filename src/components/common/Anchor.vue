@@ -7,14 +7,13 @@ type Props = {
   class?: string
 };
 
-// define props with types and default values
 const { external = false } = defineProps<Props>();
 </script>
 
 <template>
   <a
     :aria-label="ariaLabel"
-    :class="['px-1.5', 'underline', 'font-medium', 'flex', 'items-center', 'focus:outline-2', 'focus:outline-offset-2', 'focus:outline-vim-dark', 'dark:focus:outline-vim-light']"
+    :class="['px-1.5', 'h-1/2', 'underline', 'font-medium', 'flex', 'items-center', 'focus:outline-2', 'focus:outline-offset-2', 'focus:outline-vim-dark', 'dark:focus:outline-vim-light']"
     :href="url"
     :target="external ? '_blank' : '_self'"
   >
