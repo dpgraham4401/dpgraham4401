@@ -69,6 +69,11 @@ const randomQuote = quotes[randomIndex];
         fill="currentColor"
       ></path>
     </svg>
-    <p id="quote" class="vim-text">{{ randomQuote.quote }}</p>
+    <div>
+      <p id="quote" class="vim-text justify-start">{{ randomQuote.quote }}</p>
+      <div class="flex justify-end">
+        <p id="attribution" class="vim-text"> — {{ randomQuote.source }}</p>
+      </div>
+    </div>
   </div>
 </template>
