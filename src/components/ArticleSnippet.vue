@@ -14,7 +14,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div class="vim-text transition-transform duration-150 ease-in-out  flex flex-col gap-3 pb-8">
+  <div class="vim-text flex flex-col gap-3 pb-8">
     <Anchor ariaLabel="full article" class="text-xl" :url="url">
       {{ title }}
     </Anchor>
@@ -22,7 +22,7 @@ defineProps<Props>();
       {{ description }}
     </p>
     <div
-      class="text-neutral-600 dark:text-neutral-400 transition-transform duration-150 ease-in-out  flex justify-between items-center"
+      class="text-neutral-600 dark:text-neutral-400 flex justify-between items-center"
     >
       <p v-if="timestamp">
         {{ timestamp.toLocaleDateString() }}

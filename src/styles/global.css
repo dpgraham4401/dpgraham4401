@@ -42,65 +42,89 @@
     --color-solarized-base02: #073642;
 }
 
+@utility theme-transition {
+    @apply transition-colors duration-300 ease-in-out;
+}
+
 @layer base {
+
+
     .vim-bg {
         background-color: var(--color-vim-light);
+        @apply theme-transition;
         @variant dark {
             background-color: var(--color-vim-dark);
+            @apply theme-transition;
         }
         @variant solarized {
             background-color: var(--color-solarized-base02);
+            @apply theme-transition;
         }
     }
 
     .-vim-bg {
         background-color: var(--color-vim-dark);
+        @apply theme-transition;
         @variant dark {
             background-color: var(--color-vim-light);
+            @apply theme-transition;
         }
         @variant solarized {
             background-color: var(--color-solarized-base00);
+            @apply theme-transition;
         }
     }
 
     .vim-text {
         color: var(--color-vim-dark);
+        @apply theme-transition;
         @variant dark {
             color: var(--color-vim-light);
+            @apply theme-transition;
         }
         @variant solarized {
-            color: var(--color-white)
+            color: var(--color-white);
+            @apply theme-transition;
         }
     }
 
     .vim-text-secondary {
         color: var(--color-vim-light);
+        @apply theme-transition;
         @variant dark {
             color: var(--color-vim-dark);
+            @apply theme-transition;
         }
         @variant solarized {
             color: var(--color-solarized-base1);
+            @apply theme-transition;
         }
     }
 
     .vim-fill {
         fill: var(--color-vim-dark);
+        @apply theme-transition;
         @variant dark {
             fill: var(--color-vim-light);
+            @apply theme-transition;
         }
         @variant solarized {
             fill: var(--color-white);
+            @apply theme-transition;
         }
     }
 
     .vim-border-b {
         border-bottom: 2px solid;
         border-color: var(--color-vim-dark);
+        @apply theme-transition;
         @variant dark {
             border-color: var(--color-vim-light);
+            @apply theme-transition;
         }
         @variant solarized {
             border-color: var(--color-solarized-base1);
+            @apply theme-transition;
         }
     }
 }

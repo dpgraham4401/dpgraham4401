@@ -25,7 +25,7 @@ const { external = false } = defineProps<Props>();
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        class="vim-fill transition-transform duration-150 ease-in-out "
+        class="vim-fill "
         d="M362.666 149.333V320H320l-.001-97.831l-154.51 154.51l-30.169-30.17L289.829 192h-97.83v-42.666z"
         fill-rule="evenodd"
       />
