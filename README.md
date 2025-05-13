@@ -2,12 +2,6 @@
 <h1 align='center'>
   Hi! I'm David 👋.
 </h1>
-
-<div align='center'>
-  <p>I'm a full-stack developer, with a master's degree in Geophysics, currently working for the <a href="https://epa.gov/e-manifest">EPA e-Manifest team</a> where I work on both web development and regulatory rulemaking. I'm not afriad to pick up new skills to get the job done.</p>
-</div>
-
-
  
 <h4 align='center'>
   My Toolkit
@@ -32,6 +26,7 @@
 ### 🔭 I’m currently working on ...
 
   - [The re-write of HERO](https://heronetnext.epa.gov/), Health and Environmental Research Online, EPA's system of record for scientific studies.
+  - Helping maintain [django-guardian](https://github.com/django-guardian/django-guardian)
 
 ### 🌱 I’m currently learning ...
   
