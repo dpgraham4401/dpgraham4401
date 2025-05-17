@@ -18,38 +18,33 @@ of after the fact can make your code more readable and make sure your APIs are w
 
 ## The problem
 
-We've all been there, during standup, somebody says something like:
+We've all been there, during standup, one of your colleagues says something like:
 **"I'm almost done with this ticket, I just need to write the tests"**.
 
-When the PR comes in, I can usually see how the feature was implemented in the git history.
+## what's the problem?
 
-1. Code gets written, and it works.
-2. Now it’s time for tests...
-3. But suddenly, testing it isn’t so easy, because the code wasn’t written with testing in mind.
-4. So some quick tests are added where possible, and then it’s off to the next task.
+I've never been able to convince myself to write quality test after the fact.
+There invariably gets to a point where I just say to myself **"this is good enough"** and move on.
+The tests usually have at least one of the following qualities:
 
-## So what's the problem?
-
-The tests usually have at least one of the following qualities, maybe all of them:
-
+- When tests are an after-thought, so is the API.
 - Coverage is low
-  - I don't know anyone with the motivation to write tests for a feature that is already working.
-    but this usually leads to low coverage, and by extension, low confidence when refactoring.
+  - which usually means there are corners of your code that never gets tested.
 - The tests are slow and unfocused
-  - These after-thought integration tests enter at higher-level classes/functions like HTTP handers
-    that touch many parts of the system that slow down the test, like the database, and don't
-    isolate the functionality being tested.
+  - To compensate for the low-coverage conundrum, as developers we justify this laziness with
+    thoughts like *tests should only focus on testing behavior*, which is true, but
+    this leads to writing only integration tests that are slow and impossible to get to every corner
+    case.
 - They test private methods and implementation details
-  - It's rare, but sometimes the temptation is just too strong for a junior dev.
+  - It's rare, but sometimes the temptation is just too strong.
     These inevitably break when the implementation changes.
 - They are brittle
   - [monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch),
     I've never seen a test that used patching that didn't break when a minor detail changed,
     like the import path changing, or a header for an external API changes.
-- **_The API is poorly thought out_**
 
-While there are clearly many problems with after-thought tests, this post will focus primarily on
-the last one. The effects that testing has on the API of your code.
+We're going to focus primarily on the first one. The effects that testing has on the API of your
+code.
 
 ### When unit tests navigate, you end up in a better place
 

@@ -46,7 +46,7 @@ const quotes = [
     source: "Sterling Archer, Archer"
   },
   {
-    quote: " have no special talent. I am only passionately curious.",
+    quote: "I have no special talent. I am only passionately curious.",
     source: "Albert Einstein"
   }
 ];
