@@ -1,6 +1,6 @@
 ---
 import Footer from "src/components/footer/Footer.vue";
-import Header from "@components/Header.astro";
+import Header from "@components/Header.vue";
 import "@/styles/global.css";
 ---
 
@@ -35,7 +35,7 @@ import "@/styles/global.css";
   </script>
 </head>
 <body class="vim-bg vim-text font-mono">
-<Header />
+<Header client:load />
 <main>
   <slot />
 </main>
