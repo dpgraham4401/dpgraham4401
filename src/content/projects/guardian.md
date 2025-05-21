@@ -1,6 +1,6 @@
 ---
 title: Django Guardian
-description:
+description: An open-source an implementation of object permissions for the Django framework.
 tags: [ "Python", "Django", "open-source" ]
 liveUrl: https://django-guardian.readthedocs.io/
 timestamp: 2025-03-09T00:00:00+00:00
