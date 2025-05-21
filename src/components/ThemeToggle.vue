@@ -13,11 +13,9 @@ if (typeof localStorage !== "undefined") {
 }
 
 const handleToggleClick = () => {
-  console.log("toggle click");
   const element = document.documentElement;
   element.classList.toggle("dark");
   const isDark = element.classList.contains("dark");
-  console.log(isDark);
   localStorage.setItem("theme", isDark ? "dark" : "light");
   document.documentElement.dataset.theme = isDark ? "dark" : "light";
 };
