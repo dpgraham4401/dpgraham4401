@@ -1,25 +1,26 @@
 // any item set to 'undefined' is removed it from the site
 
-type PageMetadata = {
-  title: string,
+interface Described {
   shortDescription: string,
   longDescription: string
 }
 
-type SiteDetails = {
-  name: string,
-  rootUrl: string,
-  shortDescription: string,
-  longDescription: string,
+interface PageMetadata extends Described {
+  title: string,
 }
 
-type SocialMediaLinks = {
+interface SiteDetails extends Described {
+  name: string,
+  rootUrl: string,
+}
+
+interface SocialMediaLinks {
   github: string,
   twitter: string,
   linkedin: string
 }
 
-type GlobalConstants = {
+interface GlobalConstants {
   site: SiteDetails,
   social: SocialMediaLinks,
   profileImage: string,
@@ -43,12 +44,12 @@ export const GLOBAL: GlobalConstants = {
   },
   articles: {
     title: "Articles",
-    shortDescription: "Practical wisdom, unfiltered thoughts, and hot takes.",
+    shortDescription: "Unfiltered thoughts, and not-so-hot takes.",
     longDescription: "Web development, tech trends, and the occasional programming mishap."
   },
   projects: {
     title: "Projects",
-    shortDescription: "A list of projects I've worked on and developer tools.",
+    shortDescription: "A list of projects I've worked on.",
     longDescription: "All of my projects, ranging from dotfiles, static websites, full-blown web applications, CLIs, and more."
   },
   profileImage: "img/chico_cropped.webp",
