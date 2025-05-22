@@ -16,7 +16,7 @@ defineProps<Props>();
 <template>
   <div class="flex flex-col gap-3 pb-8">
     <div class="flex flex-col gap-3 sm:flex-row sm:justify-between">
-      <Anchor :url="url" ariaLabel="go to project" class="text-xl">
+      <Anchor :url="url" aria-label="go to project" class="text-xl">
         {{ title }}
       </Anchor>
       <div class="flex gap-2">
@@ -24,7 +24,7 @@ defineProps<Props>();
         <Anchor
           v-if="githubUrl"
           :url="githubUrl"
-          ariaLabel="GitHub link"
+          aria-label="GitHub link"
           class="text-base"
           external
         >
@@ -33,7 +33,7 @@ defineProps<Props>();
         <Anchor
           v-if="liveUrl"
           :url="liveUrl"
-          ariaLabel="Live link"
+          aria-label="Live link"
           class="text-base"
           external
         >
@@ -47,8 +47,8 @@ defineProps<Props>();
     <div class="flex flex-row wrap gap-2">
       <!-- v-for to loop over tags -->
       <span
-        v-if="tags"
         v-for="(tag, index) in tags"
+        v-if="tags"
         :key="index"
         class="vim-text-secondary -vim-bg  px-2 py-1 text-sm font-semibold"
       >

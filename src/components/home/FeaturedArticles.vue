@@ -11,7 +11,7 @@ const featuredPosts = posts.filter((post) => post.data.isFeatured);
 <template>
   <div class="flex justify-between items-center w-full">
     <h3 class="font-display text-lg sm:text-xl leading-loose">{{ GLOBAL.articles.title }}</h3>
-    <Anchor ariaLabel="View All" class="text-base" url="/articles">View All</Anchor>
+    <Anchor aria-label="View All" class="text-base" url="/articles">View All</Anchor>
   </div>
   <ul class="my-8">
     <li
@@ -21,8 +21,8 @@ const featuredPosts = posts.filter((post) => post.data.isFeatured);
       <ArticleSnippet
         :description="post.data.description"
         :duration="post.data.readTime"
-        :timestamp="post.data.timestamp"
         :readTime="post.data.readTime"
+        :timestamp="post.data.timestamp"
         :title="post.data.title"
         :url="`${post.collection}/${post.id}`"
       />

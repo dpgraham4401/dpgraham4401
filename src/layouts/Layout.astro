@@ -1,6 +1,6 @@
 ---
 import Footer from "src/components/footer/Footer.vue";
-import Header from "@components/Header.astro";
+import Header from "@components/Header.vue";
 import "@/styles/global.css";
 ---
 
@@ -20,6 +20,7 @@ import "@/styles/global.css";
   <script is:inline>
     // Used to avoid a flash of the theme during navigation between pages for now
     let theme = localStorage.getItem("theme");
+    console.log(theme);
     if (!theme) {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         theme = "dark";
@@ -28,14 +29,16 @@ import "@/styles/global.css";
       }
     }
     if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
+      document.documentElement.setAttribute("data-theme", "light");
       document.documentElement.classList.remove("dark");
     }
   </script>
 </head>
 <body class="vim-bg vim-text font-mono">
-<Header />
+<Header client:only="vue" />
 <main>
   <slot />
 </main>
