@@ -5,18 +5,18 @@ import { ref } from "vue";
 
 const isDark = ref(false);
 
-const saveThemeToStorage = (theme: string) => {
+const saveDarkModeToStorage = (theme: string) => {
   if (typeof localStorage !== "undefined") {
     localStorage.setItem("theme", theme);
   }
 };
 
-const applyTheme = (theme: string) => {
+const applyDarkMode = (theme: string) => {
   document.documentElement.dataset.theme = theme;
   isDark.value = theme === "dark";
 };
 
-const getTheme = () => {
+const getDarkMode = () => {
   if (typeof localStorage !== "undefined") {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -28,14 +28,14 @@ const getTheme = () => {
 };
 
 if (typeof localStorage !== "undefined") {
-  const savedTheme = getTheme();
-  applyTheme(savedTheme);
+  const savedTheme = getDarkMode();
+  applyDarkMode(savedTheme);
 }
 
 const handleToggleClick = () => {
   const newTheme = isDark.value ? "light" : "dark";
-  applyTheme(newTheme);
-  saveThemeToStorage(newTheme);
+  applyDarkMode(newTheme);
+  saveDarkModeToStorage(newTheme);
 };
 
 </script>
