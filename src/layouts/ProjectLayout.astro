@@ -39,7 +39,7 @@ const { data: { title, tags, githubUrl, liveUrl } } = Astro.props as Props;
       <div class="flex gap-2">
         {
           githubUrl ? (
-            <Anchor ariaLabel="GitHub profile" url={githubUrl} class="text-base"
+            <Anchor aria-label="GitHub profile" url={githubUrl} class="text-base"
                     external>
               GitHub
             </Anchor>
@@ -47,7 +47,7 @@ const { data: { title, tags, githubUrl, liveUrl } } = Astro.props as Props;
         }
         {
           liveUrl ? (
-            <Anchor ariaLabel="Project live demo" url={liveUrl} class="text-base"
+            <Anchor aria-label="Project live demo" url={liveUrl} class="text-base"
                     external>
               Live
             </Anchor>

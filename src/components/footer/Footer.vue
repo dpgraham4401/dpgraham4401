@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { GLOBAL } from "@/lib/constants.ts";
 import Section from "@components/common/Section.vue";
 import Quote from "@components/footer/Quote.vue";
@@ -58,7 +58,7 @@ import Anchor from "../common/Anchor.vue";
       </div>
     </Section>
     <p class="vim-text  text-center text-sm font-medium">
-      &copy; {{ year }} {{ GLOBAL.site.name }}. All rights reserved.
+      &copy; {{ year }} {{ GLOBAL.site.name }}.
     </p>
   </footer>
 </template>

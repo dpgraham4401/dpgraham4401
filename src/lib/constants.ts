@@ -37,7 +37,7 @@ export const GLOBAL: GlobalConstants = {
     longDescription: "David Paul Grahams personal website, articles, and portfolio."
   },
   social: {
-    github: "https://github.com/vimpirate",
+    github: "https://github.com/dpgraham4401",
     twitter: "https://twitter.com/",
     linkedin: "https://www.linkedin.com/in/dpgraham4401"
   },

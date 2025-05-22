@@ -14,7 +14,7 @@ const featuredProjects = posts.filter((post) => post.data.isFeatured);
     <h3 class="font-display text-lg sm:text-xl leading-loose">
       {{ GLOBAL.projects.title }}
     </h3>
-    <Anchor ariaLabel="view all" class="text-base" url="/projects">
+    <Anchor aria-label="view all" class="text-base" url="/projects">
       View All
     </Anchor>
   </div>
@@ -36,8 +36,8 @@ const featuredProjects = posts.filter((post) => post.data.isFeatured);
           :description="project.data.description"
           :githubUrl="project.data. githubUrl"
           :liveUrl="project.data.liveUrl"
-          :tags="project.data. tags ?? []"
           :readTime="project.data.readTime"
+          :tags="project.data. tags ?? []"
           :title="project.data. title"
           :url="`${project.collection}/${project.id}`"
         />

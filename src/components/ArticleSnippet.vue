@@ -15,7 +15,7 @@ defineProps<Props>();
 
 <template>
   <div class="vim-text flex flex-col gap-3 pb-8">
-    <Anchor ariaLabel="full article" class="text-xl" :url="url">
+    <Anchor :url="url" aria-label="full article" class="text-xl">
       {{ title }}
     </Anchor>
     <p class="">
