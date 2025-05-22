@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
   test:
-    name: 'End to End Tests'
+    name: 'UI Tests'
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
