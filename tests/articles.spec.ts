@@ -25,3 +25,13 @@ test("users can view individual articles", async ({ page }) => {
   await page.getByText("My Ultimate Reading List").click();
   await expect(page.getByRole("heading", { name: "Reads Worth Their Weight When" })).toBeVisible();
 });
+test("dark mode toggles theme", async ({ page }) => {
+  await page.goto("/");
+  const htmlElement = page.locator("html");
+
+  const initialTheme = await htmlElement.getAttribute("data-theme");
+  await page.getByRole("button", { name: "Theme Toggle" }).click();
+
+  const newTheme = await htmlElement.getAttribute("data-theme");
+  expect(initialTheme).not.toEqual(newTheme);
+});
