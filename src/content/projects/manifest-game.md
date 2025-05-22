@@ -3,6 +3,7 @@ title: The Manifest Game
 description: An interactive decision tree to help users fill out the electronic hazardous waste manifest.
 tags: [ "TypeScript", "React" ]
 githubUrl: https://github.com/usepa/the-manifest-game
+liveUrl: https://usepa.github.io/the-manifest-game/?tree=0&path=doHavePreparer
 timestamp: 2024-09-08T00:00:00+00:00
 isFeatured: false
 filename: manifest-game
