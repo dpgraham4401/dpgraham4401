@@ -5,7 +5,7 @@ tags: [ "code", "tests" ]
 readTime: 5
 timestamp: 2025-04-18
 filename: testing
-published: false
+published: true
 ---
 
 # Unit tests, take the wheel
@@ -13,40 +13,35 @@ published: false
 #### TL;DR
 
 While [Test Driven Development (TDD)](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
-gets a lot of flak these days, writing test as you go, instead
-of after the fact can make your code more readable and make sure your APIs are well-thought-out.
+gets some flak these days, writing test as you go, instead
+of after the fact can make sure your code's API is well-thought out.
 
 ## The problem
 
 We've all been there, during standup, one of your colleagues says something like:
 **"I'm almost done with this ticket, I just need to write the tests"**.
 
-## what's the problem?
+I don't know about everyone else,
+but I've never been able to convince myself to write quality tests after the fact.
+I, invariably, get to a point where I just say to myself **"this is good enough"** and move on.
+Usually the after-the-fact tests have the following qualities:
 
-I've never been able to convince myself to write quality test after the fact.
-There invariably gets to a point where I just say to myself **"this is good enough"** and move on.
-The tests usually have at least one of the following qualities:
-
-- When tests are an after-thought, so is the API.
-- Coverage is low
-  - which usually means there are corners of your code that never gets tested.
-- The tests are slow and unfocused
-  - To compensate for the low-coverage conundrum, as developers we justify this laziness with
-    thoughts like *tests should only focus on testing behavior*, which is true, but
-    this leads to writing only integration tests that are slow and impossible to get to every corner
-    case.
-- They test private methods and implementation details
-  - It's rare, but sometimes the temptation is just too strong.
+- Coverage is low.
+- The tests are unfocused on don't test the behavior in isolation.
+- They test implementation details
+  - When you know how it works under the hood, the temptation is just too strong.
     These inevitably break when the implementation changes.
 - They are brittle
   - [monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch),
     I've never seen a test that used patching that didn't break when a minor detail changed,
     like the import path changing, or a header for an external API changes.
 
-We're going to focus primarily on the first one. The effects that testing has on the API of your
-code.
+Last but not least; **when our tests come after the fact, we don't thing about our API as we write
+**.
 
-### When unit tests navigate, you end up in a better place
+### The real reason we write unit tests
+
+![Dr. Zoidberg meme on how your unit tests are bad](public/img/unit_test_zoidberg.webp)
 
 TDD forces you to think about where you want to end up before you get there.
 
@@ -55,9 +50,6 @@ and saves to the database. If we're not testing as we go, we usually end up hype
 making the code work instead of how our code will be called by the client code.
 If we're not careful, we end up with a function that does too much and has a poorly thought-out
 API.
-
-> Talk is cheap, show me the code
-> - Linus Torvalds
 
 ```python
 # lib/process.py
@@ -91,9 +83,7 @@ def process(data, format, db=False, extra=None, verbose=False):
     return output
 ```
 
-While reading this function is straightforward, we're missing type hints or a helpful docstring.
-
-What happens when we try to read the calling code?
+While reading this function is straightforward, what happens when we try to read the calling code?
 
 ```python
 # main.py
@@ -112,12 +102,8 @@ Is this saying it accepts "json" or outputs "json"?
 
 The only way to figure what this function call means is to read the function's code
 
-## When did things go wrong?
+#### What would have happened if we had written test as we wrote production code?
 
-The trouble usually starts when we begin writing code that’s meant for production, but we haven’t
-shifted into a “testing mindset” yet.
-
-What would have happened if we had written test as we wrote production code?
 TDD would have naturally nudged us to slow down and think more deliberately about the API they
 were building.
 
