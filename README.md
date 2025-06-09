@@ -34,4 +34,4 @@
   - Deep diving on Rust and [using it with Python]([url](https://pyo3.rs)).
   - Getting hands on experience making system architecture decisions.
   - Taking Comp. Sci. classes online through University of Maryland
-  - Still any good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/my_ultimate_reading_list.md)
+  - Still any good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
