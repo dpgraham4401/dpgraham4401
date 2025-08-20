@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/ts-plugin": "^1.10.4",
-    "@astrojs/vue": "^5.0.8",
+    "@astrojs/vue": "^5.1.0",
     "@iconoir/vue": "^7.11.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.17",
