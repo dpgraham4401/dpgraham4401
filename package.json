@@ -23,7 +23,7 @@
     "vue": "^3.5.18"
   },
   "devDependencies": {
-    "@playwright/test": "^1.52.0",
+    "@playwright/test": "^1.55.0",
     "@types/node": "^22.17.2"
   }
 }
