@@ -26,12 +26,12 @@
 ### 🔭 I’m currently working on ...
 
   - [The re-write of HERO](https://heronetnext.epa.gov/), Health and Environmental Research Online, EPA's system of record for scientific studies.
-  - Helping maintain [django-guardian](https://github.com/django-guardian/django-guardian)
+  - Helping maintain [django-guardian](https://github.com/django-guardian/django-guardian) when I have time.
 
 ### 🌱 I’m currently learning ...
+
+Not as much as I'd like to be these days. 
   
-  - [Concurrent Python with Asyncio]([url](https://www.goodreads.com/book/show/57553043-python-concurrency-with-asyncio))
-  - Deep diving on Rust and [using it with Python]([url](https://pyo3.rs)).
-  - Getting hands on experience making system architecture decisions.
+  - How to become a [JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-third-edition)
   - Taking Comp. Sci. classes online through University of Maryland
-  - Still any good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
+  - Any good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
