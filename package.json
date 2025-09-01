@@ -20,7 +20,7 @@
     "astro": "^5.13.2",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2",
-    "vue": "^3.5.18"
+    "vue": "^3.5.20"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
