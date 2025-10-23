@@ -184,6 +184,20 @@ These were books I read to pick up a new skill.
 - [x] [Web Security for Developers: Real Threats, Practical Defense](https://www.goodreads.com/book/show/51787793-think-javahttps://www.goodreads.com/book/show/54104272-web-security-for-developers)
   - A short, but practical primer. I enjoyed it because it's a level deeper than common
     documentation goes
+  
+- [x] [Sam's Teach Yourself C++ in 1 hour a day](https://www.goodreads.com/book/show/13746885-sams-teach-yourself-c-in-one-hour-a-day?ref=nav_sb_ss_2_23)
+  - Pleasantly surprised of how good this was as a way to brush up on newer standards of the language. It goes into the what the new standard solves, and why it's prefered.
+
+#### AI specific
+
+- [ ] [Deep Learning with PyTorch (Stevens)](https://www.goodreads.com/book/show/39980414-deep-learning-with-pytorch?ac=1&from_search=true&qid=yzdsxRmdvZ&rank=2)
+    - To read in 2026 
+
+- [ ] [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (Geron)](https://www.goodreads.com/book/show/32899495-hands-on-machine-learning-with-scikit-learn-and-tensorflow?ref=nav_sb_ss_1_19) 
+    - To read in 2026 
+
+- [ ] [Build a Large Language Model from scratch (Raschka)] (https://www.goodreads.com/book/show/209234015-build-a-large-language-model?ref=nav_sb_ss_1_14)
+    - To read in 2026
 
 ### Fun
 
@@ -217,6 +231,9 @@ Fun stuff I just couldn't leave off the list.
 
 - [x] [The Guns of August (Tuchman and Massie)](https://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093)
   - Something history buffs will enjoy, not for everyone.
+
+- [ ] [The Last Days of Stalin (Rubenstien)](https://www.goodreads.com/book/show/28755999-the-last-days-of-stalin?ac=1&from_search=true&qid=Lqi4AEL1gs&rank=1)
+    - in progress as of October 2025
 
 ## Save your money
 

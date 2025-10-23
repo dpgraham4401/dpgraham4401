@@ -25,13 +25,13 @@
 
 ### 🔭 I’m currently working on ...
 
-  - [The re-write of HERO](https://heronetnext.epa.gov/), Health and Environmental Research Online, EPA's system of record for scientific studies.
+  - Getting up to speed with the tech stack at [GridUnity]([https://heronetnext.epa.gov/](https://www.gridunity.com/)).
   - Helping maintain [django-guardian](https://github.com/django-guardian/django-guardian) when I have time.
 
 ### 🌱 I’m currently learning ...
-
-Not as much as I'd like to be these days. 
   
-  - How to become a [JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-third-edition)
-  - Taking Comp. Sci. classes online through University of Maryland
-  - Any good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
+  - Taking the [deep dive on machine learning](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md#ai-specific)
+  - [Refreshing my C++](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
+  - Seeing if the hype on writing code with agents is all it's cracked up to be.
+  - Taking Comp. Sci. classes through University of Maryland online
+  - As always, any technical good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
