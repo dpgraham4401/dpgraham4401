@@ -23,6 +23,8 @@
     "vue": "^3.5.26"
   },
   "devDependencies": {
+    "@playwright/browser-chromium": "^1.57.0",
+    "@playwright/browser-firefox": "^1.57.0",
     "@playwright/test": "^1.57.0",
     "@types/node": "^22.19.7"
   }

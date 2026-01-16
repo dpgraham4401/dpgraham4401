@@ -39,6 +39,12 @@ importers:
         specifier: ^3.5.26
         version: 3.5.26(typescript@5.9.3)
     devDependencies:
+      '@playwright/browser-chromium':
+        specifier: ^1.57.0
+        version: 1.57.0
+      '@playwright/browser-firefox':
+        specifier: ^1.57.0
+        version: 1.57.0
       '@playwright/test':
         specifier: ^1.57.0
         version: 1.57.0
@@ -583,6 +589,14 @@ packages:
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
+
+  '@playwright/browser-chromium@1.57.0':
+    resolution: {integrity: sha512-pUg+2p6HwewLp8KCD9G6VYaS2iewdkNkyqMcSIxXBXOlp1ojTxLF6/bwyR4ixLMy6tyv75jhE8PzzMZiX5KzwQ==}
+    engines: {node: '>=18'}
+
+  '@playwright/browser-firefox@1.57.0':
+    resolution: {integrity: sha512-Kb9CUiCDqm/1yQVyzcQfXvg8EqVW9YXwJJ/7nvr1ekeV2XX1n5FHrzm1rPiZV13Rk1mBeuWrBNook+HmwCTLpw==}
+    engines: {node: '>=18'}
 
   '@playwright/test@1.57.0':
     resolution: {integrity: sha512-6TyEnHgd6SArQO8UO2OMTxshln3QMWBtPGrOCgs3wVEmQmwyuNtB10IZMfmYDE0riwNR1cu4q+pPcxMVtaG3TA==}
@@ -3063,6 +3077,14 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@oslojs/encoding@1.1.0': {}
+
+  '@playwright/browser-chromium@1.57.0':
+    dependencies:
+      playwright-core: 1.57.0
+
+  '@playwright/browser-firefox@1.57.0':
+    dependencies:
+      playwright-core: 1.57.0
 
   '@playwright/test@1.57.0':
     dependencies:
