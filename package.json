@@ -11,19 +11,19 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/ts-plugin": "^1.10.4",
-    "@astrojs/vue": "^5.1.0",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/ts-plugin": "^1.10.6",
+    "@astrojs/vue": "^5.1.4",
     "@iconoir/vue": "^7.11.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.15.9",
-    "tailwindcss": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.10",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vue": "^3.5.20"
+    "vue": "^3.5.26"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
-    "@types/node": "^22.17.2"
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^22.19.7"
   }
 }

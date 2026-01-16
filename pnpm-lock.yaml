@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@astrojs/check':
-        specifier: ^0.9.4
+        specifier: ^0.9.6
         version: 0.9.6(prettier@3.8.0)(typescript@5.9.3)
       '@astrojs/ts-plugin':
-        specifier: ^1.10.4
+        specifier: ^1.10.6
         version: 1.10.6
       '@astrojs/vue':
-        specifier: ^5.1.0
+        specifier: ^5.1.4
         version: 5.1.4(@types/node@22.19.7)(astro@5.16.10(@types/node@22.19.7)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.55.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.55.1)(vue@3.5.26(typescript@5.9.3))(yaml@2.8.2)
       '@iconoir/vue':
         specifier: ^7.11.0
@@ -24,26 +24,26 @@ importers:
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.1.18)
       '@tailwindcss/vite':
-        specifier: ^4.1.12
+        specifier: ^4.1.18
         version: 4.1.18(vite@6.4.1(@types/node@22.19.7)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))
       astro:
-        specifier: ^5.15.9
+        specifier: ^5.16.10
         version: 5.16.10(@types/node@22.19.7)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.55.1)(typescript@5.9.3)(yaml@2.8.2)
       tailwindcss:
-        specifier: ^4.1.12
+        specifier: ^4.1.18
         version: 4.1.18
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
       vue:
-        specifier: ^3.5.20
+        specifier: ^3.5.26
         version: 3.5.26(typescript@5.9.3)
     devDependencies:
       '@playwright/test':
-        specifier: ^1.55.0
+        specifier: ^1.57.0
         version: 1.57.0
       '@types/node':
-        specifier: ^22.17.2
+        specifier: ^22.19.7
         version: 22.19.7
 
 packages:
