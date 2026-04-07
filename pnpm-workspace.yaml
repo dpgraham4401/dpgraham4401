@@ -1,3 +1,5 @@
 onlyBuiltDependencies:
   - '@playwright/browser-chromium'
   - '@playwright/browser-firefox'
+  - esbuild
+  - sharp
