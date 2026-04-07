@@ -20,7 +20,7 @@
     "@iconoir/vue": "^7.11.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^5.16.10",
+    "astro": "^5.18.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
