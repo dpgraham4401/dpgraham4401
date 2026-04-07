@@ -3,14 +3,15 @@
  */
 
 import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import {z} from "astro/zod";
+import { defineCollection } from "astro:content";
 
 const articles = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/articles" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    timestamp: z.date().optional(),
+    timestamp: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),

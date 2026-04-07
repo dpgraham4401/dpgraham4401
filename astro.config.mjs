@@ -9,10 +9,10 @@ export default defineConfig({
         plugins: [tailwindcss()]
     },
     trailingSlash: "ignore",
-    site: "https://hazguardian.com",
+    site: "https://vimpirate.com",
     server: {
         port: 3000
     },
 
-    integrations: [vue({ devtools: true })]
+    integrations: [vue()]
 });

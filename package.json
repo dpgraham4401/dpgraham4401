@@ -8,28 +8,30 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "playwright test"
+    "test": "playwright test",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/ts-plugin": "^1.10.6",
-    "@astrojs/vue": "^5.1.4",
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/ts-plugin": "^1.10.7",
+    "@astrojs/vue": "^6.0.1",
     "@iconoir/vue": "^7.11.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^5.16.10",
+    "astro": "^6.1.4",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3",
-    "vue": "^3.5.26"
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2",
+    "vue": "^3.5.32"
   },
   "devDependencies": {
-    "@playwright/browser-chromium": "^1.57.0",
-    "@playwright/browser-firefox": "^1.57.0",
-    "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.9"
+    "@playwright/browser-chromium": "^1.59.1",
+    "@playwright/browser-firefox": "^1.59.1",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^24.12.2",
+    "husky": "^9.1.7"
   }
 }
