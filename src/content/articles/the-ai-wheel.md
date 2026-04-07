@@ -25,26 +25,32 @@ With just a few prompts, Claude is more than happy to write that entire
 service for you. Who needs to use the dependency, who's even heard of `react-hook-form`?!
 All you gotta do to write it from scratch is just ask Codex.
 
-Have you ever seen AI say "I don't think that's a good idea"?
-No, you haven't.
-It's like an over eager intern who types 1 million words per minutes doesn't know when to say no.
+
+### Step 2: You Accept the AI changes
 
 So it spits out, and what do you know, it kinda works!
 
-You run it, the UI looks okay, it the network call's successful, the file's been updated.
-You feel like a god. Quick, you must be off to show everyone your new piece de resistance.
+You run it, the UI looks okay, it the network call's succeed, the file's been updated.
+You feel like a god. Quick, you must be off to show everyone your pièce de résistance.
 
-### Step 2: You Realize You Don't Actually Understand
+### Step 3: Someone Asks for a Change
 
-Two weeks later, something breaks. A network call fails under certain conditions, or maybe the UI glitches when you add a new field.
+
+Two weeks later, something breaks. A network call fails, or the feature works on one page but not the other.
 You open the file and... it's a mess.
 
-The code is there, it technically works, but you have no idea *why*. There are nested functions three levels deep with unclear purposes.
-Import statements reference libraries you've never heard of. The logic is scattered across multiple files.
+The code is there, it technically works, but it's not fun to look at.
+There are 1000 line long function, import statements in every function, try-catch blocks nested three levels deep.
+Gemini also copied and pasted a function for parsing ISO dates three times for some reason,
+and when you started Claude with the `--dangerously-skip-permissions` flag, it installed
+some package that hasn't been updated on GitHub for 7 years.
 
-You try to fix it yourself. You really do. But after 15 minutes of squinting at the generated code, you give up.
+You asked AI to include unit tests, (because you're a professional, of course!) but
+the tests are importing functions by opening files and reading the contents.
+The Python is using `MagicMock` objects so much that it's basically just testing
+that `MagicMock` works.
 
-### Step 3: You Return to AI (But Now You're Dependent)
+### Step 4: You
 
 You paste the error into Claude with the relevant code snippet and say "fix this."
 
@@ -64,7 +70,7 @@ Your codebase is now a baroque monument to technical debt, written in a language
 
 ### Step 5: The Point of No Return
 
-Eventually, you reach a point where you can't maintain the code *without* AI. 
+Eventually, you reach a point where you can't maintain the code *without* AI.
 
 You've become reliant on it not just for writing, but for *understanding* your own code.
 Onboarding a new team member? Good luck explaining the architecture when even you don't fully understand it.
