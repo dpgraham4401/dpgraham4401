@@ -34,13 +34,53 @@ So it spits out, and what do you know, it kinda works!
 You run it, the UI looks okay, it the network call's successful, the file's been updated.
 You feel like a god. Quick, you must be off to show everyone your new piece de resistance.
 
-### Step 2: You realize you don't actually understand
+### Step 2: You Realize You Don't Actually Understand
 
+Two weeks later, something breaks. A network call fails under certain conditions, or maybe the UI glitches when you add a new field.
+You open the file and... it's a mess.
 
+The code is there, it technically works, but you have no idea *why*. There are nested functions three levels deep with unclear purposes.
+Import statements reference libraries you've never heard of. The logic is scattered across multiple files.
 
+You try to fix it yourself. You really do. But after 15 minutes of squinting at the generated code, you give up.
 
-[//]: # (outlint)
-[//]: # (2. You decide to let AI write for you)
-[//]: # (3. AI generates something that nobody can understand, but the output appears right)
-[//]: # (4. you need AI to to update the broken code it generated)
-[//]: # (5. You decide to let AI write for you)
+### Step 3: You Return to AI (But Now You're Dependent)
+
+You paste the error into Claude with the relevant code snippet and say "fix this."
+
+And it does. It always does. It doesn't ask questions, it doesn't make you think—it just writes the solution.
+The patch is applied, the bug is gone, and you move on.
+
+But something has shifted. You've crossed a threshold.
+
+### Step 4: The Spiral Tightens
+
+Now every time something doesn't work, you reach for AI. A cryptic error? AI fixes it. Need to refactor? AI does it. Want to add a feature? AI builds it.
+
+But with each generated fix, the codebase becomes *more* complex and *less* understandable.
+AI tends to patch problems rather than solve them. It layers abstractions. It adds utility functions for single-use cases.
+
+Your codebase is now a baroque monument to technical debt, written in a language you don't speak.
+
+### Step 5: The Point of No Return
+
+Eventually, you reach a point where you can't maintain the code *without* AI. 
+
+You've become reliant on it not just for writing, but for *understanding* your own code.
+Onboarding a new team member? Good luck explaining the architecture when even you don't fully understand it.
+Need to migrate frameworks or update dependencies? You need AI for that too.
+
+The death spiral is complete. You're not coding anymore—you're prompting.
+
+---
+
+## How to Avoid It
+
+The solution isn't to never use AI. It's to use it as a tool, not a crutch:
+
+- **Understand what you're accepting.** If AI generates code, spend time reading and understanding it before committing.
+- **Keep complexity in check.** Question suggestions that feel over-engineered.
+- **Write some code yourself.** Especially the hard parts. That's where you learn.
+- **Maintain domain knowledge.** Know your tools, your framework, your patterns.
+
+AI is phenomenal at acceleration. But like all acceleration, you need to keep your hands on the wheel.
