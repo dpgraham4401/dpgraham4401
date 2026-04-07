@@ -30,6 +30,7 @@
     "@playwright/browser-chromium": "^1.59.1",
     "@playwright/browser-firefox": "^1.59.1",
     "@playwright/test": "^1.59.1",
-    "@types/node": "^24.12.2"
+    "@types/node": "^24.12.2",
+    "husky": "^9.1.7"
   }
 }
