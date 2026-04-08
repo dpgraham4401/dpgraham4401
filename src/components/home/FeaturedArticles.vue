@@ -5,7 +5,7 @@ import ArticleSnippet from "src/components/ArticleSnippet.vue";
 import Anchor from "src/components/common/Anchor.vue";
 
 const posts = await getCollection("articles");
-const featuredPosts = posts.filter((post) => post.data.isFeatured);
+const featuredPosts = posts.filter((post) => post.data.isFeatured && post.data.published);
 </script>
 
 <template>
