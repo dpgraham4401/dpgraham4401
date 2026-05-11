@@ -1,92 +1,67 @@
 ---
-title: The AI Death spiral
-description: Unbridled AI is a one way ticket to requiring AI
+title: The AI Wheel
+description: When AI is the only thing that understands your code, AI is the only thing that can change it
 tags: [ "code", "AI" ]
-readTime: 4
+readTime: 5
 timestamp: 2026-04-6
 filename: The AI Wheel
 published: false
 isFeatured: true
 ---
 
-# The AI Death Spiral
+# The AI Wheel
 
-It's so easy to let AI write your code for you these days.
-A few months ago, this wasn't the case, but now, you just prompt it and it'll happily
-run `rm -rf /` for you. Motivation problem solved.
+There's a phrase I keep hearing in standups and Slack threads, sometimes out loud and sometimes implied: *"it doesn't really matter if we understand it, AI can fix it later."*
 
-At some point, whether it was curiosity or laziness, you decided it was OK to let AI write your code for you.
-Tha't step 1.
+It sounds reasonable. It is, in fact, how a lot of codebases are quietly falling apart right now.
 
-### Step 1: You Decide to Let AI Write for You
+## The shortcut that eats your codebase
 
-This is the high that everyone rides when they start vibe coding.
-With just a few prompts, Claude is more than happy to write that entire
-service for you. Who needs to use the dependency, who's even heard of `react-hook-form`?!
-All you gotta do to write it from scratch is just ask Codex.
+Every codebase erodes the same way. Not in one dramatic moment, but in a hundred small decisions to *not look*.
 
+- The PR has a 1000-line function — sure, looks fine, the tests pass.
+- Gemini pasted the same ISO date parser into three files — whatever, we'll dedupe it later.
+- Claude installed some helper package that hasn't been touched on GitHub in seven years — eh, it works.
+- The "unit tests" are mostly `MagicMock` objects asserting that `MagicMock` does what `MagicMock` does — green check, ship it.
 
-### Step 2: You Accept the AI changes
+None of these are catastrophic on their own. But the throughline is the same: nobody on the team actually *understands* what just got merged. And nobody has to, because if it breaks, you just paste the error back into the chat and a new diff comes out the other side.
 
-So it spits out, and what do you know, it kinda works!
+The codebase becomes a black box that only the model can see into. And here's where it gets uncomfortable.
 
-You run it, the UI looks okay, it the network call's succeed, the file's been updated.
-You feel like a god. Quick, you must be off to show everyone your pièce de résistance.
+## If AI is the only thing that understands it, AI is the only thing that can change it
 
-### Step 3: Someone Asks for a Change
+This is the part people don't say out loud.
 
+The moment your codebase passes a certain threshold of "nobody here can read this anymore," you've handed the keys to the model. Not in some sci-fi way — in a very boring, very practical way:
 
-Two weeks later, something breaks. A network call fails, or the feature works on one page but not the other.
-You open the file and... it's a mess.
+- You can't review changes meaningfully, because you can't tell good output from bad.
+- You can't onboard new engineers, because there's no mental model to hand them.
+- You can't migrate frameworks, because you don't know what depends on what.
+- You can't even debug confidently. You can only describe symptoms and hope the model patches the right thing.
 
-The code is there, it technically works, but it's not fun to look at.
-There are 1000 line long function, import statements in every function, try-catch blocks nested three levels deep.
-Gemini also copied and pasted a function for parsing ISO dates three times for some reason,
-and when you started Claude with the `--dangerously-skip-permissions` flag, it installed
-some package that hasn't been updated on GitHub for 7 years.
+You haven't automated your work. You've outsourced your *comprehension*. And comprehension is the thing the job was actually made of.
 
-You asked AI to include unit tests, (because you're a professional, of course!) but
-the tests are importing functions by opening files and reading the contents.
-The Python is using `MagicMock` objects so much that it's basically just testing
-that `MagicMock` works.
+## The bill is coming
 
-### Step 4: You
+Here's where the math gets unfun.
 
-You paste the error into Claude with the relevant code snippet and say "fix this."
+Right now, you're getting Sonnet-tier intelligence for what is, frankly, an absurd price. That's not because tokens are cheap to produce. It's because the entire industry is in a capex arms race, burning billions on compute and chips while pulling in a combined revenue projected at something like $80–120M. Philipp Dubach's [breakdown of the arms race](https://philippdubach.com/posts/ai-capex-arms-race-who-blinks-first/) lays out the gap clearly — the spend and the revenue are not in the same universe.
 
-And it does. It always does. It doesn't ask questions, it doesn't make you think—it just writes the solution.
-The patch is applied, the bug is gone, and you move on.
+That gap closes one of two ways: capacity catches up and prices fall further, or the bill comes due and prices climb. Anyone betting their architecture entirely on the first outcome is making a pretty bold call.
 
-But something has shifted. You've crossed a threshold.
+Now imagine you've built a system that *requires* an LLM in the loop to be maintainable. Not as a productivity boost — as a hard dependency. When per-token pricing doubles, or rate limits tighten, or your preferred model gets deprecated and the replacement is 3x the cost, that isn't a line item you can renegotiate. That's your engineering team's ability to ship.
 
-### Step 4: The Spiral Tightens
+You will have built a codebase that costs money to *read*.
 
-Now every time something doesn't work, you reach for AI. A cryptic error? AI fixes it. Need to refactor? AI does it. Want to add a feature? AI builds it.
+## What "using AI well" actually looks like
 
-But with each generated fix, the codebase becomes *more* complex and *less* understandable.
-AI tends to patch problems rather than solve them. It layers abstractions. It adds utility functions for single-use cases.
+The answer isn't to stop using AI. It's to stop using it as a substitute for understanding:
 
-Your codebase is now a baroque monument to technical debt, written in a language you don't speak.
+- **Read what you accept.** If you wouldn't be able to defend the diff in review without the model present, don't merge it.
+- **Refuse code you can't explain.** Not "refuse to use AI" — refuse to merge code where, if asked, you couldn't explain *why* it's structured that way.
+- **Push back on over-engineering.** Models love to layer abstractions and add utility functions for single-use cases. That's noise, and it's noise you'll pay to maintain.
+- **Keep the load-bearing parts in your head.** The core domain logic, the data model, the gnarly parts of the auth flow — those should live in human brains, not just in context windows.
 
-### Step 5: The Point of No Return
+AI is a phenomenal accelerator. But an accelerator with no driver isn't a car, it's a hazard. And a car you can only afford to drive while the gas is subsidized isn't really yours.
 
-Eventually, you reach a point where you can't maintain the code *without* AI.
-
-You've become reliant on it not just for writing, but for *understanding* your own code.
-Onboarding a new team member? Good luck explaining the architecture when even you don't fully understand it.
-Need to migrate frameworks or update dependencies? You need AI for that too.
-
-The death spiral is complete. You're not coding anymore—you're prompting.
-
----
-
-## How to Avoid It
-
-The solution isn't to never use AI. It's to use it as a tool, not a crutch:
-
-- **Understand what you're accepting.** If AI generates code, spend time reading and understanding it before committing.
-- **Keep complexity in check.** Question suggestions that feel over-engineered.
-- **Write some code yourself.** Especially the hard parts. That's where you learn.
-- **Maintain domain knowledge.** Know your tools, your framework, your patterns.
-
-AI is phenomenal at acceleration. But like all acceleration, you need to keep your hands on the wheel.
+Keep your hands on the wheel.
