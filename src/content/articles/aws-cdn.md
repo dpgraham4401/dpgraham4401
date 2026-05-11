@@ -1,7 +1,7 @@
 ---
 title: Hosting static assets on AWS
 description: How to set up a free CDN for your self-hosted website
-tags: ['cloud', 'aws']
+tags: ["cloud", "aws"]
 readTime: 9
 timestamp: 2022-04-15
 filename: aws-cdn
@@ -22,17 +22,17 @@ For example, pictures!
 
 ![drawing of the Abarat Archipelago](https://d3gwcypbkjc953.cloudfront.net/images/floating-nature.jpg)
 
-I love this picture, I don't even know what it really is, other than what I gather from
-a [Google image search](https://onepiecefanon.fandom.com/wiki/The_Abarat_Archipelago?file=The_Abarat_Archipelago.jpg) (
-It's from a manga series called 'One Piece' and that it's publicly available for fair use under the
-CC license). If I wanted to share this photo, I could store it in the database or somewhere behind a
-web server like [NGINX](https://www.nginx.com/), and have my k8 cluster serve it up everytime I want
-to look at the photo. Sure, but there's a couple problems with that.
+I love this picture, I don't even know what it really is, other than what I gather from a
+[Google image search](https://onepiecefanon.fandom.com/wiki/The_Abarat_Archipelago?file=The_Abarat_Archipelago.jpg)
+( It's from a manga series called 'One Piece' and that it's publicly available for fair use under
+the CC license). If I wanted to share this photo, I could store it in the database or somewhere
+behind a web server like [NGINX](https://www.nginx.com/), and have my k8 cluster serve it up
+everytime I want to look at the photo. Sure, but there's a couple problems with that.
 
 1. My home cluster is not beefy.
 
-- It's 5 [Pine64 Rock64's](https://www.pine64.org/devices/single-board-computers/rock64/) I got
-  for $20 a pop a long time ago, each with only 2Gb of precious RAM.
+- It's 5 [Pine64 Rock64's](https://www.pine64.org/devices/single-board-computers/rock64/) I got for
+  $20 a pop a long time ago, each with only 2Gb of precious RAM.
 
 2. My home cluster is just that, in my home.
 
@@ -98,7 +98,8 @@ job.
 At this point, we've created a way to store or static content, but we don't have a good way to
 access it.
 
-Enter [AWS CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+Enter
+[AWS CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
 - From the AWS console homepage again,
   - Select the `Services` dropdown
@@ -120,8 +121,8 @@ Enter [AWS CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/Devel
 
 ### 5. Create an IAM User/Group
 
-At this point, our CDN is set up, but we need to create a way to access our content
-via [AWS' Identity and Access Management (IAM) service](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
+At this point, our CDN is set up, but we need to create a way to access our content via
+[AWS' Identity and Access Management (IAM) service](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
 
 To quote AWS...
 
@@ -161,8 +162,8 @@ To quote AWS...
 Before we add content to our freshly configured S3 bucket, we are going to install the AWS Command
 Line Interface.
 
-Check out the AWS CLI documentation for the
-most [up-to-date instructions on installing the AWS CLI on your OS](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+Check out the AWS CLI documentation for the most
+[up-to-date instructions on installing the AWS CLI on your OS](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 Check the cli installation
 
@@ -197,8 +198,8 @@ be to access the content (e.g., `/images`).
 
 That's it! You should now be able to access\* your content at the cloudfront URL that we copied
 earlier. For us, it was https://d1738nvaauqo1n.cloudfront.net, so if we wanted to access our
-images/floating_nature.jpg from our fresh CDN, we would navigate
-to https://d1738nvaauqo1n.cloudfront.net/images/floating_nature.jpg
+images/floating_nature.jpg from our fresh CDN, we would navigate to
+https://d1738nvaauqo1n.cloudfront.net/images/floating_nature.jpg
 
 ### 9. Troubleshooting AccessDenied errors
 

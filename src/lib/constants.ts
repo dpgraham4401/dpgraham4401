@@ -31,31 +31,31 @@ interface GlobalConstants {
 
 export const GLOBAL: GlobalConstants = {
   site: {
-    name: 'Vim Pirate',
-    rootUrl: 'https://vimpirate.com',
-    shortDescription: 'Ahoy Matey! Welcome aboard my corner of the internet.',
-    longDescription: 'David Paul Grahams personal website, articles, and portfolio.',
+    name: "Vim Pirate",
+    rootUrl: "https://vimpirate.com",
+    shortDescription: "Ahoy Matey! Welcome aboard my corner of the internet.",
+    longDescription: "David Paul Grahams personal website, articles, and portfolio.",
   },
   social: {
-    github: 'https://github.com/dpgraham4401',
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/in/dpgraham4401',
+    github: "https://github.com/dpgraham4401",
+    twitter: "https://twitter.com/",
+    linkedin: "https://www.linkedin.com/in/dpgraham4401",
   },
   articles: {
-    title: 'Articles',
-    shortDescription: 'Unfiltered thoughts, and not-so-hot takes.',
-    longDescription: 'Web development, tech trends, and the occasional programming mishap.',
+    title: "Articles",
+    shortDescription: "Unfiltered thoughts, and not-so-hot takes.",
+    longDescription: "Web development, tech trends, and the occasional programming mishap.",
   },
   projects: {
-    title: 'Projects',
+    title: "Projects",
     shortDescription: "A list of projects I've worked on.",
     longDescription:
-      'All of my projects, ranging from dotfiles, static websites, full-blown web applications, CLIs, and more.',
+      "All of my projects, ranging from dotfiles, static websites, full-blown web applications, CLIs, and more.",
   },
-  profileImage: 'img/chico_cropped.webp',
+  profileImage: "img/chico_cropped.webp",
   menu: {
-    home: '/',
-    projects: '/projects',
-    articles: '/articles',
+    home: "/",
+    projects: "/projects",
+    articles: "/articles",
   },
 };

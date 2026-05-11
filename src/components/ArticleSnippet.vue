@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Anchor from './common/Anchor.vue';
+import Anchor from "./common/Anchor.vue";
 
 type Props = {
   title: string;

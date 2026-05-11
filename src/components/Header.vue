@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { GLOBAL } from 'src/lib/constants';
-import { onMounted, onUnmounted, ref } from 'vue';
-import Anchor from './common/Anchor.vue';
-import ShipLogo from './logo/ShipLogo.vue';
-import ThemeToggle from './ThemeToggle.vue';
+import { GLOBAL } from "src/lib/constants";
+import { onMounted, onUnmounted, ref } from "vue";
+import Anchor from "./common/Anchor.vue";
+import ShipLogo from "./logo/ShipLogo.vue";
+import ThemeToggle from "./ThemeToggle.vue";
 
 let isOpen = ref(false);
 
 function updateNavState() {
-  const nav = document.querySelector('nav');
-  const isMobile = window.matchMedia('(max-width: 640px)').matches;
+  const nav = document.querySelector("nav");
+  const isMobile = window.matchMedia("(max-width: 640px)").matches;
   if (nav) {
     if (isMobile) {
-      nav.style.transform = isOpen.value ? 'translateY(0)' : 'translateY(-100%)';
+      nav.style.transform = isOpen.value ? "translateY(0)" : "translateY(-100%)";
     } else {
-      nav.style.transform = 'translateY(0)';
+      nav.style.transform = "translateY(0)";
       isOpen.value = false;
     }
   }
@@ -26,12 +26,12 @@ function toggleNav() {
 }
 
 onMounted(() => {
-  window.addEventListener('resize', updateNavState);
+  window.addEventListener("resize", updateNavState);
   updateNavState();
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', updateNavState);
+  window.removeEventListener("resize", updateNavState);
 });
 </script>
 

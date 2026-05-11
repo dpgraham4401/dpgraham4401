@@ -1,4 +1,4 @@
-name: 'CI'
+name: "CI"
 on:
   push:
     branches:
@@ -14,54 +14,54 @@ permissions:
 
 jobs:
   build:
-    name: 'Build'
+    name: "Build"
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@v6
 
-      - name: 'Install pnpm'
+      - name: "Install pnpm"
         uses: pnpm/action-setup@v4
 
-      - name: 'Setup Node.js'
+      - name: "Setup Node.js"
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          cache: 'pnpm'
+          cache: "pnpm"
 
-      - name: 'Install dependencies'
+      - name: "Install dependencies"
         run: pnpm install
 
-      - name: 'Build the project'
+      - name: "Build the project"
         run: pnpm build
 
   test:
-    name: 'UI Tests'
+    name: "UI Tests"
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@v6
 
-      - name: 'Install pnpm'
+      - name: "Install pnpm"
         uses: pnpm/action-setup@v4
 
-      - name: 'Setup Node.js'
+      - name: "Setup Node.js"
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          cache: 'pnpm'
+          cache: "pnpm"
 
-      - name: 'Install dependencies'
+      - name: "Install dependencies"
         run: pnpm install
 
-      - name: 'Install Playwright Browsers'
+      - name: "Install Playwright Browsers"
         run: pnpm exec playwright install --with-deps
 
-      - name: 'Run Playwright tests'
+      - name: "Run Playwright tests"
         run: pnpm exec playwright test
 
-      - name: 'Upload Playwright report'
+      - name: "Upload Playwright report"
         uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:

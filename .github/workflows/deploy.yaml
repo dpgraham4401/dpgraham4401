@@ -16,13 +16,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@v6
 
-      - name: 'Install, build, and upload your site'
+      - name: "Install, build, and upload your site"
         uses: withastro/action@v3
         with:
-          node-version: '24'
+          node-version: "24"
 
   deploy:
     needs: build
@@ -31,6 +31,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: 'Deploy to GitHub Pages'
+      - name: "Deploy to GitHub Pages"
         id: deployment
         uses: actions/deploy-pages@v4

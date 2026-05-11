@@ -1,7 +1,7 @@
 ---
-import Footer from 'src/components/footer/Footer.vue';
-import Header from '@components/Header.vue';
-import '@/styles/global.css';
+import Footer from "src/components/footer/Footer.vue";
+import Header from "@components/Header.vue";
+import "@/styles/global.css";
 ---
 
 <!doctype html>
@@ -19,21 +19,21 @@ import '@/styles/global.css';
     <slot name="head" />
     <script is:inline>
       // Used to avoid a flash of the theme during navigation between pages for now
-      let theme = localStorage.getItem('theme');
+      let theme = localStorage.getItem("theme");
       console.log(theme);
       if (!theme) {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          theme = 'dark';
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
         } else {
-          theme = 'light';
+          theme = "light";
         }
       }
-      if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.documentElement.classList.add('dark');
+      if (theme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
       }
     </script>
   </head>

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { GLOBAL } from '@/lib/constants.ts';
-import { getCollection } from 'astro:content';
-import ArticleSnippet from 'src/components/ArticleSnippet.vue';
-import Anchor from 'src/components/common/Anchor.vue';
+import { GLOBAL } from "@/lib/constants.ts";
+import { getCollection } from "astro:content";
+import ArticleSnippet from "src/components/ArticleSnippet.vue";
+import Anchor from "src/components/common/Anchor.vue";
 
-const posts = await getCollection('articles');
+const posts = await getCollection("articles");
 const featuredPosts = posts.filter((post) => post.data.isFeatured && post.data.published);
 </script>
 

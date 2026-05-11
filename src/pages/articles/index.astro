@@ -1,11 +1,11 @@
 ---
-import { GLOBAL } from '@/lib/constants';
-import Layout from '@/layouts/Layout.astro';
-import Section from '@/components/common/Section.vue';
-import { getCollection } from 'astro:content';
-import ArticleSnippet from '@components/ArticleSnippet.vue';
+import { GLOBAL } from "@/lib/constants";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/common/Section.vue";
+import { getCollection } from "astro:content";
+import ArticleSnippet from "@components/ArticleSnippet.vue";
 
-const posts = await getCollection('articles');
+const posts = await getCollection("articles");
 
 const collectionId = posts[0].collection;
 

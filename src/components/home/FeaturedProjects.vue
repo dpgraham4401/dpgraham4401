@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { GLOBAL } from '@/lib/constants.ts';
-import { getCollection } from 'astro:content';
-import Anchor from 'src/components/common/Anchor.vue';
-import ProjectSnippet from 'src/components/ProjectSnippet.vue';
+import { GLOBAL } from "@/lib/constants.ts";
+import { getCollection } from "astro:content";
+import Anchor from "src/components/common/Anchor.vue";
+import ProjectSnippet from "src/components/ProjectSnippet.vue";
 
-const posts = await getCollection('projects');
+const posts = await getCollection("projects");
 const featuredProjects = posts.filter((post) => post.data.isFeatured);
 </script>
 

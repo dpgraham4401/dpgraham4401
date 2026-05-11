@@ -1,5 +1,5 @@
 <script setup>
-import { GLOBAL } from '@/lib/constants.js';
+import { GLOBAL } from "@/lib/constants.js";
 </script>
 
 <template>
