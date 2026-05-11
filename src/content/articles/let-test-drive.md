@@ -1,7 +1,7 @@
 ---
 title: Unit tests, take the wheel
 description: Writing tests as you code will save you later.
-tags: [ "code", "tests" ]
+tags: ['code', 'tests']
 readTime: 5
 timestamp: 2025-04-18
 filename: testing

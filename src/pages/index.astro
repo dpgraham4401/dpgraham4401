@@ -1,17 +1,17 @@
 ---
-import { GLOBAL } from "@/lib/constants";
-import Layout from "@/layouts/Layout.astro";
-import Hero from "src/components/home/Hero.vue";
-import Section from "@components/common/Section.vue";
-import FeaturedArticles from "@components/home/FeaturedArticles.vue";
-import FeaturedProjects from "@components/home/FeaturedProjects.vue";
+import { GLOBAL } from '@/lib/constants';
+import Layout from '@/layouts/Layout.astro';
+import Hero from 'src/components/home/Hero.vue';
+import Section from '@components/common/Section.vue';
+import FeaturedArticles from '@components/home/FeaturedArticles.vue';
+import FeaturedProjects from '@components/home/FeaturedProjects.vue';
 
 const rootUrl = GLOBAL.site.rootUrl;
 ---
 
 <Layout>
   <Fragment slot="head">
-    <title>{GLOBAL.site.name} | Home </title>
+    <title>{GLOBAL.site.name} | Home</title>
     <meta name="description" content={GLOBAL.site.longDescription} />
     <meta property="og:title" content={`${GLOBAL.site.name} | ${GLOBAL.site.shortDescription}`} />
     <meta property="og:description" content={GLOBAL.site.longDescription} />

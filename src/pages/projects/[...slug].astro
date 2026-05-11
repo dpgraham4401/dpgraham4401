@@ -1,22 +1,27 @@
 ---
-import type { GetStaticPaths } from "astro";
-import { getCollection, render } from "astro:content";
-import ProjectLayout from "src/layouts/ProjectLayout.astro";
-import { GLOBAL } from "src/lib/constants";
-
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import ProjectLayout from 'src/layouts/ProjectLayout.astro';
+import { GLOBAL } from 'src/lib/constants';
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("projects");
+  const posts = await getCollection('projects');
   return posts.map((post) => ({
-    params: { slug: post.id }, props: { post }
+    params: { slug: post.id },
+    props: { post },
   }));
 }) satisfies GetStaticPaths;
 
 const post = Astro.props.post;
-const { id, collection, data: { title, description } } = post;
+const {
+  id,
+  collection,
+  data: { title, description },
+} = post;
 const pageUrl = `${GLOBAL.site.rootUrl}/${collection}/${id}`;
 const { Content } = await render(post);
 ---
+
 <ProjectLayout data={post.data}>
   <Fragment slot="head">
     <title>{GLOBAL.site.name} | {title}</title>

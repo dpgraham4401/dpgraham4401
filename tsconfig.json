@@ -1,15 +1,7 @@
 {
-  "extends": [
-    "astro/tsconfigs/base"
-  ],
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ],
+  "extends": ["astro/tsconfigs/base"],
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
     "module": "esnext",
@@ -29,12 +21,8 @@
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@/*": [
-        "src/*"
-      ]
+      "@components/*": ["src/components/*"],
+      "@/*": ["src/*"]
     },
     "plugins": [
       {

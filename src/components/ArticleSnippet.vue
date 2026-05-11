@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Anchor from "./common/Anchor.vue";
+import Anchor from './common/Anchor.vue';
 
 type Props = {
   title: string;
@@ -21,15 +21,11 @@ defineProps<Props>();
     <p class="">
       {{ description }}
     </p>
-    <div
-      class="text-neutral-600 dark:text-neutral-400 flex justify-between items-center"
-    >
+    <div class="text-neutral-600 dark:text-neutral-400 flex justify-between items-center">
       <p v-if="timestamp">
         {{ timestamp.toLocaleDateString() }}
       </p>
-      <p v-if="readTime">
-        {{ readTime }} min
-      </p>
+      <p v-if="readTime">{{ readTime }} min</p>
     </div>
   </div>
 </template>

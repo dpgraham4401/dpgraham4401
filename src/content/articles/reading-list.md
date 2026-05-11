@@ -1,7 +1,7 @@
 ---
 title: My Ultimate Reading List
 description: Books that I think that many developer will find useful, and some others.
-tags: [ "code", "reading" ]
+tags: ['code', 'reading']
 readTime: 5
 timestamp: 2026-04-6
 filename: Reading List
@@ -87,15 +87,12 @@ differently.
   - Loved it, a new way of thinking about things I encounter daily.
 
 - [x] [Principles of Web Design](https://www.goodreads.com/book/show/58437874-principles-of-web-design)
-
   - Loved that it's essentially a picture book, should have just stole from the library
 
 - [x] [Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices](https://www.goodreads.com/book/show/50083115-architecture-patterns-with-python)
-
   - Wish it talked about Django more
 
 - [x] [Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith](https://www.goodreads.com/book/show/44144499-monolith-to-microservices)
-
   - OK, but really enjoyed this books younger (bigger) brother (below)
 
 - [x] [Building Microservices: Designing Fine-Grained Systems](https://www.goodreads.com/book/show/22512931-building-microservices)
@@ -120,8 +117,8 @@ These were books I read to pick up a new skill.
     really takes Docker
     from the abstract to the concrete. Cheap, and gets updates frequently. Good as e-book.
 
- - [] [Secrets of a JavaScript Ninja—2nd Ed. (Resig, et. al.)](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850)
-   - Haven't had a change to finish yet, but so far I'm liking the deep-diving nature of the book.
+- [] [Secrets of a JavaScript Ninja—2nd Ed. (Resig, et. al.)](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850)
+  - Haven't had a change to finish yet, but so far I'm liking the deep-diving nature of the book.
 
 - [x] [The Kubernetes Book - 2022 Ed. (Nigel Poulton)](https://www.amazon.com/Kubernetes-Book-Version-November-2018-ebook/dp/B072TS9ZQZ/ref=sr_1_3?keywords=the+kubernetes+book+2022+edition&qid=1660389961&sprefix=the+kuber%2Caps%2C54&sr=8-3)
   - Great, up-to-date, core concepts of K8. Good as an ebook.
@@ -194,13 +191,13 @@ These were books I read to pick up a new skill.
 #### AI specific
 
 - [ ] [Deep Learning with PyTorch (Stevens)](https://www.goodreads.com/book/show/39980414-deep-learning-with-pytorch?ac=1&from_search=true&qid=yzdsxRmdvZ&rank=2)
-    - To read in 2026
+  - To read in 2026
 
 - [ ] [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (Geron)](https://www.goodreads.com/book/show/32899495-hands-on-machine-learning-with-scikit-learn-and-tensorflow?ref=nav_sb_ss_1_19)
-    - To read in 2026
+  - To read in 2026
 
 - [ ] [Build a Large Language Model from scratch (Raschka)] (https://www.goodreads.com/book/show/209234015-build-a-large-language-model?ref=nav_sb_ss_1_14)
-    - To read in 2026
+  - To read in 2026
 
 ### Fun
 
@@ -236,7 +233,7 @@ Fun stuff I just couldn't leave off the list.
   - Something history buffs will enjoy, not for everyone.
 
 - [ ] [The Last Days of Stalin (Rubenstien)](https://www.goodreads.com/book/show/28755999-the-last-days-of-stalin?ac=1&from_search=true&qid=Lqi4AEL1gs&rank=1)
-    - in progress as of October 2025
+  - in progress as of October 2025
 
 ## Save your money
 
@@ -290,7 +287,6 @@ find the information.
 ## In the Backlog
 
 Books I want to read, but never seem to make it to the top of the list.
-
 
 - [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
   - This is a slow read. Not sure if I will ever get to this.

@@ -1,7 +1,7 @@
 ---
 title: Haztrak
 description: An open-source web application for tracking hazardous waste shipments electronically.
-tags: [ "React", "Django", "TypeScript", "Python", "open-source" ]
+tags: ['React', 'Django', 'TypeScript', 'Python', 'open-source']
 githubUrl: https://github.com/USEPA/haztrak
 timestamp: 2024-12-01T02:39:03+00:00
 isFeatured: true

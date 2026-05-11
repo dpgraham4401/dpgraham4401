@@ -2,12 +2,12 @@
  * See Astros docs on Content Collections https://docs.astro.build/en/guides/content-collections/
  */
 
-import { glob } from "astro/loaders";
-import {z} from "astro/zod";
-import { defineCollection } from "astro:content";
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+import { defineCollection } from 'astro:content';
 
 const articles = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "src/content/articles" }),
+  loader: glob({ pattern: '**/*.md', base: 'src/content/articles' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -15,12 +15,12 @@ const articles = defineCollection({
     tags: z.array(z.string()).optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.number().optional()
-  })
+    readTime: z.number().optional(),
+  }),
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "src/content/projects" }),
+  loader: glob({ pattern: '**/*.md', base: 'src/content/projects' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -30,8 +30,8 @@ const projects = defineCollection({
     timestamp: z.date().optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.number().optional()
-  })
+    readTime: z.number().optional(),
+  }),
 });
 
 export const collections = { articles, projects };

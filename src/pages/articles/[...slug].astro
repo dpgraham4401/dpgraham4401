@@ -1,32 +1,35 @@
 ---
-import type { GetStaticPaths } from "astro";
-import type { InferEntrySchema } from "astro:content";
-import { getCollection, render } from "astro:content";
-import ArticleLayout from "src/layouts/ArticleLayout.astro";
-import { GLOBAL } from "src/lib/constants";
-
+import type { GetStaticPaths } from 'astro';
+import type { InferEntrySchema } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from 'src/layouts/ArticleLayout.astro';
+import { GLOBAL } from 'src/lib/constants';
 
 type Props = {
   post: {
-    id: string
-    body?: string
-    collection: "articles"
-    data: InferEntrySchema<"articles">
-    rendered?: any
-    filePath?: string
-  }
-}
+    id: string;
+    body?: string;
+    collection: 'articles';
+    data: InferEntrySchema<'articles'>;
+    rendered?: any;
+    filePath?: string;
+  };
+};
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("articles");
+  const posts = await getCollection('articles');
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { post }
+    props: { post },
   }));
 }) satisfies GetStaticPaths;
 
 const post = Astro.props.post;
-const { id, collection, data: { title, description, readTime, timestamp } } = post;
+const {
+  id,
+  collection,
+  data: { title, description, readTime, timestamp },
+} = post;
 const pageUrl = `${GLOBAL.site.rootUrl}/${collection}/${id}`;
 const { Content } = await render(post);
 ---

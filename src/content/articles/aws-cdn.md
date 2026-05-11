@@ -1,7 +1,7 @@
 ---
 title: Hosting static assets on AWS
 description: How to set up a free CDN for your self-hosted website
-tags: [ "cloud", "aws" ]
+tags: ['cloud', 'aws']
 readTime: 9
 timestamp: 2022-04-15
 filename: aws-cdn
@@ -31,12 +31,12 @@ to look at the photo. Sure, but there's a couple problems with that.
 
 1. My home cluster is not beefy.
 
-* It's 5 [Pine64 Rock64's](https://www.pine64.org/devices/single-board-computers/rock64/) I got
+- It's 5 [Pine64 Rock64's](https://www.pine64.org/devices/single-board-computers/rock64/) I got
   for $20 a pop a long time ago, each with only 2Gb of precious RAM.
 
 2. My home cluster is just that, in my home.
 
-* Someone looking at my site (unlikely) on the West Coast will likely sprout a couple gray hairs
+- Someone looking at my site (unlikely) on the West Coast will likely sprout a couple gray hairs
   before this picture loads.
 
 3. Life is too short to not try new things.
@@ -49,9 +49,9 @@ CDN for our website.
 By the end of this, we'll have a fast, distributed method to deliver static content to support our
 site.
 
-#### *BEWARE! AWS operates on a pay-as-you-go model, you could be left with a big bill if you don't
+#### \*BEWARE! AWS operates on a pay-as-you-go model, you could be left with a big bill if you don't
 
-monitor your usage and set up a budget through the AWS console*
+monitor your usage and set up a budget through the AWS console\*
 
 ### How to
 
@@ -59,7 +59,7 @@ monitor your usage and set up a budget through the AWS console*
 
 head over to https://aws.amazon.com/console/ and sign up for an account.
 
-* Heads up, you'll need a credit card to associate with account during the registration process.
+- Heads up, you'll need a credit card to associate with account during the registration process.
 
 #### 2. Activate MFA (optional)
 
@@ -78,18 +78,18 @@ Amazon described their Simple Storage Service (S3) as such
 To over simplify, just think of S3 as the place we'll actually store our content. that's its only
 job.
 
-* From the AWS console homepage, bring up the `Services` menu from the top left. Scroll down to
+- From the AWS console homepage, bring up the `Services` menu from the top left. Scroll down to
   `Storage`, and select `S3`.
   ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/s3_step1.png)
 
-* Click `Create Bucket` and enter a Bucket Name. The name must be unique amongst all of AWS, and you
+- Click `Create Bucket` and enter a Bucket Name. The name must be unique amongst all of AWS, and you
   should choose a [DNS-compliant name](https://duckduckgo.com/?t=ffab&q=DNS+compliant+name&ia=web)
   since this name will be part of the URI to access the bucket.
-* Choose a region that's close to you for now.
-* Scroll down to the card titled `Block Public Access settings for this bucket`
-  * Uncheck `block all public access`
-  * Check the acknowledgement
-  * ponder the risks
+- Choose a region that's close to you for now.
+- Scroll down to the card titled `Block Public Access settings for this bucket`
+  - Uncheck `block all public access`
+  - Check the acknowledgement
+  - ponder the risks
 
 ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/s3_step2.png)
 
@@ -100,21 +100,21 @@ access it.
 
 Enter [AWS CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
-* From the AWS console homepage again,
-  * Select the `Services` dropdown
-  * Scroll down to `Networking & Content Delivery`
-  * Click `CloudFront`
+- From the AWS console homepage again,
+  - Select the `Services` dropdown
+  - Scroll down to `Networking & Content Delivery`
+  - Click `CloudFront`
 
 ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/cloudfront_step1.png)
 
-* On the next page, take a moment to read the AWS free tier limits and select
+- On the next page, take a moment to read the AWS free tier limits and select
   `Create a CloudFront Distribution`
-  * From the `Origin domain` select your recently made s3 bucket
-  * Scroll down, click the radio boxes next to...
-    * `redirect HTTP to HTTPS`
-  * You can leave the remaining defaults for now.
-  * Scroll to the bottom to Create Distribution
-  * Copy the `Distribution domain name` to your new CloudFront and save it for later.
+  - From the `Origin domain` select your recently made s3 bucket
+  - Scroll down, click the radio boxes next to...
+    - `redirect HTTP to HTTPS`
+  - You can leave the remaining defaults for now.
+  - Scroll to the bottom to Create Distribution
+  - Copy the `Distribution domain name` to your new CloudFront and save it for later.
 
 ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/cloudfront_step2.png)
 
@@ -129,32 +129,32 @@ To quote AWS...
 > to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has
 > permissions) to use resources.
 
-* From the AWS console homepage again,
-  * Select the `Services` dropdown
-  * Scroll down to `Security, Identity, & Compliance` in the left menu.
-  * Click `IAM`
+- From the AWS console homepage again,
+  - Select the `Services` dropdown
+  - Scroll down to `Security, Identity, & Compliance` in the left menu.
+  - Click `IAM`
 
 ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/IAM_step1.png)
 
-* After page load, select `user` from the left menu, and click `Add User`
-* Create a new IAM user
-  * Add a username
-  * Click the check next to `Access key - programatic access`
-  * click next
+- After page load, select `user` from the left menu, and click `Add User`
+- Create a new IAM user
+  - Add a username
+  - Click the check next to `Access key - programatic access`
+  - click next
 
 ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/IAM_user_name.png)
 
-* Create a new group and add our new IAM user
-  * If you're familiar with *nix groups, these act just like that.
-  * give the group a descriptive name
-  * use the filter bar to add two security policies to your new group `AmazonS3FullAccess` &
+- Create a new group and add our new IAM user
+  - If you're familiar with \*nix groups, these act just like that.
+  - give the group a descriptive name
+  - use the filter bar to add two security policies to your new group `AmazonS3FullAccess` &
     `CloudFrontFullAccess`
-  * Add the new user to the group and create the user
+  - Add the new user to the group and create the user
 
 ![activating multi facot authentication](https://d3gwcypbkjc953.cloudfront.net/images/aws_cdn/IAM_group_access.png)
 
-* After you successfully create the user, a page will show your new user's Access ID and Key.
-  * **Copy these and store them in a safe place. They will not be visible after leaving this page**.
+- After you successfully create the user, a page will show your new user's Access ID and Key.
+  - **Copy these and store them in a safe place. They will not be visible after leaving this page**.
 
 ### 6. Install the AWS CLI
 
@@ -195,7 +195,7 @@ be to access the content (e.g., `/images`).
 
 ### 8. Congrats
 
-That's it! You should now be able to access* your content at the cloudfront URL that we copied
+That's it! You should now be able to access\* your content at the cloudfront URL that we copied
 earlier. For us, it was https://d1738nvaauqo1n.cloudfront.net, so if we wanted to access our
 images/floating_nature.jpg from our fresh CDN, we would navigate
 to https://d1738nvaauqo1n.cloudfront.net/images/floating_nature.jpg
@@ -223,5 +223,5 @@ section and create a new policy in JSON format.
 
 replacing dpgraham-sss-test with your bucket's name.
 
-*Note, it may take some time before you can actually view your content. I've heard as short as 25
+\*Note, it may take some time before you can actually view your content. I've heard as short as 25
 minutes, but it may take longer.

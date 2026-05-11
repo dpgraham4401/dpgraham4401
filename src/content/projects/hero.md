@@ -2,7 +2,7 @@
 title: HERO
 description: Health and Environmental Research Online (HERO), EPA's system for recording and storing
   scientific literature used for policy decisions.
-tags: [ "Django", "Python", "PostgresSQL", "AWS" ]
+tags: ['Django', 'Python', 'PostgresSQL', 'AWS']
 liveUrl: https://heronetnext.epa.gov/
 timestamp: 2025-04-30T00:00:00+00:00
 isFeatured: true

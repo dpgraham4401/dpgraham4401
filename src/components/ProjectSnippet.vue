@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import Anchor from "./common/Anchor.vue";
+import Anchor from './common/Anchor.vue';
 
 type Props = {
-  title: string
-  description: string
-  url: string
-  githubUrl?: string
-  liveUrl?: string
-  tags?: string[]
-}
+  title: string;
+  description: string;
+  url: string;
+  githubUrl?: string;
+  liveUrl?: string;
+  tags?: string[];
+};
 
 defineProps<Props>();
 </script>
@@ -30,18 +30,12 @@ defineProps<Props>();
         >
           GitHub
         </Anchor>
-        <Anchor
-          v-if="liveUrl"
-          :url="liveUrl"
-          aria-label="Live link"
-          class="text-base"
-          external
-        >
+        <Anchor v-if="liveUrl" :url="liveUrl" aria-label="Live link" class="text-base" external>
           Live
         </Anchor>
       </div>
     </div>
-    <p class="vim-text ">
+    <p class="vim-text">
       {{ description }}
     </p>
     <div class="flex flex-row wrap gap-2">
@@ -50,7 +44,7 @@ defineProps<Props>();
         v-for="(tag, index) in tags"
         v-if="tags"
         :key="index"
-        class="vim-text-secondary -vim-bg  px-2 py-1 text-sm font-semibold"
+        class="vim-text-secondary -vim-bg px-2 py-1 text-sm font-semibold"
       >
         {{ tag }}
       </span>

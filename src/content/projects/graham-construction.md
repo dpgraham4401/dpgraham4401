@@ -1,7 +1,7 @@
 ---
 title: Graham Construction
 description: Website for my family's residential construction business.
-tags: [ "TypeScript", "Astro", "React" ]
+tags: ['TypeScript', 'Astro', 'React']
 githubUrl: https://github.com/dpgraham4401/grahamconstruction
 liveUrl: https://grahamconstructionco.com
 timestamp: 2025-03-09T00:00:00+00:00
