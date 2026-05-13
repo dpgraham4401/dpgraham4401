@@ -14,35 +14,27 @@ const featuredProjects = posts.filter((post) => post.data.isFeatured);
     <h3 class="font-display text-lg sm:text-xl leading-loose">
       {{ GLOBAL.projects.title }}
     </h3>
-    <Anchor aria-label="view all" class="text-base" url="/projects">
-      View All
-    </Anchor>
+    <Anchor aria-label="view all" class="text-base" url="/projects"> View All </Anchor>
   </div>
 
   <ul class="my-8">
     <!-- Show a fallback message if no projects are found -->
-    <p v-if="featuredProjects.length === 0">
-      No Featured Projects Found
-    </p>
+    <p v-if="featuredProjects.length === 0">No Featured Projects Found</p>
 
     <!-- Otherwise, iterate through the featuredProjects array -->
     <template v-else>
-      <li
-        v-for="(project, index) in featuredProjects"
-        :key="index"
-      >
+      <li v-for="(project, index) in featuredProjects" :key="index">
         <!-- Pass project props into the ProjectSnippet component -->
         <ProjectSnippet
           :description="project.data.description"
-          :githubUrl="project.data. githubUrl"
+          :githubUrl="project.data.githubUrl"
           :liveUrl="project.data.liveUrl"
           :readTime="project.data.readTime"
-          :tags="project.data. tags ?? []"
-          :title="project.data. title"
+          :tags="project.data.tags ?? []"
+          :title="project.data.title"
           :url="`${project.collection}/${project.id}`"
         />
       </li>
     </template>
   </ul>
 </template>
-

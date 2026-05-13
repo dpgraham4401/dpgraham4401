@@ -20,7 +20,6 @@ function updateNavState() {
   }
 }
 
-
 function toggleNav() {
   isOpen.value = !isOpen.value;
   updateNavState();
@@ -34,20 +33,14 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("resize", updateNavState);
 });
-
-
 </script>
 
 <template>
-  <header
-    class="vim-bg vim-border-b sticky top-0 w-full z-10"
-  >
-    <div
-      class="vim-bg sm:hidden relative z-50 py-4 flex items-center"
-    >
+  <header class="vim-bg vim-border-b sticky top-0 w-full z-10">
+    <div class="vim-bg sm:hidden relative z-50 py-4 flex items-center">
       <button aria-label="Toggle navigation menu" class="px-4" @click="toggleNav">
         <svg
-          class="vim-fill "
+          class="vim-fill"
           height="32"
           viewBox="0 0 512 512"
           width="32"
@@ -58,7 +51,8 @@ onUnmounted(() => {
       </button>
     </div>
     <nav
-      class="vim-bg transition vim-border-b fixed sm:relative inset-x-0 top-0 h-auto sm:px-4 flex justify-between flex-col gap-8 py-4 text-xl sm:flex-row max-w-2xl mx-auto sm:pt-4 sm:border-none">
+      class="vim-bg transition vim-border-b fixed sm:relative inset-x-0 top-0 h-auto sm:px-4 flex justify-between flex-col gap-8 py-4 text-xl sm:flex-row max-w-2xl mx-auto sm:pt-4 sm:border-none"
+    >
       <div
         class="flex flex-col items-center font-mono font-medium gap-4 sm:flex-row px-4 sm:px-0 mt-16 sm:mt-0"
       >
@@ -70,7 +64,7 @@ onUnmounted(() => {
       <div class="flex gap-4 items-center justify-between px-4 sm:px-0">
         <Anchor :url="GLOBAL.social.github" aria-label="GitHub Repository">
           <svg
-            class="vim-fill "
+            class="vim-fill"
             height="32"
             viewBox="0 0 24 24"
             width="32"

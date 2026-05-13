@@ -1,7 +1,7 @@
 ---
 title: My Ultimate Reading List
 description: Books that I think that many developer will find useful, and some others.
-tags: [ "code", "reading" ]
+tags: ["code", "reading"]
 readTime: 5
 timestamp: 2026-04-6
 filename: Reading List
@@ -12,8 +12,7 @@ isFeatured: true
 # Reads Worth Their Weight When Moving
 
 This list doesn't encompass everything I've read, mostly just things I've read to pick up new skills
-and my
-recommendations.
+and my recommendations.
 
 It has two sections:
 
@@ -21,8 +20,7 @@ It has two sections:
 - [Save Your Money](#save-your-money)
 
 There's a gray area between the two list, things I wouldn't actively recommend but didn't strongly
-dislike either. I
-don't bother including those.
+dislike either. I don't bother including those.
 
 ## The Good Stuff
 
@@ -41,8 +39,8 @@ differently.
   - The classic scoop on why open-source is kick-butt.
 
 - [x] The Clean Code Series
-  - These get a lot of flack for being too dogmatic, but I still consider them required reading.
-    The best advice I heard was, read and ingest the ideas, then "let them go."
+  - These get a lot of flack for being too dogmatic, but I still consider them required reading. The
+    best advice I heard was, read and ingest the ideas, then "let them go."
   - [x] [Clean Code (Martin)](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
   - [x] [Clean Architecture (Martin)](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=pd_bxgy_img_sccl_1/132-7763395-0841352?pd_rd_w=kosNV&pf_rd_p=6b3eefea-7b16-43e9-bc45-2e332cbf99da&pf_rd_r=ES82JM82CTAYB524G4NT&pd_rd_r=b6173348-8ff7-4339-a387-8acb159a2d94&pd_rd_wg=nJnV4&pd_rd_i=0134494164&psc=1)
   - [x] [The Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder)
@@ -87,15 +85,12 @@ differently.
   - Loved it, a new way of thinking about things I encounter daily.
 
 - [x] [Principles of Web Design](https://www.goodreads.com/book/show/58437874-principles-of-web-design)
-
   - Loved that it's essentially a picture book, should have just stole from the library
 
 - [x] [Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices](https://www.goodreads.com/book/show/50083115-architecture-patterns-with-python)
-
   - Wish it talked about Django more
 
 - [x] [Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith](https://www.goodreads.com/book/show/44144499-monolith-to-microservices)
-
   - OK, but really enjoyed this books younger (bigger) brother (below)
 
 - [x] [Building Microservices: Designing Fine-Grained Systems](https://www.goodreads.com/book/show/22512931-building-microservices)
@@ -117,11 +112,12 @@ These were books I read to pick up a new skill.
 
 - [x] [Docker Deep Dive (Poulton)](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF/ref=sr_1_1?crid=1RFW7X994LWD1&keywords=docker+deep+dive&qid=1666639274&qu=eyJxc2MiOiIxLjU4IiwicXNhIjoiMS40MSIsInFzcCI6IjEuMzIifQ%3D%3D&s=books&sprefix=docker+deep+dive%2Cstripbooks%2C67&sr=1-1)
   - Well-written coverage of how Docker works under the hood, not a full API/CLI reference but
-    really takes Docker
-    from the abstract to the concrete. Cheap, and gets updates frequently. Good as e-book.
+    really takes Docker from the abstract to the concrete. Cheap, and gets updates frequently. Good
+    as e-book.
 
- - [] [Secrets of a JavaScript Ninja—2nd Ed. (Resig, et. al.)](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850)
-   - Haven't had a change to finish yet, but so far I'm liking the deep-diving nature of the book.
+- []
+  [Secrets of a JavaScript Ninja—2nd Ed. (Resig, et. al.)](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850)
+  - Haven't had a change to finish yet, but so far I'm liking the deep-diving nature of the book.
 
 - [x] [The Kubernetes Book - 2022 Ed. (Nigel Poulton)](https://www.amazon.com/Kubernetes-Book-Version-November-2018-ebook/dp/B072TS9ZQZ/ref=sr_1_3?keywords=the+kubernetes+book+2022+edition&qid=1660389961&sprefix=the+kuber%2Caps%2C54&sr=8-3)
   - Great, up-to-date, core concepts of K8. Good as an ebook.
@@ -140,7 +136,8 @@ These were books I read to pick up a new skill.
   - This one is on here for sentimental reasons, one of my first hands-on introductions to web
     development.
 
-- [] [Node.js Design Patterns (Casciaro and Mammino)](https://www.amazon.com/s?k=node.js+design+patterns)
+- []
+  [Node.js Design Patterns (Casciaro and Mammino)](https://www.amazon.com/s?k=node.js+design+patterns)
   - In progress, but I like it so far.
 
 - [x] [The C Programming Language (Kernigan and Ritchie)](https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628/ref=sr_1_1?keywords=the+c+programming+language&qid=1651783300&s=books&sprefix=The+C+programm%2Cstripbooks%2C68&sr=1-1)
@@ -167,12 +164,12 @@ These were books I read to pick up a new skill.
   - Good as an all around reference for the language
 
 - [x] [Object-Oriented Python: Master OOP by Building Games and GUIs (Kalb) ](https://www.amazon.com/s?k=object+oriented+programming+python&i=digital-text&sprefix=object+orient%2Cdigital-text%2C65&ref=nb_sb_ss_ts-doa-p_2_13)
-  - A great intro to OOP for pythonistas that helped me.
-    Solidified the concept of programming to an interfaces for me.
+  - A great intro to OOP for pythonistas that helped me. Solidified the concept of programming to an
+    interfaces for me.
 
 - [x] [JavaScript—The Definitive Guide (Flanagan)](https://www.amazon.com/JavaScript-Definitive-Most-Used-Programming-Language/dp/1491952024/ref=sr_1_1?keywords=javascript+the+definitive+guide&qid=1651783105&s=books&sprefix=javascript+the+%2Cstripbooks%2C81&sr=1-1)
-  - This is a questionable inclusion,
-    it focuses on the language but includes little about using it with Node.js or in the browser.
+  - This is a questionable inclusion, it focuses on the language but includes little about using it
+    with Node.js or in the browser.
 
 - [x] [Kubernetes Best Practices (Burns et al)](https://www.goodreads.com/book/show/50204703-kubernetes-best-practices?ac=1&from_search=true&qid=aoS7mRnwIJ&rank=1h)
   - This is a slow read.
@@ -186,7 +183,8 @@ These were books I read to pick up a new skill.
     documentation goes
 
 - [x] [Sam's Teach Yourself C++ in 1 hour a day](https://www.goodreads.com/book/show/13746885-sams-teach-yourself-c-in-one-hour-a-day?ref=nav_sb_ss_2_23)
-  - Pleasantly surprised of how good this was as a way to brush up on newer standards of the language. It goes into the what the new standard solves, and why it's prefered.
+  - Pleasantly surprised of how good this was as a way to brush up on newer standards of the
+    language. It goes into the what the new standard solves, and why it's prefered.
 
 - [x] [Just use Postgres](https://www.manning.com/books/just-use-postgres)
   - Very cool, reminder to take advantage of the features at the database level of the application.
@@ -194,13 +192,14 @@ These were books I read to pick up a new skill.
 #### AI specific
 
 - [ ] [Deep Learning with PyTorch (Stevens)](https://www.goodreads.com/book/show/39980414-deep-learning-with-pytorch?ac=1&from_search=true&qid=yzdsxRmdvZ&rank=2)
-    - To read in 2026
+  - To read in 2026
 
 - [ ] [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (Geron)](https://www.goodreads.com/book/show/32899495-hands-on-machine-learning-with-scikit-learn-and-tensorflow?ref=nav_sb_ss_1_19)
-    - To read in 2026
+  - To read in 2026
 
-- [ ] [Build a Large Language Model from scratch (Raschka)] (https://www.goodreads.com/book/show/209234015-build-a-large-language-model?ref=nav_sb_ss_1_14)
-    - To read in 2026
+- [ ] [Build a Large Language Model from scratch (Raschka)]
+      (https://www.goodreads.com/book/show/209234015-build-a-large-language-model?ref=nav_sb_ss_1_14)
+  - To read in 2026
 
 ### Fun
 
@@ -236,7 +235,7 @@ Fun stuff I just couldn't leave off the list.
   - Something history buffs will enjoy, not for everyone.
 
 - [ ] [The Last Days of Stalin (Rubenstien)](https://www.goodreads.com/book/show/28755999-the-last-days-of-stalin?ac=1&from_search=true&qid=Lqi4AEL1gs&rank=1)
-    - in progress as of October 2025
+  - in progress as of October 2025
 
 ## Save your money
 
@@ -244,30 +243,29 @@ This is books I usually felt that I could have done without, or maybe there was 
 find the information.
 
 - Most books published by Packt. Their price tags and title are usually enticing but I've yet to
-  read one that I thought
-  either didn't deliver on content, or there was a better alternative.
+  read one that I thought either didn't deliver on content, or there was a better alternative.
 
 - [ ] [Python for Devops (Gift et al.)](https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation-ebook/dp/B082P97LDW/ref=sr_1_1?crid=2HPQKFN8R1T64&keywords=python+for+devops&qid=1664799859&qu=eyJxc2MiOiIxLjMyIiwicXNhIjoiMC43NSIsInFzcCI6IjAuNDcifQ%3D%3D&s=digital-text&sprefix=python+for+devops%2Cdigital-text%2C63&sr=1-1)
   - Couldn't even finish, just ramblings with little useful info on using python for devops or
     automation that can't be found in a python 101 book.
 
 - [x] [Learning React (Banks and Porcello)](https://www.amazon.com/Learning-React-Modern-Patterns-Developing-ebook/dp/B08B489X8Q/ref=sr_1_1?crid=NMF3RZKIIWEU&keywords=Learning+react&qid=1664800003&qu=eyJxc2MiOiIyLjU4IiwicXNhIjoiMi4wMCIsInFzcCI6IjIuMjgifQ%3D%3D&s=digital-text&sprefix=learning+react%2Cdigital-text%2C58&sr=1-1)
-  - Plenty of technical mistakes, they must not have run the code they put in the book,
-    and already outdated.
+  - Plenty of technical mistakes, they must not have run the code they put in the book, and already
+    outdated.
 
 - [x] [Docker for Developers (Bullington-McGuire et al)](https://www.amazon.com/Docker-Developers-application-containers-continuous/dp/1789536057/ref=sr_1_1?keywords=docker+for+developers&qid=1664803100&qu=eyJxc2MiOiIxLjU2IiwicXNhIjoiMC45MSIsInFzcCI6IjAuOTgifQ%3D%3D&sprefix=docker+for+%2Caps%2C76&sr=8-1)
   - Not bad necessarily, but not worth the cash. I wish I had just stuck with _Docker Deep Dive_.
 
 - [x] [Wicked Cool Shell Scripts (Taylor)](https://www.amazon.com/Wicked-Cool-Shell-Scripts-2nd/dp/1593276028)
-  - I have mixed feelings about this one; the shell scripts may be cool,
-    but that doesn't mean they're useful.
+  - I have mixed feelings about this one; the shell scripts may be cool, but that doesn't mean
+    they're useful.
 
 - [x] [Node.js Cookbook (Griggs)](https://www.amazon.com/Node-Cookbook-techniques-server-side-development-ebook/dp/B08KTPD498/ref=sr_1_3?crid=1Q3YDCHYBGC53&keywords=node.js+cookbook&qid=1667305628&qu=eyJxc2MiOiIwLjAwIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=books&sprefix=node.js+cookbook%2Cstripbooks%2C56&sr=1-3)
   - It's not bad but offers little material that you couldn't just pick up from online docs.
 
 - [x] [Think Java: How to Think Like a Computer Scientist](https://www.goodreads.com/book/show/51787793-think-java)
-  - I only take issue with the title, which should be "basics of programming with Java."
-    Not bad if that's what you're looking for.
+  - I only take issue with the title, which should be "basics of programming with Java." Not bad if
+    that's what you're looking for.
 
 - [x] [CPython Internals: Your Guide to the Python 3 Interpreter](https://www.goodreads.com/book/show/53412684-cpython-internals)
   - I wanted this to be less abstract. It's enough for someone more curious, but I wanted more.
@@ -276,21 +274,21 @@ find the information.
   - Way more beginner oriented than it should be since its targeted audience is people
     using/learning microservices.
 
-- [] [Distributed Systems with Node.js (Hunter)](https://www.amazon.com/Distributed-Systems-Node-js-Building-Enterprise-Ready/dp/1492077291/ref=sr_1_1?crid=1YSRSX6R02BT0&dib=eyJ2IjoiMSJ9.Ui0vUS4L9WS8e1FSrpox87zgEY_aUPiSkg96QsgwDSzc-yzFj5JxEIi5ibLYbtd7eiVCn2YVKbwTIZM-xzwmThDszFEadkFPF185PbfH2J6kwQTpy3wfy8BOD0sAv2QDpfG60Ll8UUmPE9lht8t4g-bamDPsc1MDUEdoo0wgFS3Z-UmXq5At8qDvphoXTjbDUpCJrqK9oz1iQpfeeuV73vzfciRNj8cV5Y_sgeBdWV8.TdVbVsHze1IldGY6Efy8ZJ2hY82SxIYbUiapQZoQNaA&dib_tag=se&keywords=Distributed+systems+with+node.js&qid=1750788288&sprefix=distributed+systems+with+node.js%2Caps%2C72&sr=8-1)
+- []
+  [Distributed Systems with Node.js (Hunter)](https://www.amazon.com/Distributed-Systems-Node-js-Building-Enterprise-Ready/dp/1492077291/ref=sr_1_1?crid=1YSRSX6R02BT0&dib=eyJ2IjoiMSJ9.Ui0vUS4L9WS8e1FSrpox87zgEY_aUPiSkg96QsgwDSzc-yzFj5JxEIi5ibLYbtd7eiVCn2YVKbwTIZM-xzwmThDszFEadkFPF185PbfH2J6kwQTpy3wfy8BOD0sAv2QDpfG60Ll8UUmPE9lht8t4g-bamDPsc1MDUEdoo0wgFS3Z-UmXq5At8qDvphoXTjbDUpCJrqK9oz1iQpfeeuV73vzfciRNj8cV5Y_sgeBdWV8.TdVbVsHze1IldGY6Efy8ZJ2hY82SxIYbUiapQZoQNaA&dib_tag=se&keywords=Distributed+systems+with+node.js&qid=1750788288&sprefix=distributed+systems+with+node.js%2Caps%2C72&sr=8-1)
   - I would recommend getting _Node.js Design Patterns_ instead.
 
 - [x] [Boost your Django DX (A. Johnson)](https://www.google.com/search?q=Boost+your+django+DX&rlz=1C1GCEA_enUS1131US1131&oq=Boost+your+django+DX&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDMzNzRqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8)
-  - While I really appreciate Adam Johnson's work in the Django community,
-    I found the price to be a little steep for how basic the content was.
+  - While I really appreciate Adam Johnson's work in the Django community, I found the price to be a
+    little steep for how basic the content was.
 
 - [x] [Speed Up your Django Tests (A. Johnson)](https://www.google.com/search?q=speed+up+your+django+tests&sca_esv=ccb8066356fd07b7&rlz=1C1GCEA_enUS1131US1131&sxsrf=AE3TifNzY6DK9WX9YPz0-FTLWoDFmoztqg%3A1750788527083&ei=r-laaIrhBOGh5NoPpZTsYQ&ved=0ahUKEwjK9O7B04qOAxXhEFkFHSUKOwwQ4dUDCBA&uact=5&oq=speed+up+your+django+tests&gs_lp=Egxnd3Mtd2l6LXNlcnAiGnNwZWVkIHVwIHlvdXIgZGphbmdvIHRlc3RzMgUQABiABDIGEAAYFhgeMgUQABjvBTIFEAAY7wVInzRQ8AtYyzJwBXgBkAEAmAFroAG6DaoBBDI2LjG4AQPIAQD4AQGYAiCgAsAOwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAgQQIxgnwgIKECMYgAQYJxiKBcICCxAAGIAEGJECGIoFwgILEAAYgAQYsQMYgwHCAggQLhiABBixA8ICChAAGIAEGEMYigXCAhAQABiABBixAxhDGIMBGIoFwgIREC4YgAQYsQMY0QMYgwEYxwHCAg4QLhiABBixAxjRAxjHAcICCxAuGIAEGNEDGMcBwgIOEAAYgAQYsQMYgwEYigXCAg0QABiABBixAxhDGIoFwgIIEAAYgAQYsQPCAgsQLhiABBixAxjUAsICCxAAGIAEGIYDGIoFmAMAiAYBkAYJkgcEMzEuMaAHh5QBsgcEMjYuMbgHmQ7CBwkwLjE4LjEzLjHIB3M&sclient=gws-wiz-serp)
-  - While I really appreciate Adam Johnson's work in the Django community,
-    I found the price to be a little steep for how basic the content was.
+  - While I really appreciate Adam Johnson's work in the Django community, I found the price to be a
+    little steep for how basic the content was.
 
 ## In the Backlog
 
 Books I want to read, but never seem to make it to the top of the list.
-
 
 - [ ] [Site Reliability Engineering (Murphy, Beyer, et el)](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?keywords=site+reliability+engineering&qid=1667304609&qu=eyJxc2MiOiIzLjExIiwicXNhIjoiMi42NCIsInFzcCI6IjIuNjQifQ%3D%3D&sprefix=site+re%2Caps%2C115&sr=8-1)
   - This is a slow read. Not sure if I will ever get to this.

@@ -2,7 +2,7 @@
   "name": "vimpirate",
   "type": "module",
   "version": "0.2.5",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.1.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,7 +10,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx,vue,astro,json,md,yml,yaml,css}": "prettier --write"
   },
   "engines": {
     "node": ">=24.0.0"
@@ -33,6 +38,9 @@
     "@playwright/browser-firefox": "^1.59.1",
     "@playwright/test": "^1.59.1",
     "@types/node": "^24.12.2",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.4",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

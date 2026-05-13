@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 import { HalfMoon, SunLight } from "@iconoir/vue";
 import { ref } from "vue";
 
@@ -37,7 +36,6 @@ const handleToggleClick = () => {
   applyDarkMode(newTheme);
   saveDarkModeToStorage(newTheme);
 };
-
 </script>
 
 <template>
@@ -45,7 +43,8 @@ const handleToggleClick = () => {
     id="themeToggle"
     aria-label="Theme Toggle"
     class="border-none h-1/2 bg-none focus:outline-2 focus:outline-offset-2 focus:outline-vim-dark dark:focus:outline-vim-light"
-    @click="handleToggleClick">
+    @click="handleToggleClick"
+  >
     <SunLight v-if="isDark" stroke-width="2" />
     <HalfMoon v-else stroke-width="2" />
   </button>

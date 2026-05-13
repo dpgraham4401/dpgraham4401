@@ -3,7 +3,7 @@
  */
 
 import { glob } from "astro/loaders";
-import {z} from "astro/zod";
+import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
 
 const articles = defineCollection({
@@ -15,8 +15,8 @@ const articles = defineCollection({
     tags: z.array(z.string()).optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.number().optional()
-  })
+    readTime: z.number().optional(),
+  }),
 });
 
 const projects = defineCollection({
@@ -30,8 +30,8 @@ const projects = defineCollection({
     timestamp: z.date().optional(),
     published: z.boolean().optional(),
     isFeatured: z.boolean().optional(),
-    readTime: z.number().optional()
-  })
+    readTime: z.number().optional(),
+  }),
 });
 
 export const collections = { articles, projects };

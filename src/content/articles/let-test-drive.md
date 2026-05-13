@@ -1,7 +1,7 @@
 ---
 title: Unit tests, take the wheel
 description: Writing tests as you code will save you later.
-tags: [ "code", "tests" ]
+tags: ["code", "tests"]
 readTime: 5
 timestamp: 2025-04-18
 filename: testing
@@ -13,28 +13,27 @@ published: true
 #### TL;DR
 
 While [Test Driven Development (TDD)](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
-gets some flak these days, writing test as you go, instead
-of after the fact can make sure your code's API is well-thought out.
+gets some flak these days, writing test as you go, instead of after the fact can make sure your
+code's API is well-thought out.
 
 ## The problem
 
-We've all been there, during standup, one of your colleagues says something like:
-**"I'm almost done with this ticket, I just need to write the tests"**.
+We've all been there, during standup, one of your colleagues says something like: **"I'm almost done
+with this ticket, I just need to write the tests"**.
 
-I don't know about everyone else,
-but I've never been able to convince myself to write quality tests after the fact.
-I, invariably, get to a point where I just say to myself **"this is good enough"** and move on.
-Usually the after-the-fact tests have the following qualities:
+I don't know about everyone else, but I've never been able to convince myself to write quality tests
+after the fact. I, invariably, get to a point where I just say to myself **"this is good enough"**
+and move on. Usually the after-the-fact tests have the following qualities:
 
 - Coverage is low.
 - The tests are unfocused on don't test the behavior in isolation.
 - They test implementation details
-  - When you know how it works under the hood, the temptation is just too strong.
-    These inevitably break when the implementation changes.
+  - When you know how it works under the hood, the temptation is just too strong. These inevitably
+    break when the implementation changes.
 - They are brittle
-  - [monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch),
-    I've never seen a test that used patching that didn't break when a minor detail changed,
-    like the import path changing, or a header for an external API changes.
+  - [monkey-patching](https://docs.python.org/3/library/unittest.mock.html#patch), I've never seen a
+    test that used patching that didn't break when a minor detail changed, like the import path
+    changing, or a header for an external API changes.
 
 Last but not least; **when our tests come after the fact, we don't thing about our API as we write
 **.
@@ -45,11 +44,10 @@ Last but not least; **when our tests come after the fact, we don't thing about o
 
 TDD forces you to think about where you want to end up before you get there.
 
-For example, let's say we're working on a function that serializes data to JSON
-and saves to the database. If we're not testing as we go, we usually end up hyper-focusing on
-making the code work instead of how our code will be called by the client code.
-If we're not careful, we end up with a function that does too much and has a poorly thought-out
-API.
+For example, let's say we're working on a function that serializes data to JSON and saves to the
+database. If we're not testing as we go, we usually end up hyper-focusing on making the code work
+instead of how our code will be called by the client code. If we're not careful, we end up with a
+function that does too much and has a poorly thought-out API.
 
 ```python
 # lib/process.py
@@ -97,25 +95,25 @@ def main():
     ...
 ```
 
-What do these parameters mean? What is the function processing? What are the boolean flags for?
-Is this saying it accepts "json" or outputs "json"?
+What do these parameters mean? What is the function processing? What are the boolean flags for? Is
+this saying it accepts "json" or outputs "json"?
 
 The only way to figure what this function call means is to read the function's code
 
 #### What would have happened if we had written test as we wrote production code?
 
-TDD would have naturally nudged us to slow down and think more deliberately about the API they
-were building.
+TDD would have naturally nudged us to slow down and think more deliberately about the API they were
+building.
 
-From Martin
-Fowler's [Test Driven Development](https://martinfowler.com/articles/ruby.html#TestDrivenDevelopment):
+From Martin Fowler's
+[Test Driven Development](https://martinfowler.com/articles/ruby.html#TestDrivenDevelopment):
 
 > When we write a test, we imagine the perfect interface for our operation. We are telling ourselves
 > a story about how the operation will look from the outside.
 >
-> Our story won’t always come true, but
-> it’s better to start from the best-possible application program interface (API) and work backward
-> than to make things complicated, ugly, and “realistic” from the get-go.
+> Our story won’t always come true, but it’s better to start from the best-possible application
+> program interface (API) and work backward than to make things complicated, ugly, and “realistic”
+> from the get-go.
 
 ## Let's Refactor and TDD while we go
 
@@ -159,10 +157,10 @@ def serialize(data: dict, format: OutputFormat, extra: dict | None = None) -> st
 
 ```
 
-This function becomes part of the module's public API.
-Now, testing this function is easy-peasy! feed it data and check the results.
-We can easily test our serialization logic without worrying about the database or logging.
-We also include types to catch errors early, and a docstring to help our future selves.
+This function becomes part of the module's public API. Now, testing this function is easy-peasy!
+feed it data and check the results. We can easily test our serialization logic without worrying
+about the database or logging. We also include types to catch errors early, and a docstring to help
+our future selves.
 
 ```python
 # test_serialization.py
@@ -192,8 +190,8 @@ class TestSerialize:
         ...
 ```
 
-Since we're refactoring, we can plug in this function into our `process()` function,
-so any existing test for `process()` will still pass.
+Since we're refactoring, we can plug in this function into our `process()` function, so any existing
+test for `process()` will still pass.
 
 ```python
 # lib/process.py
@@ -245,8 +243,8 @@ def process(data, format, db=False, extra=None):
     return output
 ```
 
-At this point, This function is just 3 lines of business logic,
-we can extract this logic into the client code.
+At this point, This function is just 3 lines of business logic, we can extract this logic into the
+client code.
 
 ```python
 # main.py

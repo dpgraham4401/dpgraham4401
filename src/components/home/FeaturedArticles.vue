@@ -14,10 +14,7 @@ const featuredPosts = posts.filter((post) => post.data.isFeatured && post.data.p
     <Anchor aria-label="View All" class="text-base" url="/articles">View All</Anchor>
   </div>
   <ul class="my-8">
-    <li
-      v-for="(post, index) in featuredPosts"
-      :key="index"
-    >
+    <li v-for="(post, index) in featuredPosts" :key="index">
       <ArticleSnippet
         :description="post.data.description"
         :duration="post.data.readTime"

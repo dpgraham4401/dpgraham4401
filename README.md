@@ -20,14 +20,15 @@
   </a>
 </div><br>
 
-
 ---
 
 ### 🌱 I’m currently learning ...
-  
-  - Taking the [deep dive on machine learning](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md#ai-specific)
-  - Creating infrastructure on GCP and Cloudflare that almost scales to zero with Terraform/Opentofu.
-  - [Refreshing my C++](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
-  - Seeing if the hype on writing code with agents is all it's cracked up to be.
-  - Taking Comp. Sci. classes through University of Maryland online
-  - As always, any technical good book [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
+
+- Taking the
+  [deep dive on machine learning](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md#ai-specific)
+- Creating infrastructure on GCP and Cloudflare that almost scales to zero with Terraform/Opentofu.
+- [Refreshing my C++](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)
+- Seeing if the hype on writing code with agents is all it's cracked up to be.
+- Taking Comp. Sci. classes through University of Maryland online
+- As always, any technical good book
+  [I can get my hands on](https://github.com/dpgraham4401/dpgraham4401/blob/main/src/content/articles/reading-list.md)

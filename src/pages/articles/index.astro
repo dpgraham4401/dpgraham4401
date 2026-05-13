@@ -15,23 +15,14 @@ const pageUrl = `${GLOBAL.site.rootUrl}/${collectionId}`;
 <Layout>
   <Fragment slot="head">
     <title>{GLOBAL.site.name} | Articles</title>
-    <meta
-      name="description"
-      content={GLOBAL.articles.longDescription}
-    />
+    <meta name="description" content={GLOBAL.articles.longDescription} />
     <meta property="og:title" content={`${GLOBAL.site.name} | ${GLOBAL.articles.title}`} />
-    <meta
-      property="og:description"
-      content={GLOBAL.articles.shortDescription}
-    />
+    <meta property="og:description" content={GLOBAL.articles.shortDescription} />
     <meta property="og:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
     <meta property="og:url" content={`${GLOBAL.site.rootUrl}/articles`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${GLOBAL.articles.title} | ${GLOBAL.site.name}`} />
-    <meta
-      name="twitter:description"
-      content={GLOBAL.articles.shortDescription}
-    />
+    <meta name="twitter:description" content={GLOBAL.articles.shortDescription} />
     <meta name="twitter:image" content={`${GLOBAL.site.rootUrl}/${GLOBAL.profileImage}`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
@@ -41,20 +32,21 @@ const pageUrl = `${GLOBAL.site.rootUrl}/${collectionId}`;
     <div class="flex items-center gap-4 pt-8 pb-16">
       <h1 class="font-display text-3xl sm:text-4xl leading-loose">{GLOBAL.articles.title}</h1>
     </div>
-    <ul>
-    </ul>
+    <ul></ul>
   </Section>
   <Section class="my-8">
-    {posts
-      .filter((post) => post.data.published !== false)
-      .map((post) => (
-        <ArticleSnippet
-          title={post.data.title}
-          description={post.data.description}
-          url={`/${post.collection}/${post.id}`}
-          readTime={post.data.readTime}
-          timestamp={post.data.timestamp}
-        />
-      ))}
+    {
+      posts
+        .filter((post) => post.data.published !== false)
+        .map((post) => (
+          <ArticleSnippet
+            title={post.data.title}
+            description={post.data.description}
+            url={`/${post.collection}/${post.id}`}
+            readTime={post.data.readTime}
+            timestamp={post.data.timestamp}
+          />
+        ))
+    }
   </Section>
 </Layout>

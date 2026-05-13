@@ -1,18 +1,28 @@
 <template>
-  <a href="/"
-     aria-label="Home"
-     class="header bg-white rounded-full w-28 h-16 relative overflow-hidden flex items-start justify-center focus:outline-offset-2 focus:outline-vim-dark dark:focus:outline-vim-light">
+  <a
+    href="/"
+    aria-label="Home"
+    class="header bg-white rounded-full w-28 h-16 relative overflow-hidden flex items-start justify-center focus:outline-offset-2 focus:outline-vim-dark dark:focus:outline-vim-light"
+  >
     <div>
       <!--Waves behind pirate ship-->
-      <svg class="absolute bottom-0 left-0 w-full h-2/5" preserveAspectRatio="none"
-           shape-rendering="auto"
-           viewBox="0 24 150 28" xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg
+        class="absolute bottom-0 left-0 w-full h-2/5"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+        viewBox="0 24 150 28"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
         <defs>
-          <path id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          <path id="gentle-wave-long"
-                d="M-200 44c40 0 80-10 120-10 s80 10 120 10 80-10 120-10 80 10 120 10 v44h-480z" />
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+          <path
+            id="gentle-wave-long"
+            d="M-200 44c40 0 80-10 120-10 s80 10 120 10 80-10 120-10 80 10 120 10 v44h-480z"
+          />
         </defs>
         <g class="parallax">
           <use class="fill-blue-200" x="0" xlink:href="#gentle-wave-long" y="-10" />
@@ -24,15 +34,23 @@
         <img alt="Logo" class="w-20 h-1/2 logo-bob-rotate" src="/img/pirate_ship_full_bottom.svg" />
       </div>
       <!--Foreground Waves-->
-      <svg class="absolute bottom-0 left-0 w-full h-2/5" preserveAspectRatio="none"
-           shape-rendering="auto"
-           viewBox="0 24 150 28" xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg
+        class="absolute bottom-0 left-0 w-full h-2/5"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+        viewBox="0 24 150 28"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
         <defs>
-          <path id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          <path id="gentle-wave-long"
-                d="M-200 44c40 0 80-10 120-10 s80 10 120 10 80-10 120-10 80 10 120 10 v44h-480z" />
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+          <path
+            id="gentle-wave-long"
+            d="M-200 44c40 0 80-10 120-10 s80 10 120 10 80-10 120-10 80 10 120 10 v44h-480z"
+          />
         </defs>
         <g class="parallax">
           <use class="fill-blue-300 opacity-65" x="48" xlink:href="#gentle-wave" y="5" />
@@ -85,16 +103,14 @@
   }
 }
 
-
 /* Attach the bob+tilt animation to the logo */
 .logo-bob-rotate {
   animation: bobAndTilt 4s ease-in-out infinite;
   animation-timing-function: linear;
 }
 
-
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
 .parallax > use:nth-child(1) {
