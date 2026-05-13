@@ -1,3 +1,8 @@
+allowBuilds:
+  "@playwright/browser-chromium": true
+  "@playwright/browser-firefox": true
+  esbuild: true
+  sharp: true
 onlyBuiltDependencies:
   - "@playwright/browser-chromium"
   - "@playwright/browser-firefox"
