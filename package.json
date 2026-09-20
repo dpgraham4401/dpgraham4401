@@ -21,17 +21,17 @@
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/ts-plugin": "^1.10.7",
-    "@astrojs/vue": "^6.0.1",
-    "@iconoir/vue": "^7.11.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.2.1",
-    "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2",
-    "vue": "^3.5.32"
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/ts-plugin": "^1.10.12",
+    "@astrojs/vue": "^7.0.3",
+    "@iconoir/vue": "^7.12.1",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.3",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vue": "^3.5.43"
   },
   "devDependencies": {
     "@playwright/browser-chromium": "^1.63.0",
